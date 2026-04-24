@@ -7,6 +7,8 @@ export async function POST(request: NextRequest) {
     const body = (await request.json()) as {
       hostName?: string;
       category?: string;
+      selectedArea?: string | null;
+      customQuery?: string | null;
       rankingMode?: RankingMode;
     };
 
@@ -22,6 +24,8 @@ export async function POST(request: NextRequest) {
     const result = await createRoom(body as {
       hostName: string;
       category?: string;
+      selectedArea?: string | null;
+      customQuery?: string | null;
       rankingMode?: RankingMode;
     });
 

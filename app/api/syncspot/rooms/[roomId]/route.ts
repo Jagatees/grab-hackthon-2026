@@ -33,6 +33,8 @@ export async function PATCH(
     const { roomId } = await params;
     const body = (await request.json()) as {
       category?: string;
+      selectedArea?: string | null;
+      customQuery?: string | null;
       rankingMode?: RankingMode;
       selectedVenueId?: string | null;
       status?: RoomStatus;

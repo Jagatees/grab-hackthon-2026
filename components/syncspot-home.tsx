@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { SyncSpotHomeMap } from "@/components/syncspot-home-map";
 
 type CreateRoomResponse = {
   room: {
@@ -107,85 +108,104 @@ export function SyncSpotHome() {
 
   return (
     <main className="syncspot-home">
-      <section className="syncspot-hero">
-        <p className="eyebrow">SyncSpot</p>
-        <h1>Find the fairest meetup spot with real travel time.</h1>
-        <p className="syncspot-lede">
-          Create a room, invite your group, confirm where everyone is coming from,
-          and rank meetup places by actual route time instead of guesswork.
-        </p>
-
-        <div className="syncspot-mode-switch">
-          <button
-            className={`syncspot-mode-btn ${mode === "host" ? "syncspot-mode-btn-active" : ""}`}
-            onClick={() => setMode("host")}
-            type="button"
-          >
-            Host a room
-          </button>
-          <button
-            className={`syncspot-mode-btn ${mode === "join" ? "syncspot-mode-btn-active" : ""}`}
-            onClick={() => setMode("join")}
-            type="button"
-          >
-            Join a room
-          </button>
+      <SyncSpotHomeMap />
+      <section className="syncspot-home-stage">
+        <div className="syncspot-home-copy">
+          <p className="eyebrow">SyncSpot</p>
+          <h1>Find the fairest meetup spot with real travel time.</h1>
+          <p className="syncspot-lede">
+            Create a room, invite your group, confirm where everyone is coming from,
+            and rank meetup places by actual route time instead of guesswork.
+          </p>
+          <div className="syncspot-home-badges">
+            <span className="syncspot-chip syncspot-chip-neutral">Grab Maps routing</span>
+            <span className="syncspot-chip syncspot-chip-neutral">Live room planning</span>
+            <span className="syncspot-chip syncspot-chip-neutral">Singapore-first</span>
+          </div>
         </div>
 
-        <div className="syncspot-card">
-          {mode === "host" ? (
-            <>
-              <label className="syncspot-field">
-                <span>Your name</span>
-                <input
-                  onChange={(event) => setHostName(event.target.value)}
-                  placeholder="Jaga"
-                  value={hostName}
-                />
-              </label>
+        <section className="syncspot-hero syncspot-home-hero-card">
+          <div className="syncspot-mode-switch">
+            <button
+              className={`syncspot-mode-btn ${mode === "host" ? "syncspot-mode-btn-active" : ""}`}
+              onClick={() => setMode("host")}
+              type="button"
+            >
+              Host a room
+            </button>
+            <button
+              className={`syncspot-mode-btn ${mode === "join" ? "syncspot-mode-btn-active" : ""}`}
+              onClick={() => setMode("join")}
+              type="button"
+            >
+              Join a room
+            </button>
+          </div>
 
-              <button
-                className="syncspot-primary-btn"
-                disabled={loading !== null}
-                onClick={() => void createRoom()}
-                type="button"
-              >
-                {loading ?? "Create room"}
-              </button>
-            </>
-          ) : (
-            <>
-              <label className="syncspot-field">
-                <span>Your name</span>
-                <input
-                  onChange={(event) => setJoinName(event.target.value)}
-                  placeholder="Alex"
-                  value={joinName}
-                />
-              </label>
+          <div className="syncspot-card">
+            <div className="syncspot-home-card-heading">
+              <strong>{mode === "host" ? "Start a new room" : "Jump into a room"}</strong>
+              <span>
+                {mode === "host"
+                  ? "Share a link and let everyone drop their starting point."
+                  : "Enter your name and room code to join the shared map."}
+              </span>
+            </div>
 
-              <label className="syncspot-field">
-                <span>Room code</span>
-                <input
-                  onChange={(event) => setRoomCode(event.target.value.toUpperCase())}
-                  placeholder="ABC123"
-                  value={roomCode}
-                />
-              </label>
+            {mode === "host" ? (
+              <>
+                <label className="syncspot-field">
+                  <span>Your name</span>
+                  <input
+                    onChange={(event) => setHostName(event.target.value)}
+                    placeholder="Jaga"
+                    value={hostName}
+                  />
+                </label>
 
-              <button
-                className="syncspot-primary-btn"
-                disabled={loading !== null}
-                onClick={() => void joinRoom()}
-                type="button"
-              >
-                {loading ?? "Join room"}
-              </button>
-            </>
-          )}
+                <button
+                  className="syncspot-primary-btn"
+                  disabled={loading !== null}
+                  onClick={() => void createRoom()}
+                  type="button"
+                >
+                  {loading ?? "Create room"}
+                </button>
+              </>
+            ) : (
+              <>
+                <label className="syncspot-field">
+                  <span>Your name</span>
+                  <input
+                    onChange={(event) => setJoinName(event.target.value)}
+                    placeholder="Alex"
+                    value={joinName}
+                  />
+                </label>
 
-          {error ? <p className="syncspot-error">{error}</p> : null}
-        </div>
+                <label className="syncspot-field">
+                  <span>Room code</span>
+                  <input
+                    onChange={(event) => setRoomCode(event.target.value.toUpperCase())}
+                    placeholder="ABC123"
+                    value={roomCode}
+                  />
+                </label>
+
+                <button
+                  className="syncspot-primary-btn"
+                  disabled={loading !== null}
+                  onClick={() => void joinRoom()}
+                  type="button"
+                >
+                  {loading ?? "Join room"}
+                </button>
+              </>
+            )}
+
+            {error ? <p className="syncspot-error">{error}</p> : null}
+          </div>
+        </section>
       </section>
     </main>
   );

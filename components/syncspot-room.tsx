@@ -65,6 +65,8 @@ type RoomSnapshot = {
     roomCode: string;
     hostId: string;
     category: string;
+    selectedArea: string | null;
+    customQuery: string | null;
     rankingMode: "fairest" | "fastest" | "midpoint";
     selectedVenueId: string | null;
     status: "waiting" | "ready" | "computed" | "finalized";
@@ -76,6 +78,55 @@ type RoomSnapshot = {
 
 type SyncSpotRoomProps = {
   roomId: string;
+};
+
+const STATUS_LABELS: Record<string, string> = {
+  waiting: "Waiting for players",
+  ready: "Ready to compute",
+  computed: "Routes computed",
+  finalized: "Venue finalized"
+};
+
+const MODE_LABELS: Record<string, string> = {
+  fairest: "Fairest for all",
+  fastest: "Fastest overall",
+  midpoint: "Closest midpoint"
+};
+
+const TOPIC_OPTIONS = [
+  { value: "cafe", label: "Cafe" },
+  { value: "restaurant", label: "Restaurant" },
+  { value: "shop", label: "Shop" },
+  { value: "mall", label: "Mall" },
+  { value: "hotel", label: "Hotel" },
+  { value: "park", label: "Park" },
+  { value: "bar", label: "Bar" },
+  { value: "supermarket", label: "Supermarket" }
+] as const;
+
+const AREA_OPTIONS = [
+  { value: "", label: "Anywhere in Singapore" },
+  { value: "ang_mo_kio", label: "Ang Mo Kio" },
+  { value: "bishan", label: "Bishan" },
+  { value: "bugis", label: "Bugis" },
+  { value: "jurong_east", label: "Jurong East" },
+  { value: "marina_bay", label: "Marina Bay" },
+  { value: "one_north", label: "one-north" },
+  { value: "orchard", label: "Orchard" },
+  { value: "tampines", label: "Tampines" },
+  { value: "woodlands", label: "Woodlands" }
+] as const;
+
+const AREA_BIAS: Record<string, { lat: number; lng: number }> = {
+  ang_mo_kio: { lat: 1.3691, lng: 103.8454 },
+  bishan: { lat: 1.3508, lng: 103.8485 },
+  bugis: { lat: 1.3009, lng: 103.8559 },
+  jurong_east: { lat: 1.3331, lng: 103.7437 },
+  marina_bay: { lat: 1.2823, lng: 103.8585 },
+  one_north: { lat: 1.2996, lng: 103.7873 },
+  orchard: { lat: 1.3048, lng: 103.8318 },
+  tampines: { lat: 1.3526, lng: 103.9442 },
+  woodlands: { lat: 1.4361, lng: 103.7865 }
 };
 
 function isPostcodeQuery(value: string) {
@@ -124,15 +175,22 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
   const [snapshot, setSnapshot] = useState<RoomSnapshot | null>(null);
   const [joinName, setJoinName] = useState("");
   const [category, setCategory] = useState("cafe");
+  const [selectedArea, setSelectedArea] = useState("");
+  const [customQuery, setCustomQuery] = useState("");
+  const [hostFiltersDirty, setHostFiltersDirty] = useState(false);
   const [rankingMode, setRankingMode] = useState<"fairest" | "fastest" | "midpoint">(
     "fairest"
   );
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [copyLabel, setCopyLabel] = useState("Copy invite link");
+  const [showInfo, setShowInfo] = useState(false);
+  const [editingOrigin, setEditingOrigin] = useState(false);
   const [originQuery, setOriginQuery] = useState("");
   const [originResults, setOriginResults] = useState<PlaceResult[]>([]);
   const [originStatus, setOriginStatus] = useState<string | null>(null);
+  const [hostQueryResults, setHostQueryResults] = useState<PlaceResult[]>([]);
+  const [hostQueryStatus, setHostQueryStatus] = useState<string | null>(null);
   const [activeRecommendationIds, setActiveRecommendationIds] = useState<string[]>([]);
   const [chatBody, setChatBody] = useState("");
 
@@ -147,8 +205,13 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
     }
 
     setSnapshot(data);
-    setCategory(data.room.category);
-    setRankingMode(data.room.rankingMode);
+
+    if (!hostFiltersDirty) {
+      setCategory(data.room.category);
+      setSelectedArea(data.room.selectedArea ?? "");
+      setCustomQuery(data.room.customQuery ?? "");
+      setRankingMode(data.room.rankingMode);
+    }
   }
 
   useEffect(() => {
@@ -201,6 +264,75 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
 
     setOriginQuery((current) => (current.trim() ? current : currentParticipant.originLabel ?? ""));
   }, [currentParticipant?.originLabel]);
+
+  useEffect(() => {
+    if (!isHost) {
+      setHostQueryResults([]);
+      setHostQueryStatus(null);
+      return;
+    }
+
+    const trimmedQuery = customQuery.trim();
+
+    if (trimmedQuery.length < 2) {
+      setHostQueryResults([]);
+      setHostQueryStatus(null);
+      return;
+    }
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(async () => {
+      setHostQueryStatus("Searching places...");
+
+      try {
+        const params = new URLSearchParams({
+          keyword: trimmedQuery,
+          country: "SGP",
+          limit: "5"
+        });
+        const areaBias = selectedArea ? AREA_BIAS[selectedArea] : null;
+
+        if (areaBias) {
+          params.set("location", `${areaBias.lat},${areaBias.lng}`);
+        }
+
+        const response = await fetch(
+          `/api/grab-maps/places/search?${params.toString()}`,
+          {
+            cache: "no-store",
+            signal: controller.signal
+          }
+        );
+        const data = (await response.json()) as {
+          places?: PlaceResult[];
+          error?: string;
+        };
+
+        if (!response.ok) {
+          throw new Error(data.error ?? "Unable to search for places.");
+        }
+
+        setHostQueryResults(data.places ?? []);
+        setHostQueryStatus(null);
+      } catch (searchError) {
+        if ((searchError as Error).name === "AbortError") {
+          return;
+        }
+
+        setHostQueryResults([]);
+        setHostQueryStatus(
+          searchError instanceof Error
+            ? searchError.message
+            : "Unable to search for places."
+        );
+      }
+    }, 300);
+
+    return () => {
+      controller.abort();
+      window.clearTimeout(timeoutId);
+    };
+  }, [customQuery, isHost, selectedArea]);
 
   const shareUrl =
     typeof window === "undefined" || !snapshot
@@ -362,6 +494,7 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
       setOriginResults([]);
       setOriginQuery(place.formatted_address ?? place.name ?? "");
       setOriginStatus("Starting point confirmed.");
+      setEditingOrigin(false);
       window.setTimeout(() => setOriginStatus(null), 1800);
     } catch (confirmError) {
       setOriginStatus(null);
@@ -391,6 +524,8 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
           },
           body: JSON.stringify({
             category,
+            selectedArea: selectedArea || null,
+            customQuery: customQuery.trim() || null,
             rankingMode
           })
         }
@@ -402,6 +537,11 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
       }
 
       setSnapshot(data);
+      setCategory(data.room.category);
+      setSelectedArea(data.room.selectedArea ?? "");
+      setCustomQuery(data.room.customQuery ?? "");
+      setRankingMode(data.room.rankingMode);
+      setHostFiltersDirty(false);
       setActiveRecommendationIds([]);
     } catch (computeError) {
       setError(
@@ -430,6 +570,8 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
         },
         body: JSON.stringify({
           category,
+          selectedArea: selectedArea || null,
+          customQuery: customQuery.trim() || null,
           rankingMode
         })
       });
@@ -440,6 +582,11 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
       }
 
       setSnapshot(data);
+      setCategory(data.room.category);
+      setSelectedArea(data.room.selectedArea ?? "");
+      setCustomQuery(data.room.customQuery ?? "");
+      setRankingMode(data.room.rankingMode);
+      setHostFiltersDirty(false);
     } catch (updateError) {
       setError(updateError instanceof Error ? updateError.message : "Unable to update room.");
     } finally {
@@ -640,7 +787,17 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
       <section className="syncspot-room-card">
         <div className="syncspot-room-header">
           <div className="syncspot-room-summary">
-            <p className="eyebrow">SyncSpot room</p>
+            <div className="syncspot-room-eyebrow-row">
+              <p className="eyebrow">SyncSpot room</p>
+              <button
+                className="syncspot-info-btn"
+                onClick={() => setShowInfo(true)}
+                type="button"
+                aria-label="How it works"
+              >
+                ℹ
+              </button>
+            </div>
             <div className="syncspot-room-title-row">
               <h1>Room {snapshot.room.roomCode}</h1>
               <button
@@ -651,10 +808,25 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                 {copyLabel}
               </button>
             </div>
-            <p className="syncspot-muted">
-              Status: {snapshot.room.status} · Category: {snapshot.room.category} · Mode:{" "}
-              {snapshot.room.rankingMode}
-            </p>
+            <div className="syncspot-status-chips">
+              <span className={`syncspot-chip syncspot-chip-status-${snapshot.room.status}`}>
+                {STATUS_LABELS[snapshot.room.status] ?? snapshot.room.status}
+              </span>
+              <span className="syncspot-chip syncspot-chip-neutral">
+                {snapshot.room.category}
+              </span>
+              {snapshot.room.selectedArea ? (
+                <span className="syncspot-chip syncspot-chip-neutral">
+                  {
+                    AREA_OPTIONS.find((option) => option.value === snapshot.room.selectedArea)
+                      ?.label
+                  }
+                </span>
+              ) : null}
+              <span className="syncspot-chip syncspot-chip-neutral">
+                {MODE_LABELS[snapshot.room.rankingMode] ?? snapshot.room.rankingMode}
+              </span>
+            </div>
             <p className="syncspot-share-url">
               Invite: {shareUrl || `/room/${snapshot.room.roomId}`}
             </p>
@@ -687,11 +859,7 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
               <ul className="syncspot-list">
                 {snapshot.participants.map((participant) => (
                   <li
-                    className={`syncspot-list-item ${
-                      participant.participantId === currentParticipant?.participantId
-                        ? "syncspot-list-item-self"
-                        : ""
-                    }`}
+                    className="syncspot-list-item syncspot-list-item-self"
                     key={participant.participantId}
                   >
                     <div>
@@ -699,7 +867,9 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                         <strong>{participant.name}</strong>
                         <div className="syncspot-inline-actions">
                           {(participant.votedVenueIds?.length ?? 0) > 0 ? (
-                            <span className="syncspot-pill syncspot-pill-confirmed">Voted</span>
+                            <span className="syncspot-pill syncspot-pill-confirmed">
+                              Voted
+                            </span>
                           ) : null}
                           <span
                             className={`syncspot-pill ${
@@ -712,66 +882,83 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                           </span>
                         </div>
                       </div>
-                      <span>{participant.originLabel ?? "Origin not confirmed yet"}</span>
-                    </div>
 
-                    {participant.participantId === currentParticipant?.participantId ? (
-                      <div className="syncspot-inline-origin-editor">
-                        <label className="syncspot-field">
-                          <span>Edit my place</span>
-                          <input
-                            onChange={(event) => setOriginQuery(event.target.value)}
-                            onKeyDown={(event) => {
-                              if (event.key === "Enter") {
-                                event.preventDefault();
-                                void searchOrigins();
-                              }
-                            }}
-                            placeholder="Jurong East, 600324, Tampines..."
-                            value={originQuery}
-                          />
-                        </label>
-                        <button
-                          className="syncspot-primary-btn"
-                          disabled={loading !== null || originStatus === "Searching places..."}
-                          onClick={() => void searchOrigins()}
-                          type="button"
-                        >
-                          {originStatus === "Searching places..."
-                            ? originStatus
-                            : "Update place"}
-                        </button>
-
-                        {originStatus && originStatus !== "Searching places..." ? (
-                          <p className="syncspot-origin-status">{originStatus}</p>
-                        ) : null}
-
-                        {originResults.length > 0 ? (
-                          <ul className="syncspot-origin-results">
-                            {originResults.map((place, index) => (
-                              <li
-                                className="syncspot-origin-result"
-                                key={`${place.poi_id ?? place.id ?? place.name ?? "place"}-${index}`}
+                      {participant.participantId === currentParticipant?.participantId ? (
+                        editingOrigin ? (
+                          <>
+                            <div className="syncspot-origin-inline-edit">
+                              <input
+                                autoFocus
+                                onChange={(event) => setOriginQuery(event.target.value)}
+                                onKeyDown={(event) => {
+                                  if (event.key === "Enter") {
+                                    event.preventDefault();
+                                    void searchOrigins();
+                                  }
+                                }}
+                                placeholder="Jurong East, 600324, Tampines..."
+                                value={originQuery}
+                              />
+                              <button
+                                className="syncspot-primary-btn"
+                                disabled={
+                                  loading !== null ||
+                                  originStatus === "Searching places..."
+                                }
+                                onClick={() => void searchOrigins()}
+                                type="button"
                               >
-                                <div>
-                                  <strong>{place.name ?? "Unknown place"}</strong>
-                                  <span>
-                                    {place.formatted_address ?? "No address available"}
-                                  </span>
-                                </div>
-                                <button
-                                  className="syncspot-secondary-btn"
-                                  onClick={() => void confirmOrigin(place)}
-                                  type="button"
-                                >
-                                  Use this spot
-                                </button>
-                              </li>
-                            ))}
-                          </ul>
-                        ) : null}
-                      </div>
-                    ) : null}
+                                {originStatus === "Searching places..." ? "…" : "Search"}
+                              </button>
+                            </div>
+                            {originStatus && originStatus !== "Searching places..." ? (
+                              <p className="syncspot-origin-status">{originStatus}</p>
+                            ) : null}
+                            {originResults.length > 0 ? (
+                              <ul className="syncspot-origin-results">
+                                {originResults.map((place, index) => (
+                                  <li
+                                    className="syncspot-origin-result"
+                                    key={`${place.poi_id ?? place.id ?? place.name ?? "place"}-${index}`}
+                                  >
+                                    <div>
+                                      <strong>{place.name ?? "Unknown place"}</strong>
+                                      <span>
+                                        {place.formatted_address ?? "No address available"}
+                                      </span>
+                                    </div>
+                                    <button
+                                      className="syncspot-secondary-btn"
+                                      onClick={() => void confirmOrigin(place)}
+                                      type="button"
+                                    >
+                                      Use this spot
+                                    </button>
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : null}
+                          </>
+                        ) : (
+                          <div className="syncspot-origin-view">
+                            <span>
+                              {participant.originLabel ?? "Tap Edit to set your location"}
+                            </span>
+                            <button
+                              className="syncspot-edit-btn"
+                              onClick={() => setEditingOrigin(true)}
+                              type="button"
+                            >
+                              Edit
+                            </button>
+                          </div>
+                        )
+                      ) : (
+                        <span>
+                          {participant.originLabel ?? "Origin not confirmed yet"}
+                        </span>
+                      )}
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -781,24 +968,87 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
               <section className="syncspot-card">
                 <h2>Host actions</h2>
                 <label className="syncspot-field">
-                  <span>Meetup category</span>
+                  <span>Topic</span>
                   <select
-                    onChange={(event) => setCategory(event.target.value)}
+                    onChange={(event) => {
+                      setCategory(event.target.value);
+                      setHostFiltersDirty(true);
+                    }}
                     value={category}
                   >
-                    <option value="cafe">Cafe</option>
-                    <option value="restaurant">Restaurant</option>
-                    <option value="park">Park</option>
+                    {TOPIC_OPTIONS.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
                   </select>
+                </label>
+                <label className="syncspot-field">
+                  <span>Singapore area</span>
+                  <select
+                    onChange={(event) => {
+                      setSelectedArea(event.target.value);
+                      setHostFiltersDirty(true);
+                    }}
+                    value={selectedArea}
+                  >
+                    {AREA_OPTIONS.map((option) => (
+                      <option key={option.value || "any"} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="syncspot-field">
+                  <span>Specific place or vibe</span>
+                  <input
+                    onChange={(event) => {
+                      setCustomQuery(event.target.value);
+                      setHostFiltersDirty(true);
+                    }}
+                    placeholder="Bubble tea, IKEA, quiet cafe, study spot..."
+                    value={customQuery}
+                  />
+                  {hostQueryStatus && hostQueryStatus !== "Searching places..." ? (
+                    <p className="syncspot-origin-status">{hostQueryStatus}</p>
+                  ) : null}
+                  {hostQueryResults.length > 0 ? (
+                    <ul className="syncspot-origin-results">
+                      {hostQueryResults.map((place, index) => (
+                        <li
+                          className="syncspot-origin-result"
+                          key={`${place.poi_id ?? place.id ?? place.name ?? "host-place"}-${index}`}
+                        >
+                          <div>
+                            <strong>{place.name ?? "Unknown place"}</strong>
+                            <span>{place.formatted_address ?? "No address available"}</span>
+                          </div>
+                          <button
+                            className="syncspot-secondary-btn"
+                            onClick={() => {
+                              setCustomQuery(place.name ?? place.formatted_address ?? "");
+                              setHostQueryResults([]);
+                              setHostQueryStatus(null);
+                              setHostFiltersDirty(true);
+                            }}
+                            type="button"
+                          >
+                            Use this place
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
                 </label>
                 <label className="syncspot-field">
                   <span>Ranking mode</span>
                   <select
-                    onChange={(event) =>
+                    onChange={(event) => {
                       setRankingMode(
                         event.target.value as "fairest" | "fastest" | "midpoint"
-                      )
-                    }
+                      );
+                      setHostFiltersDirty(true);
+                    }}
                     value={rankingMode}
                   >
                     <option value="fairest">Fairest for everyone</option>
@@ -806,6 +1056,10 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                     <option value="midpoint">Closest midpoint</option>
                   </select>
                 </label>
+                <p className="syncspot-muted">
+                  Use a broad topic, narrow it to an area, or type a specific place idea to guide
+                  the Grab search.
+                </p>
                 <div className="syncspot-inline-actions">
                   <button
                     className="syncspot-secondary-btn"
@@ -1065,6 +1319,100 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
           </div>
         </section>
       ) : null}
+
+      {showInfo && (
+        <div
+          className="syncspot-info-overlay"
+          onClick={() => setShowInfo(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="How SyncSpot works"
+        >
+          <div
+            className="syncspot-info-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="syncspot-info-header">
+              <strong>How SyncSpot works</strong>
+              <button
+                className="syncspot-info-close"
+                onClick={() => setShowInfo(false)}
+                type="button"
+                aria-label="Close"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="syncspot-info-body">
+              <dl className="syncspot-info-glossary">
+                <dt>Room status</dt>
+                <dd>
+                  <strong>Waiting for players</strong> — People are still joining and
+                  confirming where they&apos;re coming from.
+                </dd>
+                <dd>
+                  <strong>Ready to compute</strong> — Enough confirmed origins. Host can
+                  now run route calculations.
+                </dd>
+                <dd>
+                  <strong>Routes computed</strong> — Travel times calculated for all
+                  suggested venues. Vote on your favourite.
+                </dd>
+                <dd>
+                  <strong>Venue finalized</strong> — The host picked a spot. Tap
+                  &ldquo;Open route&rdquo; to get directions.
+                </dd>
+
+                <dt>Ranking mode</dt>
+                <dd>
+                  <strong>Fairest for all</strong> — Minimises the worst individual travel
+                  time. Nobody gets stuck with a very long trip.
+                </dd>
+                <dd>
+                  <strong>Fastest overall</strong> — Minimises the total combined travel
+                  time for the whole group.
+                </dd>
+                <dd>
+                  <strong>Closest midpoint</strong> — Finds a venue that is geographically
+                  close to everyone&apos;s average location.
+                </dd>
+
+                <dt>Venue badges</dt>
+                <dd>
+                  <strong>Balanced</strong> — Travel times are very similar for everyone
+                  in the group.
+                </dd>
+                <dd>
+                  <strong>Fastest</strong> — Lowest total combined travel time.
+                </dd>
+                <dd>
+                  <strong>One-sided</strong> — Someone travels noticeably more than
+                  everyone else.
+                </dd>
+                <dd>
+                  <strong>Host-friendly</strong> — Short trip for whoever created the
+                  room.
+                </dd>
+
+                <dt>Travel metrics</dt>
+                <dd>
+                  <strong>Worst</strong> — The longest individual trip in the group.
+                </dd>
+                <dd>
+                  <strong>Best</strong> — The shortest individual trip in the group.
+                </dd>
+                <dd>
+                  <strong>Total</strong> — Sum of all travel times combined.
+                </dd>
+                <dd>
+                  <strong>Score</strong> — A fairness score. A smaller gap between Worst
+                  and Best means a more balanced venue.
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      )}
 
       {currentParticipant ? (
         <section className="syncspot-chat-dock">

@@ -19,6 +19,19 @@ import {
   type GrabPlace
 } from "@/lib/syncspot/grab-client";
 
+const AREA_CENTERS: Record<string, { label: string; latitude: number; longitude: number }> = {
+  any: { label: "Anywhere", latitude: 1.3521, longitude: 103.8198 },
+  ang_mo_kio: { label: "Ang Mo Kio", latitude: 1.3691, longitude: 103.8454 },
+  bishan: { label: "Bishan", latitude: 1.3508, longitude: 103.8485 },
+  bugis: { label: "Bugis", latitude: 1.3009, longitude: 103.8558 },
+  jurong_east: { label: "Jurong East", latitude: 1.3329, longitude: 103.7436 },
+  marina_bay: { label: "Marina Bay", latitude: 1.2834, longitude: 103.8607 },
+  orchard: { label: "Orchard", latitude: 1.3048, longitude: 103.8318 },
+  one_north: { label: "one-north", latitude: 1.2992, longitude: 103.7873 },
+  tampines: { label: "Tampines", latitude: 1.3526, longitude: 103.9451 },
+  woodlands: { label: "Woodlands", latitude: 1.436, longitude: 103.7865 }
+};
+
 function createRoomCode() {
   return Math.random().toString(36).slice(2, 8).toUpperCase();
 }
@@ -204,6 +217,8 @@ export async function createRoom(input: { hostName: string; category?: string })
       roomCode: createRoomCode(),
       hostId,
       category: input.category?.trim() || "cafe",
+      selectedArea: null,
+      customQuery: null,
       rankingMode: "fairest",
       selectedVenueId: null,
       status: "waiting",
@@ -293,6 +308,8 @@ export async function updateRoom(
   roomId: string,
   input: {
     category?: string;
+    selectedArea?: string | null;
+    customQuery?: string | null;
     rankingMode?: RankingMode;
     status?: SyncSpotRoom["status"];
     selectedVenueId?: string | null;
@@ -307,6 +324,14 @@ export async function updateRoom(
 
     if (input.category) {
       room.category = input.category.trim();
+    }
+
+    if (input.selectedArea !== undefined) {
+      room.selectedArea = input.selectedArea;
+    }
+
+    if (input.customQuery !== undefined) {
+      room.customQuery = input.customQuery?.trim() || null;
     }
 
     if (input.rankingMode) {
@@ -403,6 +428,8 @@ export async function computeRecommendations(
   roomId: string,
   input?: {
     category?: string;
+    selectedArea?: string | null;
+    customQuery?: string | null;
     country?: string;
     candidateLimit?: number;
     rankingMode?: RankingMode;
@@ -430,14 +457,28 @@ export async function computeRecommendations(
   }
 
   const category = input?.category?.trim() || room.category || "cafe";
+  const selectedArea = input?.selectedArea ?? room.selectedArea;
+  const customQuery = input?.customQuery?.trim() || room.customQuery || null;
   const rankingMode = input?.rankingMode ?? room.rankingMode ?? "fairest";
-  const center = deriveCenter(participants);
+  const participantCenter = deriveCenter(participants);
+  const areaCenter =
+    selectedArea && AREA_CENTERS[selectedArea] ? AREA_CENTERS[selectedArea] : null;
+  const center = areaCenter
+    ? { latitude: areaCenter.latitude, longitude: areaCenter.longitude }
+    : participantCenter;
   const location = `${center.latitude.toFixed(6)},${center.longitude.toFixed(6)}`;
   const candidateLimit = Math.min(Math.max(input?.candidateLimit ?? 6, 1), 10);
+  const keywordQuery = customQuery
+    ? areaCenter
+      ? `${customQuery} ${areaCenter.label}`
+      : customQuery
+    : areaCenter
+      ? `${category} ${areaCenter.label}`
+      : category;
 
   const [keywordOutcome, nearbyOutcome] = await Promise.allSettled([
     searchGrabPlaces({
-      keyword: category,
+      keyword: keywordQuery,
       country: input?.country ?? "SGP",
       location,
       limit: candidateLimit * 2
@@ -571,6 +612,8 @@ export async function computeRecommendations(
     }
 
     latestRoom.category = category;
+    latestRoom.selectedArea = selectedArea ?? null;
+    latestRoom.customQuery = customQuery;
     latestRoom.rankingMode = rankingMode;
     latestRoom.selectedVenueId = null;
 

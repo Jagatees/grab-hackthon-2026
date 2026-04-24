@@ -37,6 +37,8 @@ export async function POST(
     const { roomId } = await params;
     const body = (await request.json()) as {
       category?: string;
+      selectedArea?: string | null;
+      customQuery?: string | null;
       country?: string;
       candidateLimit?: number;
       rankingMode?: RankingMode;

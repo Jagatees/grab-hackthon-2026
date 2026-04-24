@@ -14,6 +14,8 @@ export type SyncSpotRoom = {
   roomCode: string;
   hostId: string;
   category: string;
+  selectedArea: string | null;
+  customQuery: string | null;
   rankingMode: RankingMode;
   selectedVenueId: string | null;
   status: RoomStatus;

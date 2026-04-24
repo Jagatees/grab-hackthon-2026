@@ -24,6 +24,8 @@ let writeQueue = Promise.resolve();
 function normalizeRoom(room: SyncSpotRoom): SyncSpotRoom {
   return {
     ...room,
+    selectedArea: room.selectedArea ?? null,
+    customQuery: room.customQuery ?? null,
     rankingMode: (room.rankingMode ?? "fairest") as RankingMode,
     selectedVenueId: room.selectedVenueId ?? null,
     status:
