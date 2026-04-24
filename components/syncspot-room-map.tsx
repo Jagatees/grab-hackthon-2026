@@ -95,10 +95,10 @@ function decodePolyline(encoded: string, precision = 6): [number, number][] {
 }
 
 const PARTICIPANT_COLORS = [
-  "#0d8f73",
+  "#00b14f",
   "#2563eb",
-  "#d97706",
-  "#db2777"
+  "#ffb800",
+  "#e5372c"
 ];
 
 function participantColor(participantId: string, participantIds: string[]) {
@@ -240,26 +240,26 @@ export function SyncSpotRoomMap({
               "circle-radius": [
                 "case",
                 ["==", ["get", "isSelected"], true],
-                10,
+                16,
                 ["==", ["get", "isActive"], true],
-                8,
-                6
+                14,
+                12
               ],
               "circle-color": [
                 "case",
                 ["==", ["get", "isSelected"], true],
-                "#0d8f73",
+                "#00b14f",
                 ["==", ["get", "isActive"], true],
-                "#fffaf4",
-                "#f5c451"
+                "#ffffff",
+                "#ffb800"
               ],
               "circle-stroke-color": [
                 "case",
                 ["==", ["get", "isSelected"], true],
-                "#fffaf4",
+                "#ffffff",
                 ["==", ["get", "isActive"], true],
-                "#0d8f73",
-                "#fffaf4"
+                "#00b14f",
+                "#ffffff"
               ],
               "circle-stroke-width": [
                 "case",
@@ -274,13 +274,38 @@ export function SyncSpotRoomMap({
           });
 
           map.addLayer({
+            id: "syncspot-recommendation-rank",
+            type: "symbol",
+            source: "syncspot-recommendations",
+            layout: {
+              "text-field": ["to-string", ["get", "rank"]],
+              "text-size": 11,
+              "text-anchor": "center",
+              "text-allow-overlap": true,
+              "text-ignore-placement": true
+            },
+            paint: {
+              "text-color": [
+                "case",
+                ["==", ["get", "isSelected"], true],
+                "#ffffff",
+                ["==", ["get", "isActive"], true],
+                "#00843b",
+                "#1c1c1c"
+              ],
+              "text-halo-color": "rgba(0,0,0,0)",
+              "text-halo-width": 0
+            }
+          });
+
+          map.addLayer({
             id: "syncspot-participant-points",
             type: "circle",
             source: "syncspot-participants",
             paint: {
               "circle-radius": 8,
               "circle-color": ["get", "color"],
-              "circle-stroke-color": "#fffaf4",
+              "circle-stroke-color": "#ffffff",
               "circle-stroke-width": 2
             }
           });

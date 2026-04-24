@@ -181,6 +181,45 @@
       "status": "waiting",
       "createdAt": "2026-04-24T08:04:33.442Z",
       "updatedAt": "2026-04-24T08:04:33.442Z"
+    },
+    {
+      "roomId": "ca136e5a-0664-43b8-9851-4eb73289803f",
+      "roomCode": "M4ZCS0",
+      "hostId": "d1e0ec52-cd47-43a4-9a6d-bd142ed4c6a6",
+      "category": "cafe",
+      "selectedArea": null,
+      "customQuery": null,
+      "rankingMode": "fairest",
+      "selectedVenueId": null,
+      "status": "computed",
+      "createdAt": "2026-04-24T08:10:35.843Z",
+      "updatedAt": "2026-04-24T08:11:26.473Z"
+    },
+    {
+      "roomId": "17952178-c98e-4207-bd8c-09d6ec7a0324",
+      "roomCode": "FVANM9",
+      "hostId": "37ffbb71-50b9-4c62-a644-818d8cb99960",
+      "category": "cafe",
+      "selectedArea": null,
+      "customQuery": null,
+      "rankingMode": "fairest",
+      "selectedVenueId": "IT.3HXPPPX4JXUCM",
+      "status": "finalized",
+      "createdAt": "2026-04-24T08:24:27.151Z",
+      "updatedAt": "2026-04-24T08:26:43.661Z"
+    },
+    {
+      "roomId": "f4f9f036-65ae-48e1-a286-a180fcbb0e67",
+      "roomCode": "7SI7JH",
+      "hostId": "300ed5a3-6587-4ccb-9253-37ade5826380",
+      "category": "cafe",
+      "selectedArea": null,
+      "customQuery": null,
+      "rankingMode": "fairest",
+      "selectedVenueId": "IT.3HXPPPX4JXUCM",
+      "status": "finalized",
+      "createdAt": "2026-04-24T08:30:52.788Z",
+      "updatedAt": "2026-04-24T08:32:56.044Z"
     }
   ],
   "participants": [
@@ -535,6 +574,148 @@
       "confirmed": false,
       "joinedAt": "2026-04-24T08:04:33.442Z",
       "updatedAt": "2026-04-24T08:04:33.442Z"
+    },
+    {
+      "participantId": "d1e0ec52-cd47-43a4-9a6d-bd142ed4c6a6",
+      "roomId": "ca136e5a-0664-43b8-9851-4eb73289803f",
+      "name": "1",
+      "originLat": 1.3402767352641831,
+      "originLng": 103.94960859189837,
+      "originLabel": "2 Simei Street 3, Singapore, 529889",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [
+        "IT.1B3AR1RO9SE5L"
+      ],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T08:10:35.843Z",
+      "updatedAt": "2026-04-24T08:11:12.849Z"
+    },
+    {
+      "participantId": "07ca61b0-fdf4-400f-b75a-8a9d15087315",
+      "roomId": "ca136e5a-0664-43b8-9851-4eb73289803f",
+      "name": "2",
+      "originLat": 1.3332213754926983,
+      "originLng": 103.74332702714366,
+      "originLabel": "50 Jurong Gateway Road, Singapore, 608549",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T08:10:46.774Z",
+      "updatedAt": "2026-04-24T08:10:52.189Z"
+    },
+    {
+      "participantId": "37ffbb71-50b9-4c62-a644-818d8cb99960",
+      "roomId": "17952178-c98e-4207-bd8c-09d6ec7a0324",
+      "name": "User 1",
+      "originLat": 1.3332213754926983,
+      "originLng": 103.74332702714366,
+      "originLabel": "50 Jurong Gateway Road, Singapore, 608549",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T08:24:27.151Z",
+      "updatedAt": "2026-04-24T08:24:51.547Z"
+    },
+    {
+      "participantId": "d3f65171-2b08-49ff-839a-f45114446168",
+      "roomId": "17952178-c98e-4207-bd8c-09d6ec7a0324",
+      "name": "User 2",
+      "originLat": 1.3402767352641831,
+      "originLng": 103.94960859189837,
+      "originLabel": "2 Simei Street 3, Singapore, 529889",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T08:24:39.748Z",
+      "updatedAt": "2026-04-24T08:25:27.920Z"
+    },
+    {
+      "participantId": "73ab134c-0247-4af2-95a3-0b789fefdc7c",
+      "roomId": "17952178-c98e-4207-bd8c-09d6ec7a0324",
+      "name": "User 3",
+      "originLat": 1.442889484,
+      "originLng": 103.7693383,
+      "originLabel": "11 Woodlands Crossing, Singapore, 738103",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T08:26:07.608Z",
+      "updatedAt": "2026-04-24T08:26:15.851Z"
+    },
+    {
+      "participantId": "3ec69610-a0ec-4159-9a60-18485cd2a6ec",
+      "roomId": "17952178-c98e-4207-bd8c-09d6ec7a0324",
+      "name": "User 4",
+      "originLat": 1.4062468704932485,
+      "originLng": 103.90181298332726,
+      "originLabel": "83 Punggol Central, Singapore, 828761",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T08:26:09.015Z",
+      "updatedAt": "2026-04-24T08:26:27.608Z"
+    },
+    {
+      "participantId": "300ed5a3-6587-4ccb-9253-37ade5826380",
+      "roomId": "f4f9f036-65ae-48e1-a286-a180fcbb0e67",
+      "name": "User 1",
+      "originLat": 1.3332213754926983,
+      "originLng": 103.74332702714366,
+      "originLabel": "50 Jurong Gateway Road, Singapore, 608549",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T08:30:52.788Z",
+      "updatedAt": "2026-04-24T08:30:58.666Z"
+    },
+    {
+      "participantId": "b371a517-5ed8-4ad5-b9ec-56a471674b91",
+      "roomId": "f4f9f036-65ae-48e1-a286-a180fcbb0e67",
+      "name": "User 2",
+      "originLat": 1.3611905663661616,
+      "originLng": 103.98944307138106,
+      "originLabel": "80 Airport Boulevard, Singapore, 819642",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T08:31:08.358Z",
+      "updatedAt": "2026-04-24T08:31:57.092Z"
+    },
+    {
+      "participantId": "167f9c9e-f722-4394-8989-011f9c335375",
+      "roomId": "f4f9f036-65ae-48e1-a286-a180fcbb0e67",
+      "name": "User 3",
+      "originLat": 1.442889484,
+      "originLng": 103.7693383,
+      "originLabel": "11 Woodlands Crossing, Singapore, 738103",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T08:32:32.084Z",
+      "updatedAt": "2026-04-24T08:32:39.354Z"
+    },
+    {
+      "participantId": "497e4cac-5312-4afa-b674-5337345704e5",
+      "roomId": "f4f9f036-65ae-48e1-a286-a180fcbb0e67",
+      "name": "User 4",
+      "originLat": 1.4062468704932485,
+      "originLng": 103.90181298332726,
+      "originLabel": "83 Punggol Central, Singapore, 828761",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T08:32:34.934Z",
+      "updatedAt": "2026-04-24T08:32:44.442Z"
     }
   ],
   "recommendations": [
@@ -1649,6 +1830,462 @@
       "category": "general merchandise",
       "businessType": "shopping mall/shops",
       "computedAt": "2026-04-24T07:53:10.956Z"
+    },
+    {
+      "roomId": "ca136e5a-0664-43b8-9851-4eb73289803f",
+      "poiId": "IT.2JRJ89K977IHJ",
+      "name": "Cafe Kreams - Maxwell Chambers",
+      "lat": 1.277347227122462,
+      "lng": 103.84635910548747,
+      "address": "32 Maxwell Road, #01-07, Maxwell Chambers, Singapore",
+      "fairnessScore": 1152.78,
+      "maxTravelTime": 1354.8,
+      "minTravelTime": 1338.8,
+      "totalTravelTime": 2693.6,
+      "averageTravelTime": 1346.8,
+      "spread": 16,
+      "perUserTravelTimes": [
+        {
+          "participantId": "d1e0ec52-cd47-43a4-9a6d-bd142ed4c6a6",
+          "name": "1",
+          "profile": "driving",
+          "duration": 1354.8,
+          "distance": 17473.63,
+          "geometry": "_hxpAspqgeETaAXu@lBmDxBsC~FsFn@o@nEeDrCgCzBqBrD_DxDbFpFrGtIlLdLbOrDnEzAjB|ClEqEnDq@j@iJvHcEzGoF|IOVyFxMiCrN{@vRQnUsAjj@iBpIaDbIcE~GwKfJ_U`QoBdDG|ClA`FjUfZrDpNpPbT|hC~`D|~@diAn[lb@fZvb@tDnGdCrFfClH|BxItBvKpAzJt@`KZbGZlMDlSgAfm@sA|[oIlxCkCrdAwBvy@oBrv@yB`x@e@tb@GpN\\jZ|@|i@hBha@fDl`@bDb[rBbRfCvRvBvNtCnPnEjUdMrj@jB~HjDjMpDhLhDlKjt@nrBnF|Nbv@jtBrFjOv_AnhCpGfQxZhz@~[j~@tc@`lAd[ny@x\\x|@bHdPtSpd@xi@hlAfP`]fI|TnFnQjDzM`CjMhMzp@nDjQvk@tsC`Plx@pPxmAnHti@zCrW~BzRjPrwA~TjsB~XraChMzfAvDn^fVziB|o@`nEjHx~@lBh[nB~[x@~s@JpH@x@@|AHxGH~StBlb@f@pFr@dGxClPjYzbA`T|r@nLr`@lP|i@|Vdy@`Mpb@pD|B\\b@rAxEtAtEnAlEnH~UrDhRtA~Lt@hP{ArmAWvYb@bId@jJjBnJrIdP`J`KnLhHfRvDl\\rCft@tGpb@rDxa@fC`VfAnCBxd@@x[JrgBmL~d@yDlfDye@~zAq[r]eHzJsC`wF_`B`y@{Gfy@KriAxLbsC`o@dgA~Vp_Cjr@za@|KdEfAvMfDpUdGfHhBn`@tHbZlDdd@vAzb@sApa@qDj^iId[qJxZcOpm@}g@xyAekAdZ_N|^{JlWeErW{Ah[Ej[rBrb@xIx^bPr[dPrXlWpOxTjB~C|MrQfP`VjgCnxDza@no@f~BtmD`W|_@fnB|bDrOnY`GzIfXje@vO~TziAbkBpiBltCfGzJzFfOxCzIfD`LtE|OlFhU`AfGv@zGn@bHh@jJRrKGpXoBvZcAbH_BlLcCzJ{D|LoI|SezAtjCcb@`t@{JzP{HfMZzGOnBiAfF{@bDy@dDs@pCcBfIuAlJy@`K[nJGtHG~KYnEw@xFsArFkBjG{BjFyD`DiDtCwNfHoVvLgR|HgJdIgFdHeEhG{@dBoCnFq@rAuKvR{CzFwAhD_MhTqJtP_ApBqC|EeFhI}J|OcD~EoDpFkBtBcF~EaA`A{BtBwJbJoGfGmJdIgOjM"
+        },
+        {
+          "participantId": "07ca61b0-fdf4-400f-b75a-8a9d15087315",
+          "name": "2",
+          "profile": "driving",
+          "duration": 1338.8,
+          "distance": 14968.086,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@z@sLt@gFrEcTpFqYdIsX`HqSdSoc@zQ}XfYeb@zYa_@bPsTb{@clAvNePlMeNfO_P~B{F~]ue@`kAwyA`FcJrCyHnA}Ed@qCf@{ChAoId@oHH{DJwGlB{Ul@eM`@}LjD{jAHi`@A_T]}]So[SiOSkWu@yfAo@qe@Q{GGuG?mAO}OIgKCsEkBcuBAoASc[EgNYuSGuE[q^OmOkGiIwW}UwDqD{DwCkKiIaSqO}FoEgD_CwPeMeKqImD}CmCwBeFeEwImG}NcL}UsQeBuAuGwFkGeFiEqDaJkCuAa@uHeBgMuA}@EoBKoGfGmJdIgOjM"
+        }
+      ],
+      "rank": 1,
+      "rankingMode": "fairest",
+      "badge": "Fastest",
+      "explanation": "Everyone stays under 23 min.",
+      "voteCount": 0,
+      "category": "food and beverage::cafe",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T08:11:01.448Z"
+    },
+    {
+      "roomId": "ca136e5a-0664-43b8-9851-4eb73289803f",
+      "poiId": "IT.1B3AR1RO9SE5L",
+      "name": "Cafe Gyoen Matcha Bar",
+      "lat": 1.2817161816817562,
+      "lng": 103.8456606872692,
+      "address": "87 Club Street, Singapore",
+      "fairnessScore": 1272.49,
+      "maxTravelTime": 1496,
+      "minTravelTime": 1484.2,
+      "totalTravelTime": 2980.2,
+      "averageTravelTime": 1490.1,
+      "spread": 11.799999999999955,
+      "perUserTravelTimes": [
+        {
+          "participantId": "d1e0ec52-cd47-43a4-9a6d-bd142ed4c6a6",
+          "name": "1",
+          "profile": "driving",
+          "duration": 1496,
+          "distance": 18104.795,
+          "geometry": "_hxpAspqgeETaAXu@lBmDxBsC~FsFn@o@nEeDrCgCzBqBrD_DxDbFpFrGtIlLdLbOrDnEzAjB|ClEqEnDq@j@iJvHcEzGoF|IOVyFxMiCrN{@vRQnUsAjj@iBpIaDbIcE~GwKfJ_U`QoBdDG|ClA`FjUfZrDpNpPbT|hC~`D|~@diAn[lb@fZvb@tDnGdCrFfClH|BxItBvKpAzJt@`KZbGZlMDlSgAfm@sA|[oIlxCkCrdAwBvy@oBrv@yB`x@e@tb@GpN\\jZ|@|i@hBha@fDl`@bDb[rBbRfCvRvBvNtCnPnEjUdMrj@jB~HjDjMpDhLhDlKjt@nrBnF|Nbv@jtBrFjOv_AnhCpGfQxZhz@~[j~@tc@`lAd[ny@x\\x|@bHdPtSpd@xi@hlAfP`]fI|TnFnQjDzM`CjMhMzp@nDjQvk@tsC`Plx@pPxmAnHti@zCrW~BzRjPrwA~TjsB~XraChMzfAvDn^fVziB|o@`nEjHx~@lBh[nB~[x@~s@JpH@x@@|AHxGH~StBlb@f@pFr@dGxClPjYzbA`T|r@nLr`@lP|i@|Vdy@`Mpb@pD|B\\b@rAxEtAtEnAlEnH~UrDhRtA~Lt@hP{ArmAWvYb@bId@jJjBnJrIdP`J`KnLhHfRvDl\\rCft@tGpb@rDxa@fC`VfAnCBxd@@x[JrgBmL~d@yDlfDye@~zAq[r]eHzJsC`wF_`B`y@{Gfy@KriAxLbsC`o@dgA~Vp_Cjr@za@|KdEfAvMfDpUdGfHhBn`@tHbZlDdd@vAzb@sApa@qDj^iId[qJxZcOpm@}g@xyAekAdZ_N|^{JlWeErW{Ah[Ej[rBrb@xIx^bPr[dPrXlWpOxTjB~C|MrQfP`VjgCnxDza@no@f~BtmD`W|_@fnB|bDrOnY`GzIfXje@vO~TziAbkBpiBltCfGzJzFfOxCzIfD`LtE|OlFhU`AfGv@zGn@bHh@jJRrKGpXoBvZcAbH_BlLcCzJ{D|LoI|SezAtjCcb@`t@{JzP{HfMZzGOnBiAfF{@bDy@dDs@pCcBfIuAlJy@`K[nJGtHG~KYnEw@xFsArFkBjG{BjFyD`DiDtCwNfHoVvLgR|HgJdIgFdHeEhG{@dBoCnFq@rAuKvR{CzFwAhD_MhTqJtP_ApBqC|EeFhI}J|OcD~EoDpFkBtBcF~EaA`A{BtBwJbJoGfGmJdIsYnVaFvE{Cl@yAhAy`@~Y_MtIoRfNaAbDuCvBuU`OqCrBaChBeFxDu@l@g@`@}@eAy@aAaCcDiCkDoD_GeFiI?}@gAeBsDyGk@cAa@e@oIaK}FuEmLoHsI`F{WdNiEtBgBr@_MiH"
+        },
+        {
+          "participantId": "07ca61b0-fdf4-400f-b75a-8a9d15087315",
+          "name": "2",
+          "profile": "driving",
+          "duration": 1484.2,
+          "distance": 15476.302,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@z@sLt@gFrEcTpFqYdIsX`HqSdSoc@zQ}XfYeb@zYa_@bPsTb{@clAvNePlMeNfO_P~B{F~]ue@`kAwyA`FcJrCyHnA}Ed@qCf@{ChAoId@oHH{DJwGlB{Ul@eM`@}LjD{jAHi`@A_T]}]So[SiOSkWu@yfAo@qe@Q{GGuG?mAO}OIgKCsEkBcuBAoASc[EgNYuS{Q}BcZaCs@GeJ]iCEoC@_CR_Cb@kDz@mAXcBVsBPwCFuOK}@AwPqAiMkAkPaBo@IcKcA}AOcFi@cKgAeKiAyKeAq@Icb@iEqPwAmHi@uTqAkD_@mDc@aC[uCs@ySiFiLeCkD]wDMsF?_SN}MDqN}@{Jy@k\\sEkDs@i@}A@cBr@uBv@gAhAaAlE}DtSuOzEkEl@i@aCcDiCkDoD_GeFiI?}@gAeBsDyGk@cAa@e@oIaK}FuEmLoHsI`F{WdNiEtBgBr@_MiH"
+        }
+      ],
+      "rank": 2,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "Everyone stays under 25 min.",
+      "voteCount": 0,
+      "category": "food and beverage",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T08:11:01.951Z"
+    },
+    {
+      "roomId": "ca136e5a-0664-43b8-9851-4eb73289803f",
+      "poiId": "IT.3HXPPPX4JXUCM",
+      "name": "Caffe Fernet - Collyer Quay",
+      "lat": 1.282637933,
+      "lng": 103.8536574,
+      "address": "70 Collyer Quay, Singapore, 049323",
+      "fairnessScore": 1308.2,
+      "maxTravelTime": 1538,
+      "minTravelTime": 1526,
+      "totalTravelTime": 3064,
+      "averageTravelTime": 1532,
+      "spread": 12,
+      "perUserTravelTimes": [
+        {
+          "participantId": "d1e0ec52-cd47-43a4-9a6d-bd142ed4c6a6",
+          "name": "1",
+          "profile": "driving",
+          "duration": 1526,
+          "distance": 16443.473,
+          "geometry": "_hxpAspqgeETaAXu@lBmDxBsC~FsFn@o@nEeDrCgCzBqBrD_DxDbFpFrGtIlLdLbOrDnEzAjB|ClEqEnDq@j@iJvHcEzGoF|IOVyFxMiCrN{@vRQnUsAjj@iBpIaDbIcE~GwKfJ_U`QoBdDG|ClA`FjUfZrDpNpPbT|hC~`D|~@diAn[lb@fZvb@tDnGdCrFfClH|BxItBvKpAzJt@`KZbGZlMDlSgAfm@sA|[oIlxCkCrdAwBvy@oBrv@yB`x@e@tb@GpN\\jZ|@|i@hBha@fDl`@bDb[rBbRfCvRvBvNtCnPnEjUdMrj@jB~HjDjMpDhLhDlKjt@nrBnF|Nbv@jtBrFjOv_AnhCpGfQxZhz@~[j~@tc@`lAd[ny@x\\x|@bHdPtSpd@xi@hlAfP`]fI|TnFnQjDzM`CjMhMzp@nDjQvk@tsC`Plx@pPxmAnHti@zCrW~BzRjPrwA~TjsB~XraChMzfAvDn^fVziB|o@`nEjHx~@lBh[nB~[x@~s@JpH@x@@|AHxGH~StBlb@f@pFr@dGxClPjYzbA`T|r@nLr`@lP|i@|Vdy@`Mpb@pD|B\\b@rAxEtAtEnAlEnH~UrDhRtA~Lt@hP{ArmAWvYb@bId@jJjBnJrIdP`J`KnLhHfRvDl\\rCft@tGpb@rDxa@fC`VfAnCBxd@@x[JrgBmL~d@yDlfDye@~zAq[r]eHzJsC`wF_`B`y@{Gfy@KriAxLbsC`o@xa@vD`It@xCXbjCti@`\\vLzDvBjDfBlD|B~DdDpDnDlLtO~HbQ~AjEv@bEd@hEP|EA|DY`FeAtDuA|DwAlCsB|C{CjCqLdGmVhJaF|B}DdCuCzCeClD{A`DsBhFiA|Ey@hHo@zLc@`JCbIm@rEs@rBnCv}AxBpSbRf}ApC~Sv\\|{C~Gxb@xKlg@pIfj@|DjShE~NjGrNtI|NrMrNnKpKhFzH|BjG`BhIj@nISdFq@bGcB~FyE~JgH|GwIhE{MjDsTrE{Y~GeFdBwUbD{XzDeX|J}HfD{MdKuW|QqSvQoI|J_\\|]o_@z_@]XiNjMuSxRqBfBzC~CdOrOfG|GfNtMb@`@rUzSbSfNdOfKhAr@tErCdCi@~A]|Ag@|BcC`DmEtLkQpOaUlBeDfEqHzC~Aja@hVhL|G~UxKbGlClUnLpg@lXvDhBxs@h\\pN`HbMpFpU~JzCrA`NjDxElA|R|EzNnDvB^fIvAhCb@`CXnANjTjCz@JhCZdMzAbD`@fSzBzeArLteArLfCTbCPhEb@vC\\VDt@H`JfAfHbBbNpCrJzChDfAvn@nTzIhCrQjFxUtGz@VjFbAfNjD|I`CnF|AnJzE~G`EnBa@dBa@pCeArDsBbAwEjGkV"
+        },
+        {
+          "participantId": "07ca61b0-fdf4-400f-b75a-8a9d15087315",
+          "name": "2",
+          "profile": "driving",
+          "duration": 1538,
+          "distance": 16862.155,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@|A{C~@}CpAgGxFaSbFaQnHqSlQs`@`Vah@`GoQhEgXr@ySqAqTcCuP}DeO{HoPsOiS{JgJmLkIuMaI}TgNcSyMcS_PmRyPyIcIgL{LcK{LwRwTkSq[}E_JsLqToNkYaMk[sOui@qBmHkXqgAoNwh@aFmQiH}RuGsNqJ_KoIwIeJkHqSmMyTuLkWkMaPsJoJcHsIyH}HoJaFaIkCwDyDyFoVmd@iLgUmPuZ_GcLsCmFiJsN{FsIsCaEmFsGuDgE_GcDwc@uUsLuEqRkE}IcCeRuNsUaSuB{D_AsECsE^wDjFeQdKmUjDiGrEeI`Vy`@~Xk^jIsJpGcLzDuEzPsSjGsJh@_A|NyVbBwCrEqHhDnC|CbClPrMfGvEf@`@bEjDlJ\\\\AxDu@xCcAvHiPpQ_`@fBkEtSmd@p@yA|AeDvFwLtDaIlEcJ`I}PfHkO`BiDf@eAlIiPlKsTfJyLjFsGtCaDvI_HvUcL|J{EhZkQrA{ApC}C~AsU{@wFPaROcKFiFNyBnAcIY}BsAeFy@mBo@cAe@y@o@mA_CqEuEkEwFkE{FyCmKkDgVsFkOmE_FwA}MkDmFsAmh@{RgPsFsK{CqHuBEsCA]~A{DrJzChDfAvn@nTzIhCrQjFxUtGz@VjFbAfNjD|I`CnF|AnJzE~G`EnBa@dBa@pCeArDsBbAwEjGkV"
+        }
+      ],
+      "rank": 3,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "Travel times are well balanced across the group.",
+      "voteCount": 0,
+      "category": "food and beverage",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T08:11:01.601Z"
+    },
+    {
+      "roomId": "17952178-c98e-4207-bd8c-09d6ec7a0324",
+      "poiId": "IT.1OCJO46WKX0EG",
+      "name": "Cafe De Muse - Shaw House",
+      "lat": 1.305538701,
+      "lng": 103.8311459,
+      "address": "350 Orchard Road, #01-K5/K6, Singapore, 238868",
+      "fairnessScore": 2056.24,
+      "maxTravelTime": 1953,
+      "minTravelTime": 1645.7,
+      "totalTravelTime": 7293.9,
+      "averageTravelTime": 1823.475,
+      "spread": 307.29999999999995,
+      "perUserTravelTimes": [
+        {
+          "participantId": "37ffbb71-50b9-4c62-a644-818d8cb99960",
+          "name": "User 1",
+          "profile": "driving",
+          "duration": 1645.7,
+          "distance": 14276.581,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBjTko@zIqT`GaOzk@_y@rEmM[{Iq@qCgEaLoD_EiPyQmSc^wPm^aDaK{BmHuHgVc\\udAuFmQyHwUkDcIeFwK{F_JmHyJwHuGcIyHeCmCiVkM}KwE}JwDoCeA}H_C}SsDub@qFu\\uEgYoEuW}EyFeByFeBaIaCaVkIa[cL_SyIkLkD_RkEuS_DoO{BmG}@a[}Dql@sIqq@gKa_@_DykAaOoGu@s_@kEiVaByJ_@g[XefAqC}DYgKgAgASyDk@yB_@iEy@ky@_SuPcE}x@qT{RmFm]_FoIgB_B]cBe@yF_BwF_B{UwGs`@yKwLmCsPeDcAQqDq@iRaDdD{Qp@uDdEkW`BuGvD}SpDmShDqQnEkS~Kog@nDiM|JuZpGmVnEyP|EeSnBcIjEkL|AcDlFsJfO{XdB{CbLiTtOqZ|AaDrB_EdXeh@vCqFnIoQ`MwVnDgIbRs^jY{g@vDyLnAkJ^cLWyKuBmVw@oJs@mIqBmY[uEa@sEa@qH_@gG]cJ\\gTxAuc@f@mJnAsR?wN_@oJWoDeCcPs@_F{BgRoAuPCuC[aMBmBDiBB{DDgGV_J`AsK^uEd@yEn@sC~@mDxAgGfEaNzKmXx@wBbGoNbFuKxD_KvEiMh@yA`Qgb@fFaKrBwHvBuFdBoFx@}EHgDIqIOwNgAkKGqGQeGq@qc@o@cIaCoOiDsJaEgLqLeUwBkE}LoVuB{Cm@}@kYeb@kLgQqB}Cc@w@_@q@o@kAKQ}EeJwAyDmAiFa@qGBi@HeBNiBZsBl@sBxC}HhHkRv@qBfE}KVu@bAkCtB{EvLcX`Red@Xo@JUzCiHr@cBb@aA`CyF`F}KtCyGvDkJrBmFjDiIZm@"
+        },
+        {
+          "participantId": "d3f65171-2b08-49ff-839a-f45114446168",
+          "name": "User 2",
+          "profile": "driving",
+          "duration": 1874.1,
+          "distance": 16371.237,
+          "geometry": "_hxpAspqgeETaAXu@lBmDxBsC~FsFn@o@nEeDrCgCzBqBrD_DxDbFpFrGtIlLdLbOrDnEzAjB|ClEqEnDq@j@iJvHcEzGoF|IOVyFxMiCrN{@vRQnUsAjj@iBpIaDbIcE~GwKfJ_U`QoBdDG|ClA`FjUfZrDpNpPbT|hC~`D|~@diAn[lb@fZvb@tDnGdCrFfClH|BxItBvKpAzJt@`KZbGZlMDlSgAfm@sA|[oIlxCkCrdAwBvy@oBrv@yB`x@e@tb@GpN\\jZ|@|i@hBha@fDl`@bDb[rBbRfCvRvBvNtCnPnEjUdMrj@jB~HjDjMpDhLhDlKjt@nrBnF|Nbv@jtBrFjOv_AnhCpGfQxZhz@~[j~@tc@`lAd[ny@x\\x|@bHdPtSpd@xi@hlAfP`]fI|TnFnQjDzM`CjMhMzp@nDjQvk@tsC`Plx@pPxmAnHti@zCrW~BzRjPrwA~TjsB~XraChMzfAvDn^fVziB|o@`nEjHx~@lBh[nB~[x@~s@JpH@x@@|AHxGH~StBlb@f@pFr@dGxClPjYzbA`T|r@nLr`@lP|i@|Vdy@`Mpb@fDvMnA~Gn@vEn@hFpAtMzAtMfB|Yo@ng@e@dl@g@nKaBvNeC|Nk@vBmBnFwCtHcKlWoClFkC|EkD~FkIxLgC|C}KzMcOjMoaBjiAqCrCwClC_eBflAyk@l_@sO`Kg_@hYcMnLoEnE{JxJ_FlFgIpJUpCQv@gA`C{AbCkAnBkNbV{MfUsKdTgF|KgCvFiBhEaBtEaBlFyAzEiAbEeDrNgChMsD|QiDnQcOfz@_C~LeCdLsCvLkDdN]~BUbCQpBKlDGzCEdECbGbAnBhAhC`P|\\lI|QjCjL~AvJvBzLbDnK`EdHnEbEbFbDte@bVx_@bTpP`L~YtWfLpLhg@rj@rNvO`g@|i@`[|\\dHxHfHzHnNbOjGhGlQzMhiA|~@bBtA~FrFlThTjUjWrS|Wxo@reA~JnPnJbQ`Xlv@~Uxn@~^naA`Ld\\bHrS~l@nfBn@xApDvI`KpSbS~[`QbTtMnNlVlUly@vg@vCtA~@^zEnBbCbAfDrAfCdAfBt@`DjArCa@r@@r@JnB^vZ~G~Dv@xFl@jk@`G~NrAtT`Ch`@dFzKzAbPtKfGdEnCnB~HzDoC~LgD`QsCdIeF|N}IvVwMn_@K\\qC|GmDvIyAvDmDxJqCpNoBxH}ErSiJbZ}@rCsCjI_EbL_FfN}CvIcCvG_DtIkDrJ_@dA}BzIl@tBTzCHdEm@bD{@bCaA`BbAvD`ArEtD`HjRj\\|I~OdS~\\`FtItR|\\`AdBpLhSnRf\\~D|GzAdD~NlZpGrM|NtYtEdGnCjJpHxFzHbF|GdDnD`CdDdDbAbCz@vDFzBIrDo@vDgAxDiC`JoBhDgB|CmJvVyF|QjC^`@DvEp@rHbAlMhBpWpDvNpBrIpAnEnAn@RlHjCh@RxB|@dKhDpC`ArJfDvJhDvAf@lBr@cFrNqEbMsIxSaApBkD~G}AnDoA|CcGfOo@jBc@pAeA`@e@rAMh@sAzENlCf@`CVzAVz@r@tAbBlBpDpBtFbBdA^vI~C`KnDvAn@rBSzAf@`LdEnBr@^N^L`DlAtB{EvLcX`Red@Xo@JUzCiHr@cBb@aA`CyF`F}KtCyGvDkJrBmFjDiIZm@"
+        },
+        {
+          "participantId": "73ab134c-0247-4af2-95a3-0b789fefdc7c",
+          "name": "User 3",
+          "profile": "driving",
+          "duration": 1821.1,
+          "distance": 19660.562,
+          "geometry": "k`awAosq|dEgBcAgDgB_CcBw@m@kDsCkB}BaBiCgC}DcAoDq@oDOsDEeDXuDr@mDdAaDdBwCnDcExBmBhD_CdEmBrE_BzD_@nK|@t`@AnTMlRg@bFwA~DcCbDcAd]Ohj@iAxBEbDAD|CBtB\\vYJ`SDfXBzBvExh@dA|D|AtD~IzH\\LjDz@bEPnJLxZY`r@e@nXEvy@b@tKjAfv@HpzAs@nSy@da@}A|m@aFxd@}Eje@sI~MkCzIsBtaA}TjdDe{@jz@oPpe@iIju@sHjfAgFzaAeCpWSv[UbpA_AnZU~jCi@t^Yf`CeAlkAmCr_@Wx_@s@rKUrNs@ph@wBxu@}@tbAsH`m@kGfMsAvmAwPzeBq[rq@gLj^sGvYqExZmEz~@aK~j@sFpUiBd_AwGhv@mCtZaAxsCiBn_@Jjz@s@lb@g@p{@sCp}@_EnsAsI`_@}CfZsC|Jo@jeCiObd@sCprAqJ~s@{C|PgAdx@aFjy@uF~o@_G~bAiKh{@{K~}@cQrq@{Lh[{F|x@yNpCe@fTeEbYuElE{@fLgB`v@_ObtBw_@zRkDz_BiYjxA{Wzz@oMrF_Aj}@mK~qAeMf_@wCxs@cGfg@_Edc@wDz\\{Dzp@}K`l@wLdYyJbQwFzl@cR|a@gPrh@yVd]{QnXsPjLoItR}MvX}SnUaTl\\w[dCoChLgMnMiN~MoQlLwOhLeP~\\qj@~c@ow@nJuPvXkf@dFaKpHwNpJiPdLwSnO}R~BeCjPeQjNmMhH}FxCqGbDeDj_@c[`GmEls@if@nMyNhJmQbEoOxAiRNq[b@{q@x@cWtI{l@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@j@mDh@oAl@y@tAeClF}I|JoWbB_JtAwKd@kDh@yLW}OcAwUuA_KiBsJuB}D_EgDoD_AyE[sETiDjA{BnAwApA}AlDm@dEJzGlBfLrDxIdF`HdGdFbIxDpJjC~c@~It_@vExOZ|ZcApHu@tFk@nf@sApE?lJbEfVdKvCjA`A^dIfDt[fMfWhGjIpBv@P~Ct@hJ|BvIxBfCn@nPhErLnD`Fr@|Jp@jEHbJVpKHdCDzBGvEOjBA|Ge@|Ko@nAIpIm@l_@gBtJ_AfLs@xJ}@rRgBlK_BxNuArMgAfUkAbJm@~BYn`@mD|CW|]aDjQeAxOaAz@Y~FcBlLuDnLkHdKaJfI}JrGaLtH}KzIyLzF_N|EoPjAkGnDiRjFu]vDsVpAwHxAqAv@_A|@eA~@uArCgCj@t@xBvCzHxLnEdM~C~K|B|Sp@fFf@`Hb@jCTdB~AxHnAfCtAvBn@bAdHxFfIdEdJzAx@BR?rUbArRZ~CZnD\\rb@`KhBr@td@xRfDxAhIzBbJ|CfEvA@@jFlBfBgDpDeD`L}NjAeAtCmClFkGjG{FjJmF~K}Ct@GhAEbACpA?hG^`NeC~EqA|EqAxC}HhHkRv@qBfE}KVu@bAkCtB{EvLcX`Red@Xo@JUzCiHr@cBb@aA`CyF`F}KtCyGvDkJrBmFjDiIZm@"
+        },
+        {
+          "participantId": "3ec69610-a0ec-4159-9a60-18485cd2a6ec",
+          "name": "User 4",
+          "profile": "driving",
+          "duration": 1953,
+          "distance": 20422.649,
+          "geometry": "{{xtA{ysdeEoB~DGb@TZrU|LvAFhAUfCkLtB{NXqBbEcXfBwI~BeF`I{SBkJeBsJgLeVgAeE_@uElAsHdB_G`AwBvAmCbCzA`JlF`FhDtEhCtTvHxBn@rNzD`KhDze@jTzCfBrCxAdDbB`c@tTxMjHdTxL~HHjBE|AUfCk@rFgCvOoa@vFoMdFwM~R{h@lBwFbD}InG_RpIqQp@wAhDkGlIfC`Bl@lL|Dnj@rSxXzJjVxIlTbJlIr@lHdA~CCvC_@pEaBjCeA`Bq@bCwAnGcH`IaJ~QuU`YoZrc@yd@|IoEzT{Wv]k`@~K_LnaA_`Apj@}d@bq@aj@dMeKdByAjQ}Nbh@ub@fh@mc@nfAo|@~w@oo@lQsN`k@}d@xo@}h@v^iZjSyPjD{GrH{GdHwGnJwJ`EmFhCsEfBoHl@cGAyGa@_H_@qE{AyIgBoFgAcEgAyF}@mGMoFh@eIrAkFdBiE~AaClC{CtDyCfEaBtH_BlLMdUnBjGxApHbBfKjEpDhBdD|BhChBvDxCtE|EhOxN`ZrYrI`H~FxDlOlIxNbHff@bY~GfGhQfR`M~Oj~A|wC|Ulc@jPjZb^th@hD`EfNtOnOvM`VvOlUjMzSxIbCz@|i@tRzg@`MlrArZju@jL`bBra@pbCjf@pHfBfk@vNdQdEbRbEj\\rJp^~HtStGlElA|l@hUrk@vV|mAxh@~iApg@zbBtu@pHlDrJdE`i@|Sb{Ajs@lyEhgBjh@vRhuEzpAln@tL~i@pF~h@kDrVeDffA_OdX{EpUmEhb@gEd_@c@l\\dBzZpD~WnCf`@~H~d@|Jp~@zV~b@|Qd~@vd@~b@fY`f@v_@tf@bg@n`@pn@vc@ph@va@hq@f{BjyErErJlGzLtF~LfQj`@v`@|_A|]bw@tGhL|Vxh@rUl^vg@tUzc@pIlhAc@fnBdHxt@`EnoBz[n`@vZtZnb@vhAr_E~J~KbMrMxO|HvVlFbUfFrPbIdKzIdKtP`EpPn@~]_Az\\w@da@k@nLoAhLiAhGiB|GmBpFsDvKaAjBeFtKeE|G}@dBQXc@v@_B`BeDhAkD~FkIxLgC|C}KzMcOjMoaBjiAqCrCwClC_eBflAyk@l_@sO`Kg_@hYcMnLoEnE{JxJ_FlFgIpJUpCQv@gA`C{AbCkAnBkNbV{MfUsKdTgF|KgCvFiBhEaBtEaBlFyAzEiAbEeDrNgChMsD|QiDnQcOfz@_C~LeCdLsCvLkDdN]~BUbCQpBKlDGzCEdECbGbAnBhAhC`P|\\lI|QjCjL~AvJvBzLbDnK`EdHnEbEbFbDte@bVx_@bTpP`L~YtWfLpLhg@rj@rNvO`g@|i@`[|\\dHxHfHzHnNbOjGhGlQzMhiA|~@bBtA~FrFlThTjUjWrS|Wxo@reA~JnPnJbQ`Xlv@~Uxn@~^naA`Ld\\bHrS~l@nfBn@xApDvI`KpSbS~[`QbTtMnNlVlUly@vg@vCtA~@^zEnBbCbAfDrAfCdAfBt@`DjArCa@r@@r@JnB^vZ~G~Dv@xFl@jk@`G~NrAtT`Ch`@dFzKzAbPtKfGdEnCnB~HzDoC~LgD`QsCdIeF|N}IvVwMn_@K\\qC|GmDvIyAvDmDxJqCpNoBxH}ErSiJbZ}@rCsCjI_EbL_FfN}CvIcCvG_DtIkDrJ_@dA}BzIl@tBTzCHdEm@bD{@bCaA`BbAvD`ArEtD`HjRj\\|I~OdS~\\`FtItR|\\`AdBpLhSnRf\\~D|GzAdD~NlZpGrM|NtYtEdGnCjJpHxFzHbF|GdDnD`CdDdDbAbCz@vDFzBIrDo@vDgAxDiC`JoBhDgB|CmJvVyF|QjC^`@DvEp@rHbAlMhBpWpDvNpBrIpAnEnAn@RlHjCh@RxB|@dKhDpC`ArJfDvJhDvAf@lBr@cFrNqEbMsIxSaApBkD~G}AnDoA|CcGfOo@jBc@pAeA`@e@rAMh@sAzENlCf@`CVzAVz@r@tAbBlBpDpBtFbBdA^vI~C`KnDvAn@rBSzAf@`LdEnBr@^N^L`DlAtB{EvLcX`Red@Xo@JUzCiHr@cBb@aA`CyF`F}KtCyGvDkJrBmFjDiIZm@"
+        }
+      ],
+      "rank": 1,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "Travel times are well balanced across the group.",
+      "voteCount": 0,
+      "category": "food and beverage::restaurant",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T08:26:36.345Z"
+    },
+    {
+      "roomId": "17952178-c98e-4207-bd8c-09d6ec7a0324",
+      "poiId": "IT.2R1LB6JJYE7O2",
+      "name": "Cafe Melba - Goodman Arts Centre",
+      "lat": 1.302718523778907,
+      "lng": 103.88538091398078,
+      "address": "90 Goodman Road, #01-56, Goodman Arts Centre, Singapore, 439053",
+      "fairnessScore": 2083.78,
+      "maxTravelTime": 1999.4,
+      "minTravelTime": 1329.6,
+      "totalTravelTime": 6666.400000000001,
+      "averageTravelTime": 1666.6000000000001,
+      "spread": 669.8000000000002,
+      "perUserTravelTimes": [
+        {
+          "participantId": "37ffbb71-50b9-4c62-a644-818d8cb99960",
+          "name": "User 1",
+          "profile": "driving",
+          "duration": 1881.6,
+          "distance": 20615.826,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqCiEeCgMoH_H{BkSkFiMsCgEaAaDq@cCa@cEs@uFiA}I_DqNuHeEcDaGuEoPmS_@u@sC{FyCcLiCmLY}FKkBm@}SEgP_DeNoBsDcBwAqDoAuPZyPPqPR}OVg_@RaTk@cDWaE[{SoCwSmBmKaByJiCeQiFgJaEee@}S}n@{YcG_D|AeD|CsGdHcO|l@mkA`r@cpAl[{g@xd@uaAj`@yy@rFuLx_@_z@bh@kiAvHwNtp@suAv_@ix@tYam@p}AahD`Rmb@nDqJ|T_e@dC}FnB{EjB_HhKgb@|Gaa@hEu\\vA{Yn@ac@yAsv@oGsi@uJwh@oKo]qT}s@{HqY_s@wlBkRsb@kn@_hAw_@en@aF}HsFqIqE}IyRyXkQyRsIoIkJsHoVsOmXkKov@qVgrAad@wKuDmIeDaJcEcH_D{GuDyG}D_GiEaDcCoDiDmGcGqD_EiDsEsDsG}DkI{DeJyD}KuDyMiH{]eHc^cLaj@_h@{rBa]ykAmb@cqAeGsSsKiW_FmIyFmHmI_J_GuF_F{DcFoDgXwMqNiFokAgc@{LuEoQ{HwJiFkJ{GyMmNoDqE}CwE{DeHiEkIqD{IaJaWgJab@sEuSuDeZoCa]_B}k@Tyf@tEcn@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@dHcIzCyDvDeGdB{DxDuItFsOjBcL\\yD`@yLd@qOcJo}@aHgu@s@sRlAwPlDeQ~DqOvUqm@bTsj@dCkI|AuPY_Ti@eP_AeKaAeIm@gDs@oDcBoHgMql@wF_Z{EmTuM_k@{XyoAsC{OuFm[yKe]iNy\\oSe`@{d@k}@qLqV_KoXuGcYqDuO_CeMkDg\\mBk_@wBqi@a@iq@KmG_@}OoBa|@MmGIwHy@{m@`@of@^iV|EacBHyE`@oSnEenA~Cyz@TmJPeH`AyZh@o[v@ePlKezBf@eLx@aROwWC{BaAcIkCgKaAuE{YmvAySabA{FkUmAeEuCoK}EmQgCaLcDeSeBuR[oNf@aUt@qIlBsStCaRvDmOlGkSrEkMnDyJ`JyU`KyXrJiXpHuXdFyUbC}KpAaGpAuHjCySbFeWvL{f@xOse@vRma@xYug@xa@{l@hc@}d@~NwNhA}@bJeHlP{Mz@wCVk@^i@|AsBjIsItTuNfi@w_@`SwNzGmCly@yl@vEgD``@}Xx[gUrNmJdPuGbMoD|X{Ebe@eHt_@kExOaBdO}@dUu@rJBxJD~WNhOz@xIhAzHdAzBVjN~Ahh@rEbFNhTr@rL?tYOhMjAr]_Ch_@}BvSkAr\\qAfEWzHoAdj@aJpe@qIjDg@jEw@~GqAhe@aJrm@cJbWaD`LqAdXmEvDuAnF_D|D_E|CgExAkClAoCtB{GLq@pIs\\rAeFdBeG~@mEhGsY`Mgf@|YscApH{UjBcG~Reo@nCaIjDuKlNyQ`AoAvRmXdAcBpEqHpBqCv[ec@l`@ib@vIkJbP{O`AcAtDwDfFcEzR_L~LcFdHgBzGeBfNgBlO_AtVw@lHiCxByDlA{Cd@sA^gALiGk@ySGqDoCDoBBgPRPvJqAB"
+        },
+        {
+          "participantId": "d3f65171-2b08-49ff-839a-f45114446168",
+          "name": "User 2",
+          "profile": "driving",
+          "duration": 1329.6,
+          "distance": 10511.99,
+          "geometry": "_hxpAspqgeETaAXu@lBmDxBsC~FsFn@o@nEeDrCgCzBqBrD_DxDbFpFrGtIlLdLbOrDnEzAjB|ClEqEnDq@j@iJvHcEzGoF|IOVyFxMiCrN{@vRQnUsAjj@iBpIaDbIcE~GwKfJ_U`QoBdDG|ClA`FjUfZrDpNpPbT|hC~`D|~@diAn[lb@fZvb@tDnGdCrFfClH|BxItBvKpAzJt@`KZbGZlMDlSgAfm@sA|[oIlxCkCrdAwBvy@oBrv@yB`x@e@tb@GpN\\jZ|@|i@hBha@fDl`@bDb[rBbRfCvRvBvNtCnPnEjUdMrj@jB~HjDjMpDhLhDlKjt@nrBnF|Nbv@jtBrFjOv_AnhCpGfQxZhz@~[j~@tc@`lAd[ny@x\\x|@bHdPtSpd@xi@hlAfP`]fI|TnFnQjDzM`CjMhMzp@nDjQvk@tsC`Plx@pPxmAnHti@zCrW~BzRjPrwA~TjsB~XraChMzfAfDrEpFv^vEfVvFj[tEvVlEzT~B|Jn@dC|AzFfHfUlN|OxHjG~@v@bChAvATjLDxNiBzXiDjR}B|QgC|MwBtU{CzB[tFq@fBWdWyDhBWla@iGfVgClLgA`G]lR}Bl`@oGhTyCnAQ|Gw@bOgBvBG|LBvKPzm@jGvBR|Gn@`I|@fKjAlIx@jMnAf@FzOjA~Mx@~KfBvAb@dSdItB~@z]|OnHzC`J~GpC|HhC~MjJfu@hHhl@dBzNBTbCbRbAhH`ArIZdCdAtJzHnu@|ApNpAtL|CfVl@zFjFpa@jCiAjTuFdPeEpQeE|XiGlCk@`H{AtKqA`b@oGvC]he@gFtCY|D_@^~D|@nJlA`Mp@lD|@|CdKzXjA~CjE`L~KpYj@~AdEpLfVjn@`AjCvDtJnFlMnAzCnE|J|@nC|EfBdFvA`JrB~K@~Fy@hFaCl`@ib@vIkJbP{O`AcAtDwDfFcEzR_L~LcFdHgBzGeBfNgBlO_AtVw@lHiCxByDlA{Cd@sA^gALiGk@ySGqDoCDoBBgPRPvJqAB"
+        },
+        {
+          "participantId": "73ab134c-0247-4af2-95a3-0b789fefdc7c",
+          "name": "User 3",
+          "profile": "driving",
+          "duration": 1999.4,
+          "distance": 24891.318,
+          "geometry": "k`awAosq|dEgBcAgDgB_CcBw@m@kDsCkB}BaBiCgC}DcAoDq@oDOsDEeDXuDr@mDdAaDdBwCnDcExBmBhD_CdEmBrE_BzD_@nK|@t`@AnTMlRg@bFwA~DcCbDcAd]Ohj@iAxBEbDAD|CBtB\\vYJ`SDfXBzBvExh@dA|D|AtD~IzH\\LjDz@bEPnJLxZY`r@e@nXEvy@b@tKjAfv@HpzAs@nSy@da@}A|m@aFxd@}Eje@sI~MkCzIsBtaA}TjdDe{@jz@oPpe@iIju@sHjfAgFzaAeCpWSv[UbpA_AnZU~jCi@t^Yf`CeAlkAmCr_@Wx_@s@rKUrNs@ph@wBxu@}@tbAsH`m@kGfMsAvmAwPzeBq[rq@gLj^sGvYqExZmEz~@aK~j@sFpUiBd_AwGhv@mCtZaAxsCiBn_@Jjz@s@lb@g@p{@sCp}@_EnsAsI`_@}CfZsC|Jo@jeCiObd@sCprAqJ~s@{C|PgAdx@aFjy@uF~o@_G~bAiKh{@{K~}@cQrq@{Lh[{F|x@yNpCe@fTeEbYuElE{@fLgB`v@_ObtBw_@zRkDz_BiYjxA{Wzz@oMrF_Aj}@mK~qAeMf_@wCxs@cGfg@_Edc@wDz\\{Dzp@}K`l@wLdYyJbQwFzl@cR|a@gPrh@yVd]{QnXsPjLoItR}MvX}SnUaTl\\w[dCoChLgMnMiN~MoQlLwOhLeP~\\qj@~c@ow@nJuPvXkf@dFaKpHwNpJiPdLwSnO}R~BeCjPeQjNmMhH}FxCqGbDeDj_@c[`GmEls@if@nMyNhJmQbEoOxAiRNq[b@{q@x@cWtI{l@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@dHcIzCyDvDeGdB{DxDuItFsOjBcL\\yD`@yLd@qOcJo}@aHgu@s@sRlAwPlDeQ~DqOvUqm@bTsj@dCkI|AuPY_Ti@eP_AeKaAeIm@gDs@oDcBoHgMql@wF_Z{EmTuM_k@{XyoAsC{OuFm[yKe]iNy\\oSe`@{d@k}@qLqV_KoXuGcYqDuO_CeMkDg\\mBk_@wBqi@a@iq@KmG_@}OoBa|@MmGIwHy@{m@`@of@^iV|EacBHyE`@oSnEenA~Cyz@TmJPeH`AyZh@o[v@ePlKezBf@eLx@aROwWC{BaAcIkCgKaAuE{YmvAySabA{FkUmAeEuCoK}EmQgCaLcDeSeBuR[oNf@aUt@qIlBsStCaRvDmOlGkSrEkMnDyJ`JyU`KyXrJiXpHuXdFyUbC}KpAaGpAuHjCySbFeWvL{f@xOse@vRma@xYug@xa@{l@hc@}d@~NwNhA}@bJeHlP{Mz@wCVk@^i@|AsBjIsItTuNfi@w_@`SwNzGmCly@yl@vEgD``@}Xx[gUrNmJdPuGbMoD|X{Ebe@eHt_@kExOaBdO}@dUu@rJBxJD~WNhOz@xIhAzHdAzBVjN~Ahh@rEbFNhTr@rL?tYOhMjAr]_Ch_@}BvSkAr\\qAfEWzHoAdj@aJpe@qIjDg@jEw@~GqAhe@aJrm@cJbWaD`LqAdXmEvDuAnF_D|D_E|CgExAkClAoCtB{GLq@pIs\\rAeFdBeG~@mEhGsY`Mgf@|YscApH{UjBcG~Reo@nCaIjDuKlNyQ`AoAvRmXdAcBpEqHpBqCv[ec@l`@ib@vIkJbP{O`AcAtDwDfFcEzR_L~LcFdHgBzGeBfNgBlO_AtVw@lHiCxByDlA{Cd@sA^gALiGk@ySGqDoCDoBBgPRPvJqAB"
+        },
+        {
+          "participantId": "3ec69610-a0ec-4159-9a60-18485cd2a6ec",
+          "name": "User 4",
+          "profile": "driving",
+          "duration": 1455.8,
+          "distance": 15617.862,
+          "geometry": "{{xtA{ysdeEoB~DGb@TZrU|LvAFhAUfCkLtB{NXqBbEcXfBwI~BeF`I{SBkJeBsJgLeVgAeE_@uElAsHdB_G`AwBvAmCbCzA`JlF`FhDtEhCtTvHxBn@rNzD`KhDze@jTzCfBrCxAdDbB`c@tTxMjHdTxL~HHjBE|AUfCk@rFgCvOoa@vFoMdFwM~R{h@lBwFbD}InG_RpIqQp@wAhDkGlIfC`Bl@lL|Dnj@rSxXzJjVxIlTbJlIr@lHdA~CCvC_@pEaBjCeA`Bq@bCwAnGcH`IaJ~QuU`YoZrc@yd@|IoEzT{Wv]k`@~K_LnaA_`Apj@}d@bq@aj@dMeKdByAjQ}Nbh@ub@fh@mc@nfAo|@~w@oo@lQsN`k@}d@xo@}h@v^iZjSyPjD{GrH{GdHwGnJwJ`EmFhCsEfBoHl@cGAyGa@_H_@qE{AyIgBoFgAcEgAyF}@mGMoFh@eIrAkFdBiE~AaClC{CtDyCfEaBtH_BlLMdUnBjGxApHbBfKjEpDhBdD|BhChBvDxCtE|EhOxN`ZrYrI`H~FxDlOlIxNbHff@bY~GfGhQfR`M~Oj~A|wC|Ulc@jPjZb^th@hD`EfNtOnOvM`VvOlUjMzSxIbCz@|i@tRzg@`MlrArZju@jL`bBra@pbCjf@pHfBfk@vNdQdEbRbEj\\rJp^~HtStGlElA|l@hUrk@vV|mAxh@~iApg@zbBtu@pHlDrJdE`i@|Sb{Ajs@lyEhgBjh@vRhuEzpAln@tL~i@pF~h@kDrVeDffA_OdX{EpUmEhb@gEd_@c@l\\dBzZpD~WnCf`@~H~d@|Jp~@zV~b@|Qd~@vd@~b@fY`f@v_@tf@bg@n`@pn@vc@ph@va@hq@f{BjyErErJlGzLtF~LfQj`@v`@|_A|]bw@tGhL|Vxh@rUl^vg@tUzc@pIlhAc@fnBdHxt@`EnoBz[n`@vZtZnb@vhAr_E~U|r@rn@vgBv^jz@df@zq@j\\h[pXbLzf@fIz]hEdg@nE|UxBvLjAbTt@nLEb_@m@tIw@r]_Ch_@}BvSkAr\\qAfEWzHoAdj@aJpe@qIjDg@jEw@~GqAhe@aJrm@cJbWaD`LqAdXmEvDuAnF_D|D_E|CgExAkClAoCtB{GLq@pIs\\rAeFdBeG~@mEhGsY`Mgf@|YscApH{UjBcG~Reo@nCaIjDuKlNyQ`AoAvRmXdAcBpEqHpBqCv[ec@l`@ib@vIkJbP{O`AcAtDwDfFcEzR_L~LcFdHgBzGeBfNgBlO_AtVw@lHiCxByDlA{Cd@sA^gALiGk@ySGqDoCDoBBgPRPvJqAB"
+        }
+      ],
+      "rank": 2,
+      "rankingMode": "fairest",
+      "badge": "Fastest",
+      "explanation": "Fastest overall, but it slightly favors one side.",
+      "voteCount": 0,
+      "category": "food and beverage",
+      "businessType": "shopping mall/shops",
+      "computedAt": "2026-04-24T08:26:36.897Z"
+    },
+    {
+      "roomId": "17952178-c98e-4207-bd8c-09d6ec7a0324",
+      "poiId": "IT.3HXPPPX4JXUCM",
+      "name": "Caffe Fernet - Collyer Quay",
+      "lat": 1.282637933,
+      "lng": 103.8536574,
+      "address": "70 Collyer Quay, Singapore, 049323",
+      "fairnessScore": 2197.48,
+      "maxTravelTime": 2171.7,
+      "minTravelTime": 1551.9,
+      "totalTravelTime": 6957.699999999999,
+      "averageTravelTime": 1739.4249999999997,
+      "spread": 619.7999999999997,
+      "perUserTravelTimes": [
+        {
+          "participantId": "37ffbb71-50b9-4c62-a644-818d8cb99960",
+          "name": "User 1",
+          "profile": "driving",
+          "duration": 1594,
+          "distance": 16862.155,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@|A{C~@}CpAgGxFaSbFaQnHqSlQs`@`Vah@`GoQhEgXr@ySqAqTcCuP}DeO{HoPsOiS{JgJmLkIuMaI}TgNcSyMcS_PmRyPyIcIgL{LcK{LwRwTkSq[}E_JsLqToNkYaMk[sOui@qBmHkXqgAoNwh@aFmQiH}RuGsNqJ_KoIwIeJkHqSmMyTuLkWkMaPsJoJcHsIyH}HoJaFaIkCwDyDyFoVmd@iLgUmPuZ_GcLsCmFiJsN{FsIsCaEmFsGuDgE_GcDwc@uUsLuEqRkE}IcCeRuNsUaSuB{D_AsECsE^wDjFeQdKmUjDiGrEeI`Vy`@~Xk^jIsJpGcLzDuEzPsSjGsJh@_A|NyVbBwCrEqHhDnC|CbClPrMfGvEf@`@bEjDlJ\\\\AxDu@xCcAvHiPpQ_`@fBkEtSmd@p@yA|AeDvFwLtDaIlEcJ`I}PfHkO`BiDf@eAlIiPlKsTfJyLjFsGtCaDvI_HvUcL|J{EhZkQrA{ApC}C~AsU{@wFPaROcKFiFNyBnAcIY}BsAeFy@mBo@cAe@y@o@mA_CqEuEkEwFkE{FyCmKkDgVsFkOmE_FwA}MkDmFsAmh@{RgPsFsK{CqHuBEsCA]~A{DrJzChDfAvn@nTzIhCrQjFxUtGz@VjFbAfNjD|I`CnF|AnJzE~G`EnBa@dBa@pCeArDsBbAwEjGkV"
+        },
+        {
+          "participantId": "d3f65171-2b08-49ff-839a-f45114446168",
+          "name": "User 2",
+          "profile": "driving",
+          "duration": 1640.1,
+          "distance": 14346.208,
+          "geometry": "_hxpAspqgeETaAXu@lBmDxBsC~FsFn@o@nEeDrCgCzBqBrD_DxDbFpFrGtIlLdLbOrDnEzAjB|ClEqEnDq@j@iJvHcEzGoF|IOVyFxMiCrN{@vRQnUsAjj@iBpIaDbIcE~GwKfJ_U`QoBdDG|ClA`FjUfZrDpNpPbT|hC~`D|~@diAn[lb@fZvb@tDnGdCrFfClH|BxItBvKpAzJt@`KZbGZlMDlSgAfm@sA|[oIlxCkCrdAwBvy@oBrv@yB`x@e@tb@GpN\\jZ|@|i@hBha@fDl`@bDb[rBbRfCvRvBvNtCnPnEjUdMrj@jB~HjDjMpDhLhDlKjt@nrBnF|Nbv@jtBrFjOv_AnhCpGfQxZhz@~[j~@tc@`lAd[ny@x\\x|@bHdPtSpd@xi@hlAfP`]fI|TnFnQjDzM`CjMhMzp@nDjQvk@tsC`Plx@pPxmAnHti@zCrW~BzRjPrwA~TjsB~XraChMzfAfDrEpFv^vEfVvFj[tEvVlEzT~B|Jn@dC|AzFfHfUlN|OxHjG~@v@bChAvATjLDxNiBzXiDjR}B|QgC|MwBtU{CzB[tFq@fBWdWyDhBWla@iGfVgClLgA`G]lR}Bl`@oGhTyCnAQ|Gw@bOgBvBG|LBvKPzm@jGvBR|Gn@`I|@fKjAlIx@jMnAf@FzOjA~Mx@~KfBvAb@dSdItB~@z]|OnHzC`J~GpC|HhC~MjJfu@hHhl@dBzNBTbCbRbAhH`ArIZdCdAtJzHnu@|ApNpAtL|CfVl@zFjFpa@NjA`@hD`I~o@pI|q@~@|HpC~TdAnIbB`NlCrTL`ANpAxC|Uh@hEh@rEt@~FdF~Zz@fGnFnc@rG|h@`BnOnEp]v@|DvCtPfJhV`IdObKxMbFhDhIjFbLvG|WdRpCnBfFrC`NtG`DhBfOfJfExCpJhJtFhIbDzGrCzIl@lCx@bF`AdPx@hUtFloANbHfAfi@n@d\\zCzWbK`a@bFvMxMhZ~Up^rCbF~f@bz@`aC~iEzm@nfAvg@lv@nh@ht@vG`K~Yzc@r]|h@|@xApfA`bBtDjFdNpSzHtJ|L~MnKfLnJpJnRxQrSbR`LjKfKdJbNbLnHfGlEfD`JnGnNnJzC~Aja@hVhL|G~UxKbGlClUnLpg@lXvDhBxs@h\\pN`HbMpFpU~JzCrA`NjDxElA|R|EzNnDvB^fIvAhCb@`CXnANjTjCz@JhCZdMzAbD`@fSzBzeArLteArLfCTbCPhEb@vC\\VDt@H`JfAfHbBbNpCrJzChDfAvn@nTzIhCrQjFxUtGz@VjFbAfNjD|I`CnF|AnJzE~G`EnBa@dBa@pCeArDsBbAwEjGkV"
+        },
+        {
+          "participantId": "73ab134c-0247-4af2-95a3-0b789fefdc7c",
+          "name": "User 3",
+          "profile": "driving",
+          "duration": 2171.7,
+          "distance": 27911.377,
+          "geometry": "k`awAosq|dEgBcAgDgB_CcBw@m@kDsCkB}BaBiCgC}DcAoDq@oDOsDEeDXuDr@mDdAaDdBwCnDcExBmBhD_CdEmBrE_BzD_@nK|@t`@AnTMlRg@bFwA~DcCbDcAd]Ohj@iAxBEbDAD|CBtB\\vYJ`SDfXBzBvExh@dA|D|AtD~IzH\\LjDz@bEPnJLxZY`r@e@nXEvy@b@tKjAfv@HpzAs@nSy@da@}A|m@aFxd@}Eje@sI~MkCzIsBtaA}TjdDe{@jz@oPpe@iIju@sHjfAgFzaAeCpWSv[UbpA_AnZU~jCi@t^Yf`CeAlkAmCr_@Wx_@s@rKUrNs@ph@wBxu@}@tbAsH`m@kGfMsAvmAwPzeBq[rq@gLj^sGvYqExZmEz~@aK~j@sFpUiBd_AwGhv@mCtZaAxsCiBn_@Jjz@s@lb@g@p{@sCp}@_EnsAsI`_@}CfZsC|Jo@jeCiObd@sCprAqJ~s@{C|PgAdx@aFjy@uF~o@_G~bAiKh{@{K~}@cQrq@{Lh[{F|x@yNpCe@fTeEbYuElE{@fLgB`v@_ObtBw_@zRkDz_BiYjxA{Wzz@oMrF_Aj}@mK~qAeMf_@wCxs@cGfg@_Edc@wDz\\{Dzp@}K`l@wLdYyJbQwFzl@cR|a@gPrh@yVd]{QnXsPjLoItR}MvX}SnUaTl\\w[dCoChLgMnMiN~MoQlLwOhLeP~\\qj@~c@ow@nJuPvXkf@dFaKpHwNpJiPdLwSnO}R~BeCjPeQjNmMhH}FxCqGbDeDj_@c[`GmEls@if@nMyNhJmQbEoOxAiRNq[b@{q@x@cWtI{l@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@dHcIzCyDvDeGdB{DxDuItFsOjBcL\\yD`@yLd@qOcJo}@aHgu@s@sRlAwPlDeQ~DqOvUqm@bTsj@dCkI|AuPY_Ti@eP_AeKaAeIm@gDs@oDcBoHgMql@wF_Z{EmTuM_k@{XyoAsC{OuFm[yKe]iNy\\oSe`@{d@k}@qLqV_KoXuGcYqDuO_CeMkDg\\mBk_@wBqi@a@iq@KmG_@}OoBa|@MmGIwHy@{m@`@of@^iV|EacBHyE`@oSnEenA~Cyz@TmJPeH`AyZh@o[v@ePlKezBf@eLx@aROwWC{BaAcIkCgKaAuE{YmvAySabA{FkUmAeEuCoK}EmQgCaLcDeSeBuR[oNf@aUt@qIlBsStCaRvDmOlGkSrEkMnDyJ`JyU`KyXrJiXpHuXdFyUbC}KpAaGpAuHjCySbFeWvL{f@xOse@vRma@xYug@xa@{l@hc@}d@~NwNhA}@bJeHlP{Mz@wCVk@^i@|AsBjIsItTuNfi@w_@`SwNzGmCly@yl@vEgD``@}Xx[gUrNmJdPuGbMoD|X{Ebe@eHt_@kExOaBdO}@dUu@rJBxJD~WNhOz@xIhAzHdAzBVjN~Ahh@rEbFNhTr@rL?tYOhMjAr]_Ch_@}BvSkAr\\qAfEWzHoAdj@aJpe@qIjDg@jEw@~GqAhe@aJrm@cJbWaD`LqAdXmEjBPjCMz@UbE}ApCoArHwGfH{KfHyJlGwElImGlHoDtEe@pGBlF`@xJdDjGbCtF~CpDhDdEtGlDpQp@fUf@fc@fAhg@c@d_@cA|u@n@d\\zCzWbK`a@bFvMxMhZ~Up^rCbF~f@bz@`aC~iEzm@nfAvg@lv@nh@ht@vG`K~Yzc@r]|h@|@xApfA`bBtDjFdNpSzHtJ|L~MnKfLnJpJnRxQrSbR`LjKfKdJbNbLnHfGlEfD`JnGnNnJzC~Aja@hVhL|G~UxKbGlClUnLpg@lXvDhBxs@h\\pN`HbMpFpU~JzCrA`NjDxElA|R|EzNnDvB^fIvAhCb@`CXnANjTjCz@JhCZdMzAbD`@fSzBzeArLteArLfCTbCPhEb@vC\\VDt@H`JfAfHbBbNpCrJzChDfAvn@nTzIhCrQjFxUtGz@VjFbAfNjD|I`CnF|AnJzE~G`EnBa@dBa@pCeArDsBbAwEjGkV"
+        },
+        {
+          "participantId": "3ec69610-a0ec-4159-9a60-18485cd2a6ec",
+          "name": "User 4",
+          "profile": "driving",
+          "duration": 1551.9,
+          "distance": 18645.2,
+          "geometry": "{{xtA{ysdeEoB~DGb@TZrU|LvAFhAUfCkLtB{NXqBbEcXfBwI~BeF`I{SBkJeBsJgLeVgAeE_@uElAsHdB_G`AwBvAmCbCzA`JlF`FhDtEhCtTvHxBn@rNzD`KhDze@jTzCfBrCxAdDbB`c@tTxMjHdTxL~HHjBE|AUfCk@rFgCvOoa@vFoMdFwM~R{h@lBwFbD}InG_RpIqQp@wAhDkGlIfC`Bl@lL|Dnj@rSxXzJjVxIlTbJlIr@lHdA~CCvC_@pEaBjCeA`Bq@bCwAnGcH`IaJ~QuU`YoZrc@yd@|IoEzT{Wv]k`@~K_LnaA_`Apj@}d@bq@aj@dMeKdByAjQ}Nbh@ub@fh@mc@nfAo|@~w@oo@lQsN`k@}d@xo@}h@v^iZjSyPjD{GrH{GdHwGnJwJ`EmFhCsEfBoHl@cGAyGa@_H_@qE{AyIgBoFgAcEgAyF}@mGMoFh@eIrAkFdBiE~AaClC{CtDyCfEaBtH_BlLMdUnBjGxApHbBfKjEpDhBdD|BhChBvDxCtE|EhOxN`ZrYrI`H~FxDlOlIxNbHff@bY~GfGhQfR`M~Oj~A|wC|Ulc@jPjZb^th@hD`EfNtOnOvM`VvOlUjMzSxIbCz@|i@tRzg@`MlrArZju@jL`bBra@pbCjf@pHfBfk@vNdQdEbRbEj\\rJp^~HtStGlElA|l@hUrk@vV|mAxh@~iApg@zbBtu@pHlDrJdE`i@|Sb{Ajs@lyEhgBjh@vRhuEzpAln@tL~i@pF~h@kDrVeDffA_OdX{EpUmEhb@gEd_@c@l\\dBzZpD~WnCf`@~H~d@|Jp~@zV~b@|Qd~@vd@~b@fY`f@v_@tf@bg@n`@pn@vc@ph@va@hq@f{BjyErErJlGzLtF~LfQj`@v`@|_A|]bw@tGhL|Vxh@rUl^vg@tUzc@pIlhAc@fnBdHxt@`EnoBz[n`@vZtZnb@vhAr_E~U|r@rn@vgBv^jz@df@zq@j\\h[pXbLnXtI~u@|MzcAdGbeAaE~oA{IjvAgHpGs@p_@eFhe@aK~^wF~j@qIzy@eLbMcCxH}CjGmFtFyH~QcZlImGlHoDtEe@pGBlF`@xJdDjGbCtF~CpDhDdEtGlDpQp@fUf@fc@fAhg@c@d_@cA|u@n@d\\zCzWbK`a@bFvMxMhZ~Up^rCbF~f@bz@`aC~iEzm@nfAvg@lv@nh@ht@vG`K~Yzc@r]|h@|@xApfA`bBtDjFdNpSzHtJ|L~MnKfLnJpJnRxQrSbR`LjKfKdJbNbLnHfGlEfD`JnGnNnJzC~Aja@hVhL|G~UxKbGlClUnLpg@lXvDhBxs@h\\pN`HbMpFpU~JzCrA`NjDxElA|R|EzNnDvB^fIvAhCb@`CXnANjTjCz@JhCZdMzAbD`@fSzBzeArLteArLfCTbCPhEb@vC\\VDt@H`JfAfHbBbNpCrJzChDfAvn@nTzIhCrQjFxUtGz@VjFbAfNjD|I`CnF|AnJzE~G`EnBa@dBa@pCeArDsBbAwEjGkV"
+        }
+      ],
+      "rank": 3,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "Solid compromise with a group total of 116 min.",
+      "voteCount": 0,
+      "category": "food and beverage",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T08:26:36.074Z"
+    },
+    {
+      "roomId": "f4f9f036-65ae-48e1-a286-a180fcbb0e67",
+      "poiId": "IT.18W1PGNLHKIJ6",
+      "name": "Cafe O Bugis",
+      "lat": 1.299880283,
+      "lng": 103.85483,
+      "address": "229 Victoria Street, Singapore, 188023",
+      "fairnessScore": 2056.32,
+      "maxTravelTime": 1968.9,
+      "minTravelTime": 1376,
+      "totalTravelTime": 6717.4,
+      "averageTravelTime": 1679.35,
+      "spread": 592.9000000000001,
+      "perUserTravelTimes": [
+        {
+          "participantId": "300ed5a3-6587-4ccb-9253-37ade5826380",
+          "name": "User 1",
+          "profile": "driving",
+          "duration": 1734.5,
+          "distance": 16886.96,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@|A{C~@}CpAgGxFaSbFaQnHqSlQs`@`Vah@`GoQhEgXr@ySqAqTcCuP}DeO{HoPsOiS{JgJmLkIuMaI}TgNcSyMcS_PmRyPyIcIgL{LcK{LwRwTkSq[}E_JsLqToNkYaMk[sOui@qBmHkXqgAoNwh@aFmQiH}RuGsNqJ_KoIwIeJkHqSmMyTuLkWkMaPsJoJcHsIyH}HoJaFaIkCwDyDyFoVmd@iLgUmPuZ_GcLsCmFiJsN{FsIsCaEmFsGuDgE_GcDwc@uUsLuEqRkE}IcCeRuNsUaSuB{D_AsECsE^wDjFeQdKmUjDiGrEeI`Vy`@~Xk^jIsJpGcLzDuEzPsSjGsJh@_A|NyVbBwCcXaUkKuIeFcE}GoFqLuJmi@ma@iHuFc^yVoI{G}BwBsDoCoI{G}FaEwHyDqQiI_QkHyNwGqOeG_L{EmJeDkJiCwB_AeHyBuDmAoLwD{Ak@oS{H}UsKyH}CaGcCqD{AsFyBuS}IsEcCuDoC}_@k[cQ}OsB{Bg@e@yDkDgIwHwFwEsBkBeDcDuB_BgFoEmIkH_IeH_V}RsDqCo@e@mXiSmEiD{FgEyIqGkA}@{PgMsPaMeCiB{BvCo_@`f@aCzCcEeDsA_AcOyKs@i@oMsJcFwD}@q@sCwBaAs@uDsC_HgF{BcB{@m@^a@|FiGxCaDZ_@nGyGxCaDlCqClBsB"
+        },
+        {
+          "participantId": "b371a517-5ed8-4ad5-b9ec-56a471674b91",
+          "name": "User 2",
+          "profile": "driving",
+          "duration": 1376,
+          "distance": 19302.159,
+          "geometry": "asarA{k_jeEz@kC|_@kmA|A{DhBwBvByAfBa@rHt@nn@jSbDnA|CtB`EbFzC~EvAjFvBfJ|AbI|Gh[~CnDhEnExDlB~ExBh~@nZhDb@rBNnDTjBRzBh@nZpJvg@fP`xAnb@p}@|Z`QdGnqAxd@`IpC|W|IvWxJpVzHjP|EfeAx[jKjDjU`HjXzGve@rOjS|Gfg@rOpKhDvZvJ`Y~In\\lKtFfBpwAhc@htCn~@d^fLhXbLpl@rRhuCv`Ax{@|ZrVtJtPlH~TvK|]|Rda@|Vhk@~]~gEfeCxYjQjSvKryBrpAvzBxvAzyDj|B|vBrvAxUjOza@b\\zc@|b@h_@rh@fUpc@bO~_@vRvl@`bAfaDdJj[bf@n~A|yAt|EruAhrExd@lzAnIx[p@`C`BzEfFvUxFj[tFzl@fAl[nAl}A~Ad}AdAzdA|@vq@rAx[rCtXnE`\\`Qz`Ajl@b}ChEdUxT|jAfIlf@nAbHf@bCr@tCjQx~@rLpk@|DpSnA|FzjAfsGtEjVzWhjAfBnFlBlFpEfL~]hy@b\\bu@|J~YfIlZrb@``C~DxTvMjt@nKfl@~j@~vCpC~M|C~OdC`OnCnMtZlaBxn@~hDhZ|zAdGzZhAxEzjApsGvc@tzBx_@|bBno@~aC`c@l`Bls@xgCpF|RjJt\\`]|mAlRtr@dD|LrHnYvIn]jDzPbD|ShA~I`AzJj@|FfDld@T~_@Dhu@kCxqAUlOk@xd@KrY[xKuD|sBi@vf@b@va@@h@@pAp@tn@fDrwCjGrsDDhd@n@nb@pBxgABlIPfKh@hX?vd@lDjpDf@fJnCv}AxBpSbRf}ApC~Sv\\|{C~Gxb@xKlg@pIfj@|DjShE~NjGrNtI|NrMrNnKpKhFzH|BjG`BhIj@nISdFq@bGcB~FyE~JgH|GwIhE{MjDsTrE{Y~GeFdBwUbD{XzDeX|J}HfD{MdKuW|QqSvQoI|J_\\|]o_@z_@]XiNjMuSxRqBfByEhD}BjBgl@de@g@^}@r@iRpOiLpLuDzDyBrBye@bd@wCpCuD~DsDtDgShOcCrAoIbMeAlCUlADx@DpB`BtAxHpGlEnD`DrCdBpA`DjCdF`ElE`DtEhD|HnF^a@|FiGxCaDZ_@nGyGxCaDlCqClBsB"
+        },
+        {
+          "participantId": "167f9c9e-f722-4394-8989-011f9c335375",
+          "name": "User 3",
+          "profile": "driving",
+          "duration": 1968.9,
+          "distance": 22033.503,
+          "geometry": "k`awAosq|dEgBcAgDgB_CcBw@m@kDsCkB}BaBiCgC}DcAoDq@oDOsDEeDXuDr@mDdAaDdBwCnDcExBmBhD_CdEmBrE_BzD_@nK|@t`@AnTMlRg@bFwA~DcCbDcAd]Ohj@iAxBEbDAD|CBtB\\vYJ`SDfXBzBvExh@dA|D|AtD~IzH\\LjDz@bEPnJLxZY`r@e@nXEvy@b@tKjAfv@HpzAs@nSy@da@}A|m@aFxd@}Eje@sI~MkCzIsBtaA}TjdDe{@jz@oPpe@iIju@sHjfAgFzaAeCpWSv[UbpA_AnZU~jCi@t^Yf`CeAlkAmCr_@Wx_@s@rKUrNs@ph@wBxu@}@tbAsH`m@kGfMsAvmAwPzeBq[rq@gLj^sGvYqExZmEz~@aK~j@sFpUiBd_AwGhv@mCtZaAxsCiBn_@Jjz@s@lb@g@p{@sCp}@_EnsAsI`_@}CfZsC|Jo@jeCiObd@sCprAqJ~s@{C|PgAdx@aFjy@uF~o@_G~bAiKh{@{K~}@cQrq@{Lh[{F|x@yNpCe@fTeEbYuElE{@fLgB`v@_ObtBw_@zRkDz_BiYjxA{Wzz@oMrF_Aj}@mK~qAeMf_@wCxs@cGfg@_Edc@wDz\\{Dzp@}K`l@wLdYyJbQwFzl@cR|a@gPrh@yVd]{QnXsPjLoItR}MvX}SnUaTl\\w[dCoChLgMnMiN~MoQlLwOhLeP~\\qj@~c@ow@nJuPvXkf@dFaKpHwNpJiPdLwSnO}R~BeCjPeQjNmMhH}FxCqGbDeDj_@c[`GmEls@if@nMyNhJmQbEoOxAiRNq[b@{q@x@cWtI{l@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@j@mDh@oAl@y@tAeClF}I|JoWbB_JtAwKd@kDh@yLW}OcAwUuA_KiBsJuB}D_EgDoD_AyE[sETiDjA{BnAwApA}AlDm@dEJzGlBfLrDxIdF`HdGdFbIxDpJjC~c@~It_@vExOZ|ZcApHu@tFk@nf@sApE?lJbEfVdKvCjA`A^dIfDt[fMfWhGjIpBv@P~Ct@hJ|BvIxBfCn@nPhEzFn@|DDbDc@rBiA|AkBtRy|@bEkRxKaf@zOik@`AqE`AmFxHm_@lBaIbC{KdIa]nAmFfEuQdKic@|G}ZXsAvWmrAxLmn@`B{HpKmh@zDmPnFwL`FoIjAeBdBgC|RcSnBeBrBeB`MiKfNmLzSwP~RyPhL{JbCqBnJaIde@eb@jZ_UvRyOnPaMlUoNdUoMhT_ObF{EzGcIzH_LhJuT`a@apAdHcVpB}Gb@wC`KyYnNk_@tJmW`BkEdG}R~@_EhI_^dFuQd@oBvAiKbAmGtB}K`DmLjDyJdFqJjDqEtF}FlDuCrQmN|MwJdCuBfKuHnHqFxCeCjNmJ|DiCzWyUj]m_@fBoBfLeLvTsS`OaPnU{[dAyApCuD|e@gn@b^yd@vCiErC_EhAoBrMwTrCmFxHmQfI{RtH_XxGmV|DaMlDmHfTwh@tB}EnAsCr@uAjBoE`E_Ld@iCXuHKkJ`BwUz@sDx@mDjB{EfBqDjHwLf@s@|DeFvCyDb@m@zJsNl@oBPwBp@eEd@sA~@yBvAeBv@eAp@{@zEaFdCgCxF_EdHrFhIzGpNbMbHvF`b@h^nC~BuD~DsDtDgShOcCrAoIbMeAlCUlADx@DpB`BtAxHpGlEnD`DrCdBpA`DjCdF`ElE`DtEhD|HnF^a@|FiGxCaDZ_@nGyGxCaDlCqClBsB"
+        },
+        {
+          "participantId": "497e4cac-5312-4afa-b674-5337345704e5",
+          "name": "User 4",
+          "profile": "driving",
+          "duration": 1638,
+          "distance": 19110.668,
+          "geometry": "{{xtA{ysdeEoB~DGb@TZrU|LvAFhAUfCkLtB{NXqBbEcXfBwI~BeF`I{SBkJeBsJgLeVgAeE_@uElAsHdB_G`AwBvAmCbCzA`JlF`FhDtEhCtTvHxBn@rNzD`KhDze@jTzCfBrCxAdDbB`c@tTxMjHdTxL~HHjBE|AUfCk@rFgCvOoa@vFoMdFwM~R{h@lBwFbD}InG_RpIqQp@wAhDkGlIfC`Bl@lL|Dnj@rSxXzJjVxIlTbJlIr@lHdA~CCvC_@pEaBjCeA`Bq@bCwAnGcH`IaJ~QuU`YoZrc@yd@|IoEzT{Wv]k`@~K_LnaA_`Apj@}d@bq@aj@dMeKdByAjQ}Nbh@ub@fh@mc@nfAo|@~w@oo@lQsN`k@}d@xo@}h@v^iZjSyPjD{GrH{GdHwGnJwJ`EmFhCsEfBoHl@cGAyGa@_H_@qE{AyIgBoFgAcEgAyF}@mGMoFh@eIrAkFdBiE~AaClC{CtDyCfEaBtH_BlLMdUnBjGxApHbBfKjEpDhBdD|BhChBvDxCtE|EhOxN`ZrYrI`H~FxDlOlIxNbHff@bY~GfGhQfR`M~Oj~A|wC|Ulc@jPjZb^th@hD`EfNtOnOvM`VvOlUjMzSxIbCz@|i@tRzg@`MlrArZju@jL`bBra@pbCjf@pHfBfk@vNdQdEbRbEj\\rJp^~HtStGlElA|l@hUrk@vV|mAxh@~iApg@zbBtu@pHlDrJdE`i@|Sb{Ajs@lyEhgBjh@vRhuEzpAln@tL~i@pF~h@kDrVeDffA_OdX{EpUmEhb@gEd_@c@l\\dBzZpD~WnCf`@~H~d@|Jp~@zV~b@|Qd~@vd@~b@fY`f@v_@tf@bg@n`@pn@vc@ph@va@hq@f{BjyErErJlGzLtF~LfQj`@v`@|_A|]bw@tGhL|Vxh@rUl^vg@tUzc@pIlhAc@fnBdHxt@`EnoBz[n`@vZtZnb@vhAr_E~U|r@rn@vgBv^jz@df@zq@j\\h[pXbLnXtI~u@|MzcAdGbeAaE~oA{IjvAgHpGs@p_@eFpbB}VteAcRtTuGpZkHtToGtMwDzJsC`wF_`B`y@{Gfy@KriAxLbsC`o@xa@vD`It@xCXbjCti@`\\vLzDvBjDfBlD|B~DdDpDnDlLtO~HbQ~AjEv@bEd@hEP|EA|DY`FeAtDuA|DwAlCsB|C{CjCqLdGmVhJaF|B}DdCuCzCeClD{A`DsBhFiA|Ey@hHo@zLc@`JCbIm@rEs@rBnCv}AxBpSbRf}ApC~Sv\\|{C~Gxb@xKlg@pIfj@|DjShE~NjGrNtI|NrMrNnKpKhFzH|BjG`BhIj@nISdFq@bGcB~FyE~JgH|GwIhE{MjDsTrE{Y~GeFdBwUbD{XzDeX|J}HfD{MdKuW|QqSvQoI|J_\\|]o_@z_@]XiNjMuSxRqBfByEhD}BjBgl@de@g@^}@r@iRpOiLpLuDzDyBrBye@bd@wCpCuD~DsDtDgShOcCrAoIbMeAlCUlADx@DpB`BtAxHpGlEnD`DrCdBpA`DjCdF`ElE`DtEhD|HnF^a@|FiGxCaDZ_@nGyGxCaDlCqClBsB"
+        }
+      ],
+      "rank": 1,
+      "rankingMode": "fairest",
+      "badge": "Fastest",
+      "explanation": "Fastest overall, but it slightly favors one side.",
+      "voteCount": 0,
+      "category": "food and beverage",
+      "businessType": "commercial building",
+      "computedAt": "2026-04-24T08:32:51.660Z"
+    },
+    {
+      "roomId": "f4f9f036-65ae-48e1-a286-a180fcbb0e67",
+      "poiId": "IT.3HXPPPX4JXUCM",
+      "name": "Caffe Fernet - Collyer Quay",
+      "lat": 1.282637933,
+      "lng": 103.8536574,
+      "address": "70 Collyer Quay, Singapore, 049323",
+      "fairnessScore": 2092.22,
+      "maxTravelTime": 2065.5,
+      "minTravelTime": 1530.6,
+      "totalTravelTime": 6732.7,
+      "averageTravelTime": 1683.175,
+      "spread": 534.9000000000001,
+      "perUserTravelTimes": [
+        {
+          "participantId": "300ed5a3-6587-4ccb-9253-37ade5826380",
+          "name": "User 1",
+          "profile": "driving",
+          "duration": 1573.4,
+          "distance": 16862.155,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@|A{C~@}CpAgGxFaSbFaQnHqSlQs`@`Vah@`GoQhEgXr@ySqAqTcCuP}DeO{HoPsOiS{JgJmLkIuMaI}TgNcSyMcS_PmRyPyIcIgL{LcK{LwRwTkSq[}E_JsLqToNkYaMk[sOui@qBmHkXqgAoNwh@aFmQiH}RuGsNqJ_KoIwIeJkHqSmMyTuLkWkMaPsJoJcHsIyH}HoJaFaIkCwDyDyFoVmd@iLgUmPuZ_GcLsCmFiJsN{FsIsCaEmFsGuDgE_GcDwc@uUsLuEqRkE}IcCeRuNsUaSuB{D_AsECsE^wDjFeQdKmUjDiGrEeI`Vy`@~Xk^jIsJpGcLzDuEzPsSjGsJh@_A|NyVbBwCrEqHhDnC|CbClPrMfGvEf@`@bEjDlJ\\\\AxDu@xCcAvHiPpQ_`@fBkEtSmd@p@yA|AeDvFwLtDaIlEcJ`I}PfHkO`BiDf@eAlIiPlKsTfJyLjFsGtCaDvI_HvUcL|J{EhZkQrA{ApC}C~AsU{@wFPaROcKFiFNyBnAcIY}BsAeFy@mBo@cAe@y@o@mA_CqEuEkEwFkE{FyCmKkDgVsFkOmE_FwA}MkDmFsAmh@{RgPsFsK{CqHuBEsCA]~A{DrJzChDfAvn@nTzIhCrQjFxUtGz@VjFbAfNjD|I`CnF|AnJzE~G`EnBa@dBa@pCeArDsBbAwEjGkV"
+        },
+        {
+          "participantId": "b371a517-5ed8-4ad5-b9ec-56a471674b91",
+          "name": "User 2",
+          "profile": "driving",
+          "duration": 1530.6,
+          "distance": 20629.234,
+          "geometry": "asarA{k_jeEz@kC|_@kmA|A{DhBwBvByAfBa@rHt@nn@jSbDnA|CtB`EbFzC~EvAjFvBfJ|AbI|Gh[~CnDhEnExDlB~ExBh~@nZhDb@rBNnDTjBRzBh@nZpJvg@fP`xAnb@p}@|Z`QdGnqAxd@`IpC|W|IvWxJpVzHjP|EfeAx[jKjDjU`HjXzGve@rOjS|Gfg@rOpKhDvZvJ`Y~In\\lKtFfBpwAhc@htCn~@d^fLhXbLpl@rRhuCv`Ax{@|ZrVtJtPlH~TvK|]|Rda@|Vhk@~]~gEfeCxYjQjSvKryBrpAvzBxvAzyDj|B|vBrvAxUjOza@b\\zc@|b@h_@rh@fUpc@bO~_@vRvl@`bAfaDdJj[bf@n~A|yAt|EruAhrExd@lzAnIx[p@`C`BzEfFvUxFj[tFzl@fAl[nAl}A~Ad}AdAzdA|@vq@rAx[rCtXnE`\\`Qz`Ajl@b}ChEdUxT|jAfIlf@nAbHf@bCr@tCjQx~@rLpk@|DpSnA|FzjAfsGtEjVzWhjAfBnFlBlFpEfL~]hy@b\\bu@|J~YfIlZrb@``C~DxTvMjt@nKfl@~j@~vCpC~M|C~OdC`OnCnMtZlaBxn@~hDhZ|zAdGzZhAxEzjApsGvc@tzBx_@|bBno@~aC`c@l`Bls@xgCpF|RjJt\\`]|mAlRtr@dD|LrHnYvIn]jDzPbD|ShA~I`AzJj@|FfDld@T~_@Dhu@kCxqAUlOk@xd@KrY[xKuD|sBi@vf@b@va@@h@@pAp@tn@fDrwCjGrsDDhd@n@nb@pBxgABlIPfKh@hX?vd@lDjpDf@fJnCv}AxBpSbRf}ApC~Sv\\|{C~Gxb@xKlg@pIfj@|DjShE~NjGrNtI|NrMrNnKpKhFzH|BjG`BhIj@nISdFq@bGcB~FyE~JgH|GwIhE{MjDsTrE{Y~GeFdBwUbD{XzDeX|J}HfD{MdKuW|QqSvQoI|J_\\|]o_@z_@]XiNjMuSxRqBfBzC~CdOrOfG|GfNtMb@`@rUzSbSfNdOfKhAr@tErCdCi@~A]|Ag@|BcC`DmEtLkQpOaUlBeDfEqHzC~Aja@hVhL|G~UxKbGlClUnLpg@lXvDhBxs@h\\pN`HbMpFpU~JzCrA`NjDxElA|R|EzNnDvB^fIvAhCb@`CXnANjTjCz@JhCZdMzAbD`@fSzBzeArLteArLfCTbCPhEb@vC\\VDt@H`JfAfHbBbNpCrJzChDfAvn@nTzIhCrQjFxUtGz@VjFbAfNjD|I`CnF|AnJzE~G`EnBa@dBa@pCeArDsBbAwEjGkV"
+        },
+        {
+          "participantId": "167f9c9e-f722-4394-8989-011f9c335375",
+          "name": "User 3",
+          "profile": "driving",
+          "duration": 2065.5,
+          "distance": 27911.377,
+          "geometry": "k`awAosq|dEgBcAgDgB_CcBw@m@kDsCkB}BaBiCgC}DcAoDq@oDOsDEeDXuDr@mDdAaDdBwCnDcExBmBhD_CdEmBrE_BzD_@nK|@t`@AnTMlRg@bFwA~DcCbDcAd]Ohj@iAxBEbDAD|CBtB\\vYJ`SDfXBzBvExh@dA|D|AtD~IzH\\LjDz@bEPnJLxZY`r@e@nXEvy@b@tKjAfv@HpzAs@nSy@da@}A|m@aFxd@}Eje@sI~MkCzIsBtaA}TjdDe{@jz@oPpe@iIju@sHjfAgFzaAeCpWSv[UbpA_AnZU~jCi@t^Yf`CeAlkAmCr_@Wx_@s@rKUrNs@ph@wBxu@}@tbAsH`m@kGfMsAvmAwPzeBq[rq@gLj^sGvYqExZmEz~@aK~j@sFpUiBd_AwGhv@mCtZaAxsCiBn_@Jjz@s@lb@g@p{@sCp}@_EnsAsI`_@}CfZsC|Jo@jeCiObd@sCprAqJ~s@{C|PgAdx@aFjy@uF~o@_G~bAiKh{@{K~}@cQrq@{Lh[{F|x@yNpCe@fTeEbYuElE{@fLgB`v@_ObtBw_@zRkDz_BiYjxA{Wzz@oMrF_Aj}@mK~qAeMf_@wCxs@cGfg@_Edc@wDz\\{Dzp@}K`l@wLdYyJbQwFzl@cR|a@gPrh@yVd]{QnXsPjLoItR}MvX}SnUaTl\\w[dCoChLgMnMiN~MoQlLwOhLeP~\\qj@~c@ow@nJuPvXkf@dFaKpHwNpJiPdLwSnO}R~BeCjPeQjNmMhH}FxCqGbDeDj_@c[`GmEls@if@nMyNhJmQbEoOxAiRNq[b@{q@x@cWtI{l@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@dHcIzCyDvDeGdB{DxDuItFsOjBcL\\yD`@yLd@qOcJo}@aHgu@s@sRlAwPlDeQ~DqOvUqm@bTsj@dCkI|AuPY_Ti@eP_AeKaAeIm@gDs@oDcBoHgMql@wF_Z{EmTuM_k@{XyoAsC{OuFm[yKe]iNy\\oSe`@{d@k}@qLqV_KoXuGcYqDuO_CeMkDg\\mBk_@wBqi@a@iq@KmG_@}OoBa|@MmGIwHy@{m@`@of@^iV|EacBHyE`@oSnEenA~Cyz@TmJPeH`AyZh@o[v@ePlKezBf@eLx@aROwWC{BaAcIkCgKaAuE{YmvAySabA{FkUmAeEuCoK}EmQgCaLcDeSeBuR[oNf@aUt@qIlBsStCaRvDmOlGkSrEkMnDyJ`JyU`KyXrJiXpHuXdFyUbC}KpAaGpAuHjCySbFeWvL{f@xOse@vRma@xYug@xa@{l@hc@}d@~NwNhA}@bJeHlP{Mz@wCVk@^i@|AsBjIsItTuNfi@w_@`SwNzGmCly@yl@vEgD``@}Xx[gUrNmJdPuGbMoD|X{Ebe@eHt_@kExOaBdO}@dUu@rJBxJD~WNhOz@xIhAzHdAzBVjN~Ahh@rEbFNhTr@rL?tYOhMjAr]_Ch_@}BvSkAr\\qAfEWzHoAdj@aJpe@qIjDg@jEw@~GqAhe@aJrm@cJbWaD`LqAdXmEjBPjCMz@UbE}ApCoArHwGfH{KfHyJlGwElImGlHoDtEe@pGBlF`@xJdDjGbCtF~CpDhDdEtGlDpQp@fUf@fc@fAhg@c@d_@cA|u@n@d\\zCzWbK`a@bFvMxMhZ~Up^rCbF~f@bz@`aC~iEzm@nfAvg@lv@nh@ht@vG`K~Yzc@r]|h@|@xApfA`bBtDjFdNpSzHtJ|L~MnKfLnJpJnRxQrSbR`LjKfKdJbNbLnHfGlEfD`JnGnNnJzC~Aja@hVhL|G~UxKbGlClUnLpg@lXvDhBxs@h\\pN`HbMpFpU~JzCrA`NjDxElA|R|EzNnDvB^fIvAhCb@`CXnANjTjCz@JhCZdMzAbD`@fSzBzeArLteArLfCTbCPhEb@vC\\VDt@H`JfAfHbBbNpCrJzChDfAvn@nTzIhCrQjFxUtGz@VjFbAfNjD|I`CnF|AnJzE~G`EnBa@dBa@pCeArDsBbAwEjGkV"
+        },
+        {
+          "participantId": "497e4cac-5312-4afa-b674-5337345704e5",
+          "name": "User 4",
+          "profile": "driving",
+          "duration": 1563.2,
+          "distance": 18645.2,
+          "geometry": "{{xtA{ysdeEoB~DGb@TZrU|LvAFhAUfCkLtB{NXqBbEcXfBwI~BeF`I{SBkJeBsJgLeVgAeE_@uElAsHdB_G`AwBvAmCbCzA`JlF`FhDtEhCtTvHxBn@rNzD`KhDze@jTzCfBrCxAdDbB`c@tTxMjHdTxL~HHjBE|AUfCk@rFgCvOoa@vFoMdFwM~R{h@lBwFbD}InG_RpIqQp@wAhDkGlIfC`Bl@lL|Dnj@rSxXzJjVxIlTbJlIr@lHdA~CCvC_@pEaBjCeA`Bq@bCwAnGcH`IaJ~QuU`YoZrc@yd@|IoEzT{Wv]k`@~K_LnaA_`Apj@}d@bq@aj@dMeKdByAjQ}Nbh@ub@fh@mc@nfAo|@~w@oo@lQsN`k@}d@xo@}h@v^iZjSyPjD{GrH{GdHwGnJwJ`EmFhCsEfBoHl@cGAyGa@_H_@qE{AyIgBoFgAcEgAyF}@mGMoFh@eIrAkFdBiE~AaClC{CtDyCfEaBtH_BlLMdUnBjGxApHbBfKjEpDhBdD|BhChBvDxCtE|EhOxN`ZrYrI`H~FxDlOlIxNbHff@bY~GfGhQfR`M~Oj~A|wC|Ulc@jPjZb^th@hD`EfNtOnOvM`VvOlUjMzSxIbCz@|i@tRzg@`MlrArZju@jL`bBra@pbCjf@pHfBfk@vNdQdEbRbEj\\rJp^~HtStGlElA|l@hUrk@vV|mAxh@~iApg@zbBtu@pHlDrJdE`i@|Sb{Ajs@lyEhgBjh@vRhuEzpAln@tL~i@pF~h@kDrVeDffA_OdX{EpUmEhb@gEd_@c@l\\dBzZpD~WnCf`@~H~d@|Jp~@zV~b@|Qd~@vd@~b@fY`f@v_@tf@bg@n`@pn@vc@ph@va@hq@f{BjyErErJlGzLtF~LfQj`@v`@|_A|]bw@tGhL|Vxh@rUl^vg@tUzc@pIlhAc@fnBdHxt@`EnoBz[n`@vZtZnb@vhAr_E~U|r@rn@vgBv^jz@df@zq@j\\h[pXbLnXtI~u@|MzcAdGbeAaE~oA{IjvAgHpGs@p_@eFhe@aK~^wF~j@qIzy@eLbMcCxH}CjGmFtFyH~QcZlImGlHoDtEe@pGBlF`@xJdDjGbCtF~CpDhDdEtGlDpQp@fUf@fc@fAhg@c@d_@cA|u@n@d\\zCzWbK`a@bFvMxMhZ~Up^rCbF~f@bz@`aC~iEzm@nfAvg@lv@nh@ht@vG`K~Yzc@r]|h@|@xApfA`bBtDjFdNpSzHtJ|L~MnKfLnJpJnRxQrSbR`LjKfKdJbNbLnHfGlEfD`JnGnNnJzC~Aja@hVhL|G~UxKbGlClUnLpg@lXvDhBxs@h\\pN`HbMpFpU~JzCrA`NjDxElA|R|EzNnDvB^fIvAhCb@`CXnANjTjCz@JhCZdMzAbD`@fSzBzeArLteArLfCTbCPhEb@vC\\VDt@H`JfAfHbBbNpCrJzChDfAvn@nTzIhCrQjFxUtGz@VjFbAfNjD|I`CnF|AnJzE~G`EnBa@dBa@pCeArDsBbAwEjGkV"
+        }
+      ],
+      "rank": 2,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "Solid compromise with a group total of 112 min.",
+      "voteCount": 0,
+      "category": "food and beverage",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T08:32:52.230Z"
+    },
+    {
+      "roomId": "f4f9f036-65ae-48e1-a286-a180fcbb0e67",
+      "poiId": "IT.1OCJO46WKX0EG",
+      "name": "Cafe De Muse - Shaw House",
+      "lat": 1.305538701,
+      "lng": 103.8311459,
+      "address": "350 Orchard Road, #01-K5/K6, Singapore, 238868",
+      "fairnessScore": 2129.5,
+      "maxTravelTime": 2029.5,
+      "minTravelTime": 1577.7,
+      "totalTravelTime": 7285.799999999999,
+      "averageTravelTime": 1821.4499999999998,
+      "spread": 451.79999999999995,
+      "perUserTravelTimes": [
+        {
+          "participantId": "300ed5a3-6587-4ccb-9253-37ade5826380",
+          "name": "User 1",
+          "profile": "driving",
+          "duration": 1577.7,
+          "distance": 14276.581,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBjTko@zIqT`GaOzk@_y@rEmM[{Iq@qCgEaLoD_EiPyQmSc^wPm^aDaK{BmHuHgVc\\udAuFmQyHwUkDcIeFwK{F_JmHyJwHuGcIyHeCmCiVkM}KwE}JwDoCeA}H_C}SsDub@qFu\\uEgYoEuW}EyFeByFeBaIaCaVkIa[cL_SyIkLkD_RkEuS_DoO{BmG}@a[}Dql@sIqq@gKa_@_DykAaOoGu@s_@kEiVaByJ_@g[XefAqC}DYgKgAgASyDk@yB_@iEy@ky@_SuPcE}x@qT{RmFm]_FoIgB_B]cBe@yF_BwF_B{UwGs`@yKwLmCsPeDcAQqDq@iRaDdD{Qp@uDdEkW`BuGvD}SpDmShDqQnEkS~Kog@nDiM|JuZpGmVnEyP|EeSnBcIjEkL|AcDlFsJfO{XdB{CbLiTtOqZ|AaDrB_EdXeh@vCqFnIoQ`MwVnDgIbRs^jY{g@vDyLnAkJ^cLWyKuBmVw@oJs@mIqBmY[uEa@sEa@qH_@gG]cJ\\gTxAuc@f@mJnAsR?wN_@oJWoDeCcPs@_F{BgRoAuPCuC[aMBmBDiBB{DDgGV_J`AsK^uEd@yEn@sC~@mDxAgGfEaNzKmXx@wBbGoNbFuKxD_KvEiMh@yA`Qgb@fFaKrBwHvBuFdBoFx@}EHgDIqIOwNgAkKGqGQeGq@qc@o@cIaCoOiDsJaEgLqLeUwBkE}LoVuB{Cm@}@kYeb@kLgQqB}Cc@w@_@q@o@kAKQ}EeJwAyDmAiFa@qGBi@HeBNiBZsBl@sBxC}HhHkRv@qBfE}KVu@bAkCtB{EvLcX`Red@Xo@JUzCiHr@cBb@aA`CyF`F}KtCyGvDkJrBmFjDiIZm@"
+        },
+        {
+          "participantId": "b371a517-5ed8-4ad5-b9ec-56a471674b91",
+          "name": "User 2",
+          "profile": "driving",
+          "duration": 2029.5,
+          "distance": 23198.072,
+          "geometry": "asarA{k_jeEz@kC|_@kmA|A{DhBwBvByAfBa@rHt@nn@jSbDnA|CtB`EbFzC~EvAjFvBfJ|AbI|Gh[~CnDhEnExDlB~ExBh~@nZhDb@rBNnDTjBRzBh@nZpJvg@fP`xAnb@p}@|Z`QdGnqAxd@`IpC|W|IvWxJpVzHjP|EfeAx[jKjDjU`HjXzGve@rOjS|Gfg@rOpKhDvZvJ`Y~In\\lKtFfBpwAhc@htCn~@d^fLhXbLpl@rRhuCv`Ax{@|ZrVtJtPlH~TvK|]|Rda@|Vhk@~]~gEfeCxYjQjSvKryBrpAvzBxvAzyDj|B|vBrvAxUjOza@b\\zc@|b@h_@rh@fUpc@bO~_@vRvl@`bAfaDdJj[bf@n~A|yAt|EruAhrExd@lzAnIx[p@`C`BzEfFvUxFj[tFzl@fAl[nAl}A~Ad}AdAzdA|@vq@rAx[rCtXnE`\\`Qz`Ajl@b}ChEdUxT|jAfIlf@nAbHf@bCr@tCjQx~@rLpk@|DpSnA|FzjAfsGtEjVzWhjAfBnFlBlFpEfL~]hy@b\\bu@|J~YfIlZrb@``C~DxTvMjt@nKfl@~j@~vCpC~M|C~OdC`OnCnMtZlaBxn@~hDhZ|zAdGzZhAxEzjApsGvc@tzBx_@|bBno@~aC`c@l`Bls@xgCpF|RjJt\\`]|mAlRtr@dD|LrHnYvIn]jDzPbD|ShA~I`AzJj@|FfDld@T~_@Dhu@kCxqAUlOk@xd@KrY[xKuD|sBi@vf@b@va@@h@@pAp@tn@fDrwCjGrsDDhd@n@nb@pBxgABlIPfKh@hX?vd@lDjpDf@fJnCv}AxBpSbRf}ApC~Sv\\|{C~Gxb@xKlg@pIfj@|DjShE~NjGrNtI|NrMrNnKpKhFzH|BjG`BhIj@nISdFq@bGcB~FyE~JgH|GwIhE{MjDsTrE{Y~GeFdBwUbD{XzDeX|J}HfD{MdKuW|QqSvQoI|J_\\|]o_@z_@]XiNjMuSxRqBfByEhD}BjBgl@de@g@^}@r@iRpOiLpLuDzDyBrBye@bd@wCpCuD~DsDtDgShOcCrAeI|BsAl@cInFgBx@y@\\}J~DoHpCaKfEmLzF}GhD}ElCqJhFuKtGgD~CaGzHyAnCeAlCwBtEcQp]{HnNwA`HgEjXgDzUyAfKw@~GsJtWgVth@yClF{DvDsGtHwY|XuJtIyHpJmFpGuFjGqGxF}DzEoo@nt@wEfF}ShSgK`LyJlJiQvPiJtH_CvBuClCiDtCeFtD{B~A}MxKeCfBa@X{CxByFlEaTlO{PdOiIdJgGbN}CbLwDjTYpAgD|OWfAoC~LgD`QsCdIeF|N}IvVwMn_@K\\qC|GmDvIyAvDmDxJqCpNoBxH}ErSiJbZ}@rCsCjI_EbL_FfN}CvIcCvG_DtIkDrJ_@dA}BzIl@tBTzCHdEm@bD{@bCaA`BbAvD`ArEtD`HjRj\\|I~OdS~\\`FtItR|\\`AdBpLhSnRf\\~D|GzAdD~NlZpGrM|NtYtEdGnCjJpHxFzHbF|GdDnD`CdDdDbAbCz@vDFzBIrDo@vDgAxDiC`JoBhDgB|CmJvVyF|QjC^`@DvEp@rHbAlMhBpWpDvNpBrIpAnEnAn@RlHjCh@RxB|@dKhDpC`ArJfDvJhDvAf@lBr@cFrNqEbMsIxSaApBkD~G}AnDoA|CcGfOo@jBc@pAeA`@e@rAMh@sAzENlCf@`CVzAVz@r@tAbBlBpDpBtFbBdA^vI~C`KnDvAn@rBSzAf@`LdEnBr@^N^L`DlAtB{EvLcX`Red@Xo@JUzCiHr@cBb@aA`CyF`F}KtCyGvDkJrBmFjDiIZm@"
+        },
+        {
+          "participantId": "167f9c9e-f722-4394-8989-011f9c335375",
+          "name": "User 3",
+          "profile": "driving",
+          "duration": 1725.6,
+          "distance": 19660.562,
+          "geometry": "k`awAosq|dEgBcAgDgB_CcBw@m@kDsCkB}BaBiCgC}DcAoDq@oDOsDEeDXuDr@mDdAaDdBwCnDcExBmBhD_CdEmBrE_BzD_@nK|@t`@AnTMlRg@bFwA~DcCbDcAd]Ohj@iAxBEbDAD|CBtB\\vYJ`SDfXBzBvExh@dA|D|AtD~IzH\\LjDz@bEPnJLxZY`r@e@nXEvy@b@tKjAfv@HpzAs@nSy@da@}A|m@aFxd@}Eje@sI~MkCzIsBtaA}TjdDe{@jz@oPpe@iIju@sHjfAgFzaAeCpWSv[UbpA_AnZU~jCi@t^Yf`CeAlkAmCr_@Wx_@s@rKUrNs@ph@wBxu@}@tbAsH`m@kGfMsAvmAwPzeBq[rq@gLj^sGvYqExZmEz~@aK~j@sFpUiBd_AwGhv@mCtZaAxsCiBn_@Jjz@s@lb@g@p{@sCp}@_EnsAsI`_@}CfZsC|Jo@jeCiObd@sCprAqJ~s@{C|PgAdx@aFjy@uF~o@_G~bAiKh{@{K~}@cQrq@{Lh[{F|x@yNpCe@fTeEbYuElE{@fLgB`v@_ObtBw_@zRkDz_BiYjxA{Wzz@oMrF_Aj}@mK~qAeMf_@wCxs@cGfg@_Edc@wDz\\{Dzp@}K`l@wLdYyJbQwFzl@cR|a@gPrh@yVd]{QnXsPjLoItR}MvX}SnUaTl\\w[dCoChLgMnMiN~MoQlLwOhLeP~\\qj@~c@ow@nJuPvXkf@dFaKpHwNpJiPdLwSnO}R~BeCjPeQjNmMhH}FxCqGbDeDj_@c[`GmEls@if@nMyNhJmQbEoOxAiRNq[b@{q@x@cWtI{l@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@j@mDh@oAl@y@tAeClF}I|JoWbB_JtAwKd@kDh@yLW}OcAwUuA_KiBsJuB}D_EgDoD_AyE[sETiDjA{BnAwApA}AlDm@dEJzGlBfLrDxIdF`HdGdFbIxDpJjC~c@~It_@vExOZ|ZcApHu@tFk@nf@sApE?lJbEfVdKvCjA`A^dIfDt[fMfWhGjIpBv@P~Ct@hJ|BvIxBfCn@nPhErLnD`Fr@|Jp@jEHbJVpKHdCDzBGvEOjBA|Ge@|Ko@nAIpIm@l_@gBtJ_AfLs@xJ}@rRgBlK_BxNuArMgAfUkAbJm@~BYn`@mD|CW|]aDjQeAxOaAz@Y~FcBlLuDnLkHdKaJfI}JrGaLtH}KzIyLzF_N|EoPjAkGnDiRjFu]vDsVpAwHxAqAv@_A|@eA~@uArCgCj@t@xBvCzHxLnEdM~C~K|B|Sp@fFf@`Hb@jCTdB~AxHnAfCtAvBn@bAdHxFfIdEdJzAx@BR?rUbArRZ~CZnD\\rb@`KhBr@td@xRfDxAhIzBbJ|CfEvA@@jFlBfBgDpDeD`L}NjAeAtCmClFkGjG{FjJmF~K}Ct@GhAEbACpA?hG^`NeC~EqA|EqAxC}HhHkRv@qBfE}KVu@bAkCtB{EvLcX`Red@Xo@JUzCiHr@cBb@aA`CyF`F}KtCyGvDkJrBmFjDiIZm@"
+        },
+        {
+          "participantId": "497e4cac-5312-4afa-b674-5337345704e5",
+          "name": "User 4",
+          "profile": "driving",
+          "duration": 1953,
+          "distance": 20422.649,
+          "geometry": "{{xtA{ysdeEoB~DGb@TZrU|LvAFhAUfCkLtB{NXqBbEcXfBwI~BeF`I{SBkJeBsJgLeVgAeE_@uElAsHdB_G`AwBvAmCbCzA`JlF`FhDtEhCtTvHxBn@rNzD`KhDze@jTzCfBrCxAdDbB`c@tTxMjHdTxL~HHjBE|AUfCk@rFgCvOoa@vFoMdFwM~R{h@lBwFbD}InG_RpIqQp@wAhDkGlIfC`Bl@lL|Dnj@rSxXzJjVxIlTbJlIr@lHdA~CCvC_@pEaBjCeA`Bq@bCwAnGcH`IaJ~QuU`YoZrc@yd@|IoEzT{Wv]k`@~K_LnaA_`Apj@}d@bq@aj@dMeKdByAjQ}Nbh@ub@fh@mc@nfAo|@~w@oo@lQsN`k@}d@xo@}h@v^iZjSyPjD{GrH{GdHwGnJwJ`EmFhCsEfBoHl@cGAyGa@_H_@qE{AyIgBoFgAcEgAyF}@mGMoFh@eIrAkFdBiE~AaClC{CtDyCfEaBtH_BlLMdUnBjGxApHbBfKjEpDhBdD|BhChBvDxCtE|EhOxN`ZrYrI`H~FxDlOlIxNbHff@bY~GfGhQfR`M~Oj~A|wC|Ulc@jPjZb^th@hD`EfNtOnOvM`VvOlUjMzSxIbCz@|i@tRzg@`MlrArZju@jL`bBra@pbCjf@pHfBfk@vNdQdEbRbEj\\rJp^~HtStGlElA|l@hUrk@vV|mAxh@~iApg@zbBtu@pHlDrJdE`i@|Sb{Ajs@lyEhgBjh@vRhuEzpAln@tL~i@pF~h@kDrVeDffA_OdX{EpUmEhb@gEd_@c@l\\dBzZpD~WnCf`@~H~d@|Jp~@zV~b@|Qd~@vd@~b@fY`f@v_@tf@bg@n`@pn@vc@ph@va@hq@f{BjyErErJlGzLtF~LfQj`@v`@|_A|]bw@tGhL|Vxh@rUl^vg@tUzc@pIlhAc@fnBdHxt@`EnoBz[n`@vZtZnb@vhAr_E~J~KbMrMxO|HvVlFbUfFrPbIdKzIdKtP`EpPn@~]_Az\\w@da@k@nLoAhLiAhGiB|GmBpFsDvKaAjBeFtKeE|G}@dBQXc@v@_B`BeDhAkD~FkIxLgC|C}KzMcOjMoaBjiAqCrCwClC_eBflAyk@l_@sO`Kg_@hYcMnLoEnE{JxJ_FlFgIpJUpCQv@gA`C{AbCkAnBkNbV{MfUsKdTgF|KgCvFiBhEaBtEaBlFyAzEiAbEeDrNgChMsD|QiDnQcOfz@_C~LeCdLsCvLkDdN]~BUbCQpBKlDGzCEdECbGbAnBhAhC`P|\\lI|QjCjL~AvJvBzLbDnK`EdHnEbEbFbDte@bVx_@bTpP`L~YtWfLpLhg@rj@rNvO`g@|i@`[|\\dHxHfHzHnNbOjGhGlQzMhiA|~@bBtA~FrFlThTjUjWrS|Wxo@reA~JnPnJbQ`Xlv@~Uxn@~^naA`Ld\\bHrS~l@nfBn@xApDvI`KpSbS~[`QbTtMnNlVlUly@vg@vCtA~@^zEnBbCbAfDrAfCdAfBt@`DjArCa@r@@r@JnB^vZ~G~Dv@xFl@jk@`G~NrAtT`Ch`@dFzKzAbPtKfGdEnCnB~HzDoC~LgD`QsCdIeF|N}IvVwMn_@K\\qC|GmDvIyAvDmDxJqCpNoBxH}ErSiJbZ}@rCsCjI_EbL_FfN}CvIcCvG_DtIkDrJ_@dA}BzIl@tBTzCHdEm@bD{@bCaA`BbAvD`ArEtD`HjRj\\|I~OdS~\\`FtItR|\\`AdBpLhSnRf\\~D|GzAdD~NlZpGrM|NtYtEdGnCjJpHxFzHbF|GdDnD`CdDdDbAbCz@vDFzBIrDo@vDgAxDiC`JoBhDgB|CmJvVyF|QjC^`@DvEp@rHbAlMhBpWpDvNpBrIpAnEnAn@RlHjCh@RxB|@dKhDpC`ArJfDvJhDvAf@lBr@cFrNqEbMsIxSaApBkD~G}AnDoA|CcGfOo@jBc@pAeA`@e@rAMh@sAzENlCf@`CVzAVz@r@tAbBlBpDpBtFbBdA^vI~C`KnDvAn@rBSzAf@`LdEnBr@^N^L`DlAtB{EvLcX`Red@Xo@JUzCiHr@cBb@aA`CyF`F}KtCyGvDkJrBmFjDiIZm@"
+        }
+      ],
+      "rank": 3,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "Solid compromise with a group total of 121 min.",
+      "voteCount": 0,
+      "category": "food and beverage::restaurant",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T08:32:52.792Z"
     }
   ],
   "messages": [
@@ -1691,6 +2328,22 @@
       "participantName": "Sam",
       "body": "Hi",
       "createdAt": "2026-04-24T07:39:39.077Z"
+    },
+    {
+      "messageId": "ef8ffcfd-80f9-4fdf-961d-57ecffa7b81c",
+      "roomId": "17952178-c98e-4207-bd8c-09d6ec7a0324",
+      "participantId": "d3f65171-2b08-49ff-839a-f45114446168",
+      "participantName": "User 2",
+      "body": "Hey i like options 1 can we go there",
+      "createdAt": "2026-04-24T08:25:38.738Z"
+    },
+    {
+      "messageId": "518a9ca2-cb0c-497e-96ef-77a16e8e17e5",
+      "roomId": "f4f9f036-65ae-48e1-a286-a180fcbb0e67",
+      "participantId": "b371a517-5ed8-4ad5-b9ec-56a471674b91",
+      "participantName": "User 2",
+      "body": "Hey let go to cafe some where",
+      "createdAt": "2026-04-24T08:31:26.703Z"
     }
   ]
 }
