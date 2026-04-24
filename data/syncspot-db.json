@@ -1,0 +1,827 @@
+{
+  "rooms": [
+    {
+      "roomId": "d6c308c4-5fb3-401d-85cb-32a10dadb5d1",
+      "roomCode": "VA8L3B",
+      "hostId": "8b8a5ddc-2d1b-4ce5-bfd4-7d130a9803e8",
+      "category": "cafe",
+      "status": "computed",
+      "createdAt": "2026-04-24T03:14:44.102Z",
+      "updatedAt": "2026-04-24T03:14:46.106Z"
+    },
+    {
+      "roomId": "21e01069-256e-4070-8a3a-02fc88330958",
+      "roomCode": "OHS9KQ",
+      "hostId": "f61beedc-61a7-4c16-a27f-7df7a47bfa36",
+      "category": "restaurant",
+      "status": "waiting",
+      "createdAt": "2026-04-24T03:19:43.683Z",
+      "updatedAt": "2026-04-24T03:19:43.683Z"
+    },
+    {
+      "roomId": "b0bc156d-7c30-4138-be93-a80fb090b241",
+      "roomCode": "8TM8A5",
+      "hostId": "05bb0193-dbb3-4c40-81d7-912a9ae817a7",
+      "category": "cafe",
+      "status": "waiting",
+      "createdAt": "2026-04-24T03:21:46.551Z",
+      "updatedAt": "2026-04-24T03:21:46.551Z"
+    },
+    {
+      "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
+      "roomCode": "JTZP5J",
+      "hostId": "325affd1-1246-429e-9eb2-105452e5f8fd",
+      "category": "cafe",
+      "status": "computed",
+      "createdAt": "2026-04-24T03:23:01.233Z",
+      "updatedAt": "2026-04-24T03:27:32.420Z"
+    },
+    {
+      "roomId": "82e26f71-c553-4163-a9e2-29a36faf2293",
+      "roomCode": "2SDJ7P",
+      "hostId": "cf3c076b-d203-4df1-9c4b-d4649333b66a",
+      "category": "cafe",
+      "status": "ready",
+      "createdAt": "2026-04-24T03:25:32.526Z",
+      "updatedAt": "2026-04-24T03:25:46.345Z"
+    },
+    {
+      "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
+      "roomCode": "RQRJY6",
+      "hostId": "51653f04-06a0-42c0-ad14-b0f30e1026fc",
+      "category": "park",
+      "status": "computed",
+      "createdAt": "2026-04-24T03:34:54.155Z",
+      "updatedAt": "2026-04-24T04:45:07.633Z"
+    },
+    {
+      "roomId": "dcc84f57-deaa-4788-910d-e2e15f0bbcbd",
+      "roomCode": "CDFI3V",
+      "hostId": "14585a24-06cb-48e7-b669-ff8596264732",
+      "category": "cafe",
+      "status": "waiting",
+      "createdAt": "2026-04-24T05:08:30.492Z",
+      "updatedAt": "2026-04-24T05:08:40.830Z"
+    },
+    {
+      "roomId": "062ec917-ec21-4a19-ab04-00a5a43f3697",
+      "roomCode": "LJ0AI7",
+      "hostId": "21fb8e5e-482e-49b3-bde5-3871bf0ce5c9",
+      "category": "park",
+      "status": "ready",
+      "createdAt": "2026-04-24T05:14:37.163Z",
+      "updatedAt": "2026-04-24T05:17:06.049Z"
+    },
+    {
+      "roomId": "647d45eb-b17d-4c4e-8060-3e49462d1228",
+      "roomCode": "TOTYIY",
+      "hostId": "213dbc6e-a3ae-4203-bcc2-bcf52edcda4d",
+      "category": "cafe",
+      "status": "computed",
+      "createdAt": "2026-04-24T05:21:11.110Z",
+      "updatedAt": "2026-04-24T05:21:48.445Z"
+    }
+  ],
+  "participants": [
+    {
+      "participantId": "8b8a5ddc-2d1b-4ce5-bfd4-7d130a9803e8",
+      "roomId": "d6c308c4-5fb3-401d-85cb-32a10dadb5d1",
+      "name": "Jaga",
+      "originLat": 1.3521,
+      "originLng": 103.8198,
+      "originLabel": "Host Origin",
+      "confirmed": true,
+      "joinedAt": "2026-04-24T03:14:44.102Z",
+      "updatedAt": "2026-04-24T03:14:44.612Z",
+      "travelProfile": "driving",
+      "avoid": []
+    },
+    {
+      "participantId": "818e8025-988a-4a61-83a1-0cfbbce98e63",
+      "roomId": "d6c308c4-5fb3-401d-85cb-32a10dadb5d1",
+      "name": "Alex",
+      "originLat": 1.2834,
+      "originLng": 103.8607,
+      "originLabel": "Guest Origin",
+      "confirmed": true,
+      "joinedAt": "2026-04-24T03:14:44.154Z",
+      "updatedAt": "2026-04-24T03:14:44.621Z",
+      "travelProfile": "driving",
+      "avoid": []
+    },
+    {
+      "participantId": "f61beedc-61a7-4c16-a27f-7df7a47bfa36",
+      "roomId": "21e01069-256e-4070-8a3a-02fc88330958",
+      "name": "Jagatees",
+      "originLat": null,
+      "originLng": null,
+      "originLabel": null,
+      "confirmed": false,
+      "joinedAt": "2026-04-24T03:19:43.683Z",
+      "updatedAt": "2026-04-24T03:19:43.683Z",
+      "travelProfile": "driving",
+      "avoid": []
+    },
+    {
+      "participantId": "05bb0193-dbb3-4c40-81d7-912a9ae817a7",
+      "roomId": "b0bc156d-7c30-4138-be93-a80fb090b241",
+      "name": "Jaga",
+      "originLat": null,
+      "originLng": null,
+      "originLabel": null,
+      "confirmed": false,
+      "joinedAt": "2026-04-24T03:21:46.551Z",
+      "updatedAt": "2026-04-24T03:21:46.551Z",
+      "travelProfile": "driving",
+      "avoid": []
+    },
+    {
+      "participantId": "325affd1-1246-429e-9eb2-105452e5f8fd",
+      "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
+      "name": "Jaga",
+      "originLat": 1.349072311,
+      "originLng": 103.7297907,
+      "originLabel": "326 Jurong East Street 31, Singapore, 600326",
+      "confirmed": true,
+      "joinedAt": "2026-04-24T03:23:01.233Z",
+      "updatedAt": "2026-04-24T03:27:25.716Z",
+      "travelProfile": "driving",
+      "avoid": []
+    },
+    {
+      "participantId": "907dcfc2-8de0-432a-883f-ed0522a6890b",
+      "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
+      "name": "Sam",
+      "originLat": 1.297615,
+      "originLng": 103.790929,
+      "originLabel": "1 One-North Crescent, 07-02, ReadySpace Singapore, Singapore, 138538",
+      "confirmed": true,
+      "joinedAt": "2026-04-24T03:23:19.483Z",
+      "updatedAt": "2026-04-24T03:27:27.390Z",
+      "travelProfile": "driving",
+      "avoid": []
+    },
+    {
+      "participantId": "cf3c076b-d203-4df1-9c4b-d4649333b66a",
+      "roomId": "82e26f71-c553-4163-a9e2-29a36faf2293",
+      "name": "Jaga",
+      "originLat": 1.3332213754926983,
+      "originLng": 103.74332702714366,
+      "originLabel": "50 Jurong Gateway Road, Singapore, 608549",
+      "confirmed": true,
+      "joinedAt": "2026-04-24T03:25:32.526Z",
+      "updatedAt": "2026-04-24T03:25:40.575Z",
+      "travelProfile": "driving",
+      "avoid": []
+    },
+    {
+      "participantId": "ba414f4e-cb1f-4f1f-9f7d-e7795988bb05",
+      "roomId": "82e26f71-c553-4163-a9e2-29a36faf2293",
+      "name": "Sam",
+      "originLat": 1.349072311,
+      "originLng": 103.7297907,
+      "originLabel": "326 Jurong East Street 31, Singapore, 600326",
+      "confirmed": true,
+      "joinedAt": "2026-04-24T03:25:40.016Z",
+      "updatedAt": "2026-04-24T03:25:46.345Z",
+      "travelProfile": "driving",
+      "avoid": []
+    },
+    {
+      "participantId": "51653f04-06a0-42c0-ad14-b0f30e1026fc",
+      "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
+      "name": "Jaga1",
+      "originLat": 1.3488657852260957,
+      "originLng": 103.72957489281288,
+      "originLabel": "326 Jurong East Street 31, Singapore, 600326",
+      "confirmed": true,
+      "joinedAt": "2026-04-24T03:34:54.155Z",
+      "updatedAt": "2026-04-24T04:45:07.633Z",
+      "travelProfile": "driving",
+      "avoid": []
+    },
+    {
+      "participantId": "6c1b972c-ab74-41b2-925f-f28469a48de6",
+      "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
+      "name": "Jaga2",
+      "originLat": 1.3556703970478878,
+      "originLng": 103.98848613951526,
+      "originLabel": "60 Airport Boulevard, Singapore, 819643",
+      "confirmed": true,
+      "joinedAt": "2026-04-24T03:35:04.622Z",
+      "updatedAt": "2026-04-24T04:44:15.918Z",
+      "travelProfile": "driving",
+      "avoid": []
+    },
+    {
+      "participantId": "14585a24-06cb-48e7-b669-ff8596264732",
+      "roomId": "dcc84f57-deaa-4788-910d-e2e15f0bbcbd",
+      "name": "1",
+      "originLat": null,
+      "originLng": null,
+      "originLabel": null,
+      "travelProfile": "driving",
+      "avoid": [],
+      "confirmed": false,
+      "joinedAt": "2026-04-24T05:08:30.492Z",
+      "updatedAt": "2026-04-24T05:08:30.492Z"
+    },
+    {
+      "participantId": "4b0d06b7-c925-41ac-9a99-679e24ebce14",
+      "roomId": "dcc84f57-deaa-4788-910d-e2e15f0bbcbd",
+      "name": "same",
+      "originLat": null,
+      "originLng": null,
+      "originLabel": null,
+      "travelProfile": "driving",
+      "avoid": [],
+      "confirmed": false,
+      "joinedAt": "2026-04-24T05:08:40.830Z",
+      "updatedAt": "2026-04-24T05:08:40.830Z"
+    },
+    {
+      "participantId": "21fb8e5e-482e-49b3-bde5-3871bf0ce5c9",
+      "roomId": "062ec917-ec21-4a19-ab04-00a5a43f3697",
+      "name": "TESTER 1",
+      "originLat": 1.349072311,
+      "originLng": 103.7297907,
+      "originLabel": "326 Jurong East Street 31, Singapore, 600326",
+      "travelProfile": "driving",
+      "avoid": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T05:14:37.163Z",
+      "updatedAt": "2026-04-24T05:15:32.251Z"
+    },
+    {
+      "participantId": "380b27fd-42bf-4eb7-b93f-5a109231b4d5",
+      "roomId": "062ec917-ec21-4a19-ab04-00a5a43f3697",
+      "name": "819643",
+      "originLat": 1.3556703970478878,
+      "originLng": 103.98848613951526,
+      "originLabel": "60 Airport Boulevard, Singapore, 819643",
+      "travelProfile": "driving",
+      "avoid": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T05:15:53.822Z",
+      "updatedAt": "2026-04-24T05:16:52.192Z"
+    },
+    {
+      "participantId": "213dbc6e-a3ae-4203-bcc2-bcf52edcda4d",
+      "roomId": "647d45eb-b17d-4c4e-8060-3e49462d1228",
+      "name": "Jagatees",
+      "originLat": 1.351994,
+      "originLng": 103.987361,
+      "originLabel": "60 Airport Boulevard, Singapore, 819643",
+      "travelProfile": "driving",
+      "avoid": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T05:21:11.110Z",
+      "updatedAt": "2026-04-24T05:21:44.498Z"
+    },
+    {
+      "participantId": "e05c868c-4fea-4fbf-bbe8-760aae461248",
+      "roomId": "647d45eb-b17d-4c4e-8060-3e49462d1228",
+      "name": "Alex",
+      "originLat": 1.349072311,
+      "originLng": 103.7297907,
+      "originLabel": "326 Jurong East Street 31, Singapore, 600326",
+      "travelProfile": "driving",
+      "avoid": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T05:21:23.233Z",
+      "updatedAt": "2026-04-24T05:21:36.415Z"
+    }
+  ],
+  "recommendations": [
+    {
+      "roomId": "d6c308c4-5fb3-401d-85cb-32a10dadb5d1",
+      "poiId": "IT.1OCJO46WKX0EG",
+      "name": "Cafe De Muse - Shaw House",
+      "lat": 1.305538701,
+      "lng": 103.8311459,
+      "address": "350 Orchard Road, #01-K5/K6, Singapore, 238868",
+      "fairnessScore": 1136.96,
+      "maxTravelTime": 1336.1,
+      "minTravelTime": 995.7,
+      "totalTravelTime": 2331.8,
+      "perUserTravelTimes": [
+        {
+          "participantId": "8b8a5ddc-2d1b-4ce5-bfd4-7d130a9803e8",
+          "name": "Jaga",
+          "duration": 1336.1,
+          "distance": 10671.755
+        },
+        {
+          "participantId": "818e8025-988a-4a61-83a1-0cfbbce98e63",
+          "name": "Alex",
+          "duration": 995.7,
+          "distance": 6648.896
+        }
+      ],
+      "rank": 1,
+      "category": "food and beverage::restaurant",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T03:14:46.103Z"
+    },
+    {
+      "roomId": "d6c308c4-5fb3-401d-85cb-32a10dadb5d1",
+      "poiId": "IT.3HXPPPX4JXUCM",
+      "name": "Caffe Fernet - Collyer Quay",
+      "lat": 1.282637933,
+      "lng": 103.8536574,
+      "address": "70 Collyer Quay, Singapore, 049323",
+      "fairnessScore": 1606.78,
+      "maxTravelTime": 1705.9,
+      "minTravelTime": 495.6,
+      "totalTravelTime": 2201.5,
+      "perUserTravelTimes": [
+        {
+          "participantId": "8b8a5ddc-2d1b-4ce5-bfd4-7d130a9803e8",
+          "name": "Jaga",
+          "duration": 1705.9,
+          "distance": 15291.867
+        },
+        {
+          "participantId": "818e8025-988a-4a61-83a1-0cfbbce98e63",
+          "name": "Alex",
+          "duration": 495.6,
+          "distance": 4080.058
+        }
+      ],
+      "rank": 2,
+      "category": "food and beverage",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T03:14:45.958Z"
+    },
+    {
+      "roomId": "d6c308c4-5fb3-401d-85cb-32a10dadb5d1",
+      "poiId": "IT.18W1PGNLHKIJ6",
+      "name": "Cafe O Bugis",
+      "lat": 1.299880283,
+      "lng": 103.85483,
+      "address": "229 Victoria Street, Singapore, 188023",
+      "fairnessScore": 1613.34,
+      "maxTravelTime": 1694.7,
+      "minTravelTime": 406.8,
+      "totalTravelTime": 2101.5,
+      "perUserTravelTimes": [
+        {
+          "participantId": "8b8a5ddc-2d1b-4ce5-bfd4-7d130a9803e8",
+          "name": "Jaga",
+          "duration": 1694.7,
+          "distance": 12371.467
+        },
+        {
+          "participantId": "818e8025-988a-4a61-83a1-0cfbbce98e63",
+          "name": "Alex",
+          "duration": 406.8,
+          "distance": 2752.983
+        }
+      ],
+      "rank": 3,
+      "category": "food and beverage",
+      "businessType": "commercial building",
+      "computedAt": "2026-04-24T03:14:45.818Z"
+    },
+    {
+      "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
+      "poiId": "IT.010M3FG6R47C0",
+      "name": "Cafe Melba at Mediapolis - Mediacorp Campus",
+      "lat": 1.2957895,
+      "lng": 103.7926149,
+      "address": "1 Stars Avenue, #03-01, Singapore, 138507",
+      "fairnessScore": 1129.68,
+      "maxTravelTime": 1150.1,
+      "minTravelTime": 102.1,
+      "totalTravelTime": 1252.1999999999998,
+      "perUserTravelTimes": [
+        {
+          "participantId": "325affd1-1246-429e-9eb2-105452e5f8fd",
+          "name": "Jaga",
+          "duration": 1150.1,
+          "distance": 10733.23
+        },
+        {
+          "participantId": "907dcfc2-8de0-432a-883f-ed0522a6890b",
+          "name": "Sam",
+          "duration": 102.1,
+          "distance": 516.181
+        }
+      ],
+      "rank": 1,
+      "category": "food and beverage",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T03:27:31.720Z"
+    },
+    {
+      "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
+      "poiId": "IT.1OCJO46WKX0EG",
+      "name": "Cafe De Muse - Shaw House",
+      "lat": 1.305538701,
+      "lng": 103.8311459,
+      "address": "350 Orchard Road, #01-K5/K6, Singapore, 238868",
+      "fairnessScore": 1328.7,
+      "maxTravelTime": 1527,
+      "minTravelTime": 991.5,
+      "totalTravelTime": 2518.5,
+      "perUserTravelTimes": [
+        {
+          "participantId": "325affd1-1246-429e-9eb2-105452e5f8fd",
+          "name": "Jaga",
+          "duration": 1527,
+          "distance": 16999.62
+        },
+        {
+          "participantId": "907dcfc2-8de0-432a-883f-ed0522a6890b",
+          "name": "Sam",
+          "duration": 991.5,
+          "distance": 6980.29
+        }
+      ],
+      "rank": 2,
+      "category": "food and beverage::restaurant",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T03:27:32.140Z"
+    },
+    {
+      "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
+      "poiId": "IT.2JRJ89K977IHJ",
+      "name": "Cafe Kreams - Maxwell Chambers",
+      "lat": 1.277347227122462,
+      "lng": 103.84635910548747,
+      "address": "32 Maxwell Road, #01-07, Maxwell Chambers, Singapore",
+      "fairnessScore": 1415.96,
+      "maxTravelTime": 1588.6,
+      "minTravelTime": 863.2,
+      "totalTravelTime": 2451.8,
+      "perUserTravelTimes": [
+        {
+          "participantId": "325affd1-1246-429e-9eb2-105452e5f8fd",
+          "name": "Jaga",
+          "duration": 1588.6,
+          "distance": 17310.072
+        },
+        {
+          "participantId": "907dcfc2-8de0-432a-883f-ed0522a6890b",
+          "name": "Sam",
+          "duration": 863.2,
+          "distance": 8258.738
+        }
+      ],
+      "rank": 3,
+      "category": "food and beverage::cafe",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T03:27:31.880Z"
+    },
+    {
+      "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
+      "poiId": "IT.3HXPPPX4JXUCM",
+      "name": "Caffe Fernet - Collyer Quay",
+      "lat": 1.282637933,
+      "lng": 103.8536574,
+      "address": "70 Collyer Quay, Singapore, 049323",
+      "fairnessScore": 1462.72,
+      "maxTravelTime": 1666.8,
+      "minTravelTime": 1020.4,
+      "totalTravelTime": 2687.2,
+      "perUserTravelTimes": [
+        {
+          "participantId": "325affd1-1246-429e-9eb2-105452e5f8fd",
+          "name": "Jaga",
+          "duration": 1666.8,
+          "distance": 19204.141
+        },
+        {
+          "participantId": "907dcfc2-8de0-432a-883f-ed0522a6890b",
+          "name": "Sam",
+          "duration": 1020.4,
+          "distance": 10152.807
+        }
+      ],
+      "rank": 4,
+      "category": "food and beverage",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T03:27:32.271Z"
+    },
+    {
+      "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
+      "poiId": "IT.1B3AR1RO9SE5L",
+      "name": "Cafe Gyoen Matcha Bar",
+      "lat": 1.2817161816817562,
+      "lng": 103.8456606872692,
+      "address": "87 Club Street, Singapore",
+      "fairnessScore": 1550.12,
+      "maxTravelTime": 1756.3,
+      "minTravelTime": 1030.9,
+      "totalTravelTime": 2787.2,
+      "perUserTravelTimes": [
+        {
+          "participantId": "325affd1-1246-429e-9eb2-105452e5f8fd",
+          "name": "Jaga",
+          "duration": 1756.3,
+          "distance": 17818.288
+        },
+        {
+          "participantId": "907dcfc2-8de0-432a-883f-ed0522a6890b",
+          "name": "Sam",
+          "duration": 1030.9,
+          "distance": 8766.954
+        }
+      ],
+      "rank": 5,
+      "category": "food and beverage",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T03:27:32.418Z"
+    },
+    {
+      "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
+      "poiId": "IT.18W1PGNLHKIJ6",
+      "name": "Cafe O Bugis",
+      "lat": 1.299880283,
+      "lng": 103.85483,
+      "address": "229 Victoria Street, Singapore, 188023",
+      "fairnessScore": 1618.8,
+      "maxTravelTime": 1839.8,
+      "minTravelTime": 1105,
+      "totalTravelTime": 2944.8,
+      "perUserTravelTimes": [
+        {
+          "participantId": "325affd1-1246-429e-9eb2-105452e5f8fd",
+          "name": "Jaga",
+          "duration": 1839.8,
+          "distance": 19372.561
+        },
+        {
+          "participantId": "907dcfc2-8de0-432a-883f-ed0522a6890b",
+          "name": "Sam",
+          "duration": 1105,
+          "distance": 10177.612
+        }
+      ],
+      "rank": 6,
+      "category": "food and beverage",
+      "businessType": "commercial building",
+      "computedAt": "2026-04-24T03:27:32.010Z"
+    },
+    {
+      "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
+      "poiId": "IT.1M4MDY3N8E8SV",
+      "name": "Arrival Plaza, Park Colonial",
+      "lat": 1.3380545815914218,
+      "lng": 103.869118162586,
+      "address": "2 Woodleigh Lane, Singapore, 357685",
+      "fairnessScore": 1252.4,
+      "maxTravelTime": 1544,
+      "minTravelTime": 1458,
+      "totalTravelTime": 3002,
+      "perUserTravelTimes": [
+        {
+          "participantId": "51653f04-06a0-42c0-ad14-b0f30e1026fc",
+          "name": "Jaga1",
+          "duration": 1544,
+          "distance": 19669.447,
+          "geometry": "}{iqAqgdzdEsCCgJEE|VmSBoFA{@?o@?A?uAA}CGHaCbB{NnDcPnFoPhHqLvEeHf@w@~BqCfHaGzHkF`B}@fFuCxFuC`GcCzCeA`JyClRcD|BWp@IpBUvDa@~@IjN}AtEe@jKmA`Hq@jSmBjO_BnD]|B_@`NaCxKcDbHqCdJoFrIcGvLiLpGaK`ByCXo@xCcHhDiKpDkOfBkG\\kA~AwFf@{Ap@}BzAkF|FoR|EkMzNsZfEoJzIiR~EcK|@kB|AyJRiDByD[aE{A_DeC_C_d@wKwNkEyHgCwPwFqMmF_EmAyPgHuIeDuJiEyDmBzDqHhAeDCiDSyBGcBEcBBaBHuAZwCb@sCvBcLvOco@vKuc@`Gg_@jB{Mj@{KHgCN_HJqCJcAz@uCdA{`@nDcg@T}CT}CjHef@fXabAdF_NhBoEfCsGhUse@bFqLbHiPjKqVhj@}kAzu@y|A|HgPxMqZ|EgKlPm_@`fAe{BlNcZxd@uaAj`@yy@rFuLx_@_z@bh@kiAvHwNtp@suAv_@ix@tYam@p}AahD`Rmb@nDqJ|T_e@dC}FnB{EjB_HhKgb@|Gaa@hEu\\vA{Yn@ac@yAsv@oGsi@uJwh@oKo]qT}s@{HqY_s@wlBkRsb@kn@_hAw_@en@aF}HsFqIqE}IyRyXkQyRsIoIkJsHoVsOmXkKov@qVgrAad@wKuDmIeDaJcEcH_D{GuDyG}D_GiEaDcCoDiDmGcGqD_EiDsEsDsG}DkI{DeJyD}KuDyMiH{]eHc^cLaj@_h@{rBa]ykAmb@cqAeGsSsKiW_FmIyFmHmI_J_GuF_F{DcFoDgXwMqNiFokAgc@{LuEoQ{HwJiFkJ{GyMmNoDqE}CwE{DeHiEkIqD{IaJaWgJab@sEuSuDeZoCa]_B}k@Tyf@tEcn@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@dHcIzCyDvDeGdB{DxDuItFsOjBcL\\yD`@yLd@qOcJo}@aHgu@s@sRlAwPlDeQ~DqOvUqm@bTsj@dCkI|AuPY_Ti@eP_AeKaAeIm@gDs@oDcBoHgMql@wF_Z{EmTuM_k@{XyoAsC{OuFm[yKe]iNy\\oSe`@{d@k}@qLqV_KoXuGcYqDuO_CeMkDg\\mBk_@wBqi@a@iq@KmG_@}OoBa|@MmGIwHy@{m@`@of@^iV|EacBHyE`@oSnEenA~Cyz@TmJPeH`AyZh@o[v@ePlKezBf@eLx@aROwWC{BaAcIkCgKaAuE{YmvAySabAuBoA_A{@w@eAsImXw@aDiGkO}BmHs@qCwBoL}BmQy@mT`@iSXqRnDie@tCkR|EmThHuW~IaUxGuQzB{IxPqf@pQ_o@zAcIxAoHdDcNIkCn@{DfB_L`BsIbAkF`@yB|EaUzDwLlB_HpBcIe@}Ca@mAcBuDmCwD{VoEoz@{MySiDiJ{Ag`@iGs@OqJ{A_IaBuScEiQoCeDk@_C{CwDg@iQwCof@sGqKmB}SiFmGcBsUuF{KgCaB_@wHiBeBe@_B[kBe@wB]eD_@qe@wEqMw@kRiAoXaBe]sB_ReAqDrAmBzAeBrBsAhFCxMaBj\\AFAh@kAtHw@lFW`DyB~OcBdHw@pCyAhFiB|BwB@s@cAWwArAmHbDiOjAgF\\}C"
+        },
+        {
+          "participantId": "6c1b972c-ab74-41b2-925f-f28469a48de6",
+          "name": "Jaga2",
+          "duration": 1458,
+          "distance": 18321.17,
+          "geometry": "yroqAoh{ieEq@UeeBoj@xFmQ|uB|o@zB`B|CpBzPzCn@ChAQhIlDjKfDfGdBdD~BJNbArAn@hCGjDkC`JiFpKe@pF\\hEpB~Bxh@nPxBv@nCrA|B|AnD~BjBdCtBxCxAzBxAtBpAjBvA`BhC`ChC~AhErB`MhDvJvDvEdBvClAbMxGve@rOjS|Gfg@rOpKhDvZvJ`Y~In\\lKtFfBpwAhc@htCn~@d^fLlY|GdIdC~c@tMpQrEtI`BbFfA`FXnGDlHYhD]zDo@|CeA|CuAxDyBzCyBnJ}HhCeBtCoAvCk@|CWrEBfFd@rDr@hEpAxD`BzCvBjCxB|CtD|BpEdB~EpAlEr@~E`@bFFtEO|Fi@fEq@`DkNpb@}[hcAsQ~j@kIlWsF~PiHfX}Plj@uUlr@mJ`Z{a@zoAiKx_@oSpi@kOn[aVba@{Wv[i_@b^}c@pY}f@nXekBbdAga@zTgFdCgZdOwvBhpAck@fd@qLhOsLrN{TzZiV~b@kFzLmRje@iGbUiGvYaArFgDvLsAtH{AzJgBfNgC~N{CzR{@pXGjRBhRZdWbArT`AxL`BvLzA|IdB|I~A|HhBpIfB~G~AbFjBjG|BnHvBvFxHpSvJhXbGrNrH`NzTz]bmAp|AbfAbsAh_A|iAj{AjjB`FdGrZ`_@|bFzsGzHxJpPbT|hC~`D|~@diAn[lb@fZvb@tDnGdCrFfClH|BxItBvKpAzJt@`KZbGZlMDlSgAfm@sA|[oIlxCkCrdAwBvy@oBrv@yB`x@e@tb@GpN\\jZ|@|i@hBha@fDl`@bDb[rBbRfCvRvBvNtCnPnEjUdMrj@jB~HjDjMpDhLhDlKjt@nrBnF|Nbv@jtBrFjOv_AnhCpGfQxZhz@~[j~@tc@`lAd[ny@x\\x|@bHdPtSpd@xi@hlAfP`]fI|TnFnQjDzM`CjMhMzp@nDjQvk@tsC`Plx@pPxmAnHti@zCrW~BzRjPrwA~TjsB~XraChMzfAvDn^fVziB|o@`nEjHx~@lBh[nB~[x@~s@JpH@x@@|AHxGH~StBlb@f@pFr@dGxClPjYzbA`T|r@nLr`@lP|i@|Vdy@`Mpb@pD|B\\b@rAxEtAtEnAlEnH~UrDhRtA~Lt@hP{ArmAWvYqC|W{DhQkFhOiKbTcB`D_E|HaQxY_DjDsN~KmYtQu[tOoSzJgg@r[}VtPorA|aAgy@tk@{h@d\\aC|ByGzHkGzGqQvT{OzS{H|LkFlGaAzAmAhBuClGiCxHiDjKwKrSmDfFcFfFcChCuBs@qFcBmFmA}QaHkDy@u@Q}G{A{VoEoz@{MySiDiJ{Ag`@iGs@OqJ{A_IaBuScEiQoCeDk@_C{CwDg@iQwCof@sGqKmB}SiFmGcBsUuF{KgCaB_@wHiBeBe@_B[kBe@wB]eD_@qe@wEqMw@kRiAoXaBe]sB_ReAqDrAmBzAeBrBsAhFCxMaBj\\AFAh@kAtHw@lFW`DyB~OcBdHw@pCyAhFiB|BwB@s@cAWwArAmHbDiOjAgF\\}C"
+        }
+      ],
+      "rank": 1,
+      "category": "residential",
+      "businessType": "residential",
+      "computedAt": "2026-04-24T03:36:45.653Z"
+    },
+    {
+      "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
+      "poiId": "IT.048FS8614VWC4",
+      "name": "Hotel Lobby, PARKROYAL on Beach Rd",
+      "lat": 1.300190006812599,
+      "lng": 103.8604299484782,
+      "address": "7500 Beach Road, Singapore, 199590",
+      "fairnessScore": 1549.12,
+      "maxTravelTime": 1822.8,
+      "minTravelTime": 1368.4,
+      "totalTravelTime": 3191.2,
+      "perUserTravelTimes": [
+        {
+          "participantId": "51653f04-06a0-42c0-ad14-b0f30e1026fc",
+          "name": "Jaga1",
+          "duration": 1822.8,
+          "distance": 19654.126,
+          "geometry": "}{iqAqgdzdEsCCgJEE|VmSBoFA{@?o@?A?uAA}CGHaCbB{NnDcPnFoPhHqLvEeHf@w@~BqCfHaGzHkF`B}@fFuCxFuC`GcCzCeA`JyClRcD|BWp@IpBUvDa@~@IjN}AtEe@jKmA`Hq@jSmBjO_BnD]|B_@`NaCxKcDbHqCdJoFrIcGvLiLpGaK`ByCXo@xCcHhDiKpDkOfBkG\\kA~AwFf@{Ap@}BzAkF|FoR|EkMzNsZfEoJzIiR~EcK|@kB|AyJRiDByD[aE{A_DeC_C_d@wKwNkEyHgCwPwFqMmF_EmAyPgHuIeDuJiEyDmBzDqHhAeDCiDSyBGcBEcBBaBHuAZwCb@sCvBcLvOco@vKuc@`Gg_@jB{Mj@{KHgCN_HJqCJcAz@uCdA{`@nDcg@T}CT}CjHef@fXabAdF_NhBoEfCsGhUse@bFqLbHiPjKqVhj@}kAzu@y|A|HgPxMqZ|EgKlPm_@`fAe{BlNcZxd@uaAj`@yy@rFuLx_@_z@bh@kiAvHwNtp@suAv_@ix@tYam@p}AahD`Rmb@nDqJ|T_e@dC}FnB{EjB_HhKgb@|Gaa@hEu\\vA{Yn@ac@yAsv@oGsi@uJwh@oKo]qT}s@{HqY_s@wlBkRsb@kn@_hAw_@en@aF}HsFqIqE}IyRyXkQyRsIoIkJsHoVsOmXkKov@qVgrAad@wKuDmIeDaJcEcH_D{GuDyG}D_GiEaDcCoDiDmGcGqD_EiDsEsDsG}DkI{DeJyD}KuDyMiH{]eHc^cLaj@_h@{rBa]ykAmb@cqAeGsSsKiW_FmIyFmHmI_J_GuF_F{DcFoDgXwMqNiFokAgc@{LuEoQ{HwJiFkJ{GyMmNoDqE}CwE{DeHiEkIqD{IaJaWgJab@sEuSuDeZoCa]_B}k@Tyf@tEcn@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@j@mDh@oAl@y@tAeClF}I|JoWbB_JtAwKd@kDh@yLW}OcAwUuA_KiBsJuB}D_EgDoD_AyE[sETiDjA{BnAwApA}AlDm@dEJzGlBfLrDxIdF`HdGdFbIxDpJjC~c@~It_@vExOZ|ZcApHu@tFk@nf@sApE?lJbEfVdKvCjA`A^dIfDt[fMfWhGjIpBv@P~Ct@hJ|BvIxBfCn@nPhEzFn@|DDbDc@rBiA|AkBtRy|@bEkRxKaf@zOik@`AqE`AmFxHm_@lBaIbC{KdIa]nAmFfEuQdKic@|G}ZXsAvWmrAxLmn@`B{HpKmh@zDmPnFwL`FoIjAeBdBgC|RcSnBeBrBeB`MiKfNmLzSwP~RyPhL{JbCqBnJaIde@eb@jZ_UvRyOnPaMlUoNdUoMhT_ObF{EzGcIzH_LhJuT`a@apAdHcVpB}Gb@wC`KyYnNk_@tJmW`BkEdG}R~@_EhI_^dFuQd@oBvAiKbAmGtB}K`DmLjDyJdFqJjDqEtF}FlDuCrQmN|MwJdCuBfKuHnHqFxCeCjNmJ|DiCzWyUj]m_@fBoBfLeLvTsS`OaPnU{[dAyApCuD|e@gn@b^yd@vCiErC_EhAoBrMwTrCmFxHmQfI{RtH_XxGmV|DaMlDmHfTwh@tB}EnAsCr@uAjBoE`E_Ld@iCXuHKkJ`BwUz@sDx@mDjB{EfBqDjHwLf@s@|DeFvCyDb@m@zJsNl@oBPwBp@eEd@sA~@yBvAeBv@eAp@{@zEaFdCgCxF_ErAo@f@s@vH_KpCsDjGiIhAwAfHgJzC}D`AoAzVq[zKgNlJqIbS_Q`PsM`Au@gD_EkIsJaM_PyQsXmFiJcFwJ}JoU_FuL|@qAr@u@hB[pANnE`KrAzCvKzT`AdBfIpNxOnUz@pAh@aAnCkFOeFi@yAkAaDcAyA"
+        },
+        {
+          "participantId": "6c1b972c-ab74-41b2-925f-f28469a48de6",
+          "name": "Jaga2",
+          "duration": 1368.4,
+          "distance": 18592.938,
+          "geometry": "yroqAoh{ieEq@UeeBoj@xFmQ|uB|o@zB`B|CpBzPzCn@ChAQhIlDjKfDfGdBdD~BJNbArAn@hCGjDkC`JiFpKe@pF\\hEpB~Bxh@nPxBv@nCrA|B|AnD~BjBdCtBxCxAzBxAtBpAjBvA`BhC`ChC~AhErB`MhDvJvDvEdBvClAbMxGve@rOjS|Gfg@rOpKhDvZvJ`Y~In\\lKtFfBpwAhc@htCn~@d^fLhXbLpl@rRhuCv`Ax{@|ZrVtJtPlH~TvK|]|Rda@|Vhk@~]~gEfeCxYjQjSvKryBrpAvzBxvAzyDj|B|vBrvAxUjOza@b\\zc@|b@h_@rh@fUpc@bO~_@vRvl@`bAfaDdJj[bf@n~A|yAt|EruAhrExd@lzAnIx[p@`C`BzEfFvUxFj[tFzl@fAl[nAl}A~Ad}AdAzdA|@vq@rAx[rCtXnE`\\`Qz`Ajl@b}ChEdUxT|jAfIlf@nAbHf@bCr@tCjQx~@rLpk@|DpSnA|FzjAfsGtEjVzWhjAfBnFlBlFpEfL~]hy@b\\bu@|J~YfIlZrb@``C~DxTvMjt@nKfl@~j@~vCpC~M|C~OdC`OnCnMtZlaBxn@~hDhZ|zAdGzZhAxEzjApsGvc@tzBx_@|bBno@~aC`c@l`Bls@xgCpF|RjJt\\`]|mAlRtr@dD|LrHnYvIn]jDzPbD|ShA~I`AzJj@|FfDld@T~_@Dhu@kCxqAUlOk@xd@KrY[xKuD|sBi@vf@b@va@@h@@pAp@tn@fDrwCjGrsDDhd@n@nb@pBxgABlIPfKh@hX?vd@lDjpDf@fJnCv}AxBpSbRf}ApC~Sv\\|{C~Gxb@xKlg@pIfj@|DjShE~NjGrNtI|NrMrNnKpKhFzH|BjG`BhIj@nISdFq@bGcB~FyE~JgH|GwIhE{MjDsTrE{Y~GeFdBwUbD{XzDeX|J}HfD{MdKuW|QqSvQoI|J_\\|]o_@z_@]XiNjMuSxRqBfByEhDcDeD_X_X}JuKaDkD}OoPcB_BcPkO_DgDgD_EkIsJaM_PyQsXmFiJcFwJ}JoU_FuL|@qAr@u@hB[pANnE`KrAzCvKzT`AdBfIpNxOnUz@pAh@aAnCkFOeFi@yAkAaDcAyA"
+        }
+      ],
+      "rank": 2,
+      "category": "hotel",
+      "businessType": "hotel",
+      "computedAt": "2026-04-24T03:36:45.236Z"
+    },
+    {
+      "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
+      "poiId": "IT.2L26VVQBOKU5K",
+      "name": "Lobby, PARKROYAL COLLECTION Marina Bay Singapore (Formerly Marina Mandarin)",
+      "lat": 1.2918353446931832,
+      "lng": 103.85723941031591,
+      "address": "6 Raffles Boulevard, Singapore, 039594",
+      "fairnessScore": 1554.94,
+      "maxTravelTime": 1838.7,
+      "minTravelTime": 1418.8,
+      "totalTravelTime": 3257.5,
+      "perUserTravelTimes": [
+        {
+          "participantId": "51653f04-06a0-42c0-ad14-b0f30e1026fc",
+          "name": "Jaga1",
+          "duration": 1838.7,
+          "distance": 19655.017,
+          "geometry": "}{iqAqgdzdEsCCgJEE|Vf@?~VB|HFdIDtFOnDc@hHcFlLiPdCiDlD}DpNoQbBuAnDkAnB_@da@{DpPkB~OoBvD[z@I~Ec@vB{@`AdCvDlFhCjC`I~GpFjB`A\\pFp@jFHpJDnE@xKBrP?dC@hIcAdBgA`EaHjJm\\xNy]tBgEju@{iAtCsElr@ygAnJ{NjIaMdQoXlCgEdEwFhErCzExCjKlHnCfBhRlLnMfFvJlDrLvBvFn@tIlAvNhAlRJ`JKtEYzFKfKc@vMiB`LwClNkDlJmEhDqA`NmGbRuIhJmFbGiDlMyGfR_MjWoRjSaQxRwQxMyMnMwMdI{I~K_MhJyJ~CsD|CsD|JcLt@{@fD}E`@q@`LkPpD{FvNiXxTq^fAgBdC{DjIiNbL}OpFaJlEoHrBeDjByClMuT`JyOzAgC~AwClGmK~T{a@zO}VpOkVfB_Dn]yi@rAkFpB{EzBsCfYi[dQyRvCeD`DsDlEsEvRmQjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@|A{C~@}CpAgGxFaSbFaQnHqSlQs`@`Vah@`GoQhEgXr@ySqAqTcCuP}DeO{HoPsOiS{JgJmLkIuMaI}TgNcSyMcS_PmRyPyIcIgL{LcK{LwRwTkSq[}E_JsLqToNkYaMk[sOui@qBmHkXqgAoNwh@aFmQiH}RuGsNqJ_KoIwIeJkHqSmMyTuLkWkMaPsJoJcHsIyH}HoJaFaIkCwDyDyFoVmd@iLgUmPuZ_GcLsCmFiJsN{FsIsCaEmFsGuDgE_GcDwc@uUsLuEqRkE}IcCeRuNsUaSuB{D_AsECsE^wDjFeQdKmUjDiGrEeI`Vy`@~Xk^jIsJpGcLzDuEzPsSjGsJh@_A|NyVbBwCcXaUkKuIeFcE}GoFqLuJmi@ma@iHuFc^yVoI{G}BwBsDoCoI{G}FaEwHyDqQiIgB}DQaBXoCbAsAvKwOfN{Rj@y@rLwQbDmD~@wAlA}A|N_SrEaGfFqGzDkFxJwM~@cB~@cB~@cBp@qARa@^}@Ji@Dg@Es@Iy@Wu@a@u@_GwGwGyCwHmDgaA{c@eHeD_Aa@}IcEkKwEof@iUmIuDqDaBwLoF_G}GsBmEw@qF{@gFWyAc@oCmBeCW]Y_@}Z_QeC{AiHoD_VsLaA[}FcBlEiGxU{`@vMsWtBgEpDsHlG{MlIuQ~KcUjCkFdBkD|BoE`AoBzNe[p@uAnDoHrEtBxFtCx@d@tWhMpFlC|@b@l@KZQtLgVjP|HiDbHuCdG_DvGcOiHuOwHkOoHyChGoHlO"
+        },
+        {
+          "participantId": "6c1b972c-ab74-41b2-925f-f28469a48de6",
+          "name": "Jaga2",
+          "duration": 1418.8,
+          "distance": 18524.122,
+          "geometry": "yroqAoh{ieEq@UeeBoj@xFmQ|uB|o@zB`B|CpBzPzCn@ChAQhIlDjKfDfGdBdD~BJNbArAn@hCGjDkC`JiFpKe@pF\\hEpB~Bxh@nPxBv@nCrA|B|AnD~BjBdCtBxCxAzBxAtBpAjBvA`BhC`ChC~AhErB`MhDvJvDvEdBvClAbMxGve@rOjS|Gfg@rOpKhDvZvJ`Y~In\\lKtFfBpwAhc@htCn~@d^fLhXbLpl@rRhuCv`Ax{@|ZrVtJtPlH~TvK|]|Rda@|Vhk@~]~gEfeCxYjQjSvKryBrpAvzBxvAzyDj|B|vBrvAxUjOza@b\\zc@|b@h_@rh@fUpc@bO~_@vRvl@`bAfaDdJj[bf@n~A|yAt|EruAhrExd@lzAnIx[p@`C`BzEfFvUxFj[tFzl@fAl[nAl}A~Ad}AdAzdA|@vq@rAx[rCtXnE`\\`Qz`Ajl@b}ChEdUxT|jAfIlf@nAbHf@bCr@tCjQx~@rLpk@|DpSnA|FzjAfsGtEjVzWhjAfBnFlBlFpEfL~]hy@b\\bu@|J~YfIlZrb@``C~DxTvMjt@nKfl@~j@~vCpC~M|C~OdC`OnCnMtZlaBxn@~hDhZ|zAdGzZhAxEzjApsGvc@tzBx_@|bBno@~aC`c@l`Bls@xgCpF|RjJt\\`]|mAlRtr@dD|LrHnYvIn]jDzPbD|ShA~I`AzJj@|FfDld@T~_@Dhu@kCxqAUlOk@xd@KrY[xKuD|sBi@vf@b@va@@h@@pAp@tn@fDrwCjGrsDDhd@n@nb@pBxgABlIPfKh@hX?vd@lDjpDf@fJnCv}AxBpSbRf}ApC~Sv\\|{C~Gxb@xKlg@pIfj@|DjShE~NjGrNtI|NrMrNnKpKhFzH|BjG`BhIj@nISdFq@bGcB~FyE~JgH|GwIhE{MjDsTrE{Y~GeFdBwUbD{XzDeX|J}HfD{MdKiM|SyB~G[~DZ`F~AtBl@v@dCpAvRrI`OhHlG|BbAVz@FbBChGiAbBo@`Ci@fCOfCDtBVdCr@xBnAhBzAtApB~@~Bh@fCNnCd@bD~@vCb@r@~@bAbCxAtEzBl]tPbUlLhNdGzFtCbDhBxF~CbF`CfAh@lEx@vFIdFuAhEkAnDoHLWpDsHqAk@gQgIqAAs@r@}RkJcD}AdCoFrKbF`KxExW`MlF`C~EzBlAJxAn@rFnCzGbD_DtGkOoHyChGyChGoHlO"
+        }
+      ],
+      "rank": 3,
+      "category": "hotel::resorts",
+      "businessType": "hotel",
+      "computedAt": "2026-04-24T03:36:45.409Z"
+    },
+    {
+      "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
+      "poiId": "IT.2N1TJXZW4XU1F",
+      "name": "PARKROYAL COLLECTION Marina Bay Singapore (Formerly Marina Mandarin)",
+      "lat": 1.2916726604963742,
+      "lng": 103.85709255425917,
+      "address": "6 Raffles Boulevard, Singapore, 039594",
+      "fairnessScore": 1638.76,
+      "maxTravelTime": 1922.8,
+      "minTravelTime": 1420.2,
+      "totalTravelTime": 3343,
+      "perUserTravelTimes": [
+        {
+          "participantId": "51653f04-06a0-42c0-ad14-b0f30e1026fc",
+          "name": "Jaga1",
+          "duration": 1922.8,
+          "distance": 19660.032,
+          "geometry": "}{iqAqgdzdEsCCgJEE|Vf@?~VB|HFdIDtFOnDc@hHcFlLiPdCiDlD}DpNoQbBuAnDkAnB_@da@{DpPkB~OoBvD[z@I~Ec@vB{@`AdCvDlFhCjC`I~GpFjB`A\\pFp@jFHpJDnE@xKBrP?dC@hIcAdBgA`EaHjJm\\xNy]tBgEju@{iAtCsElr@ygAnJ{NjIaMdQoXlCgEdEwFhErCzExCjKlHnCfBhRlLnMfFvJlDrLvBvFn@tIlAvNhAlRJ`JKtEYzFKfKc@vMiB`LwClNkDlJmEhDqA`NmGbRuIhJmFbGiDlMyGfR_MjWoRjSaQxRwQxMyMnMwMdI{I~K_MhJyJ~CsD|CsD|JcLt@{@fD}E`@q@`LkPpD{FvNiXxTq^fAgBdC{DjIiNbL}OpFaJlEoHrBeDjByClMuT`JyOzAgC~AwClGmK~T{a@zO}VpOkVfB_Dn]yi@rAkFpB{EzBsCfYi[dQyRvCeD`DsDlEsEvRmQjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@|A{C~@}CpAgGxFaSbFaQnHqSlQs`@`Vah@`GoQhEgXr@ySqAqTcCuP}DeO{HoPsOiS{JgJmLkIuMaI}TgNcSyMcS_PmRyPyIcIgL{LcK{LwRwTkSq[}E_JsLqToNkYaMk[sOui@qBmHkXqgAoNwh@aFmQiH}RuGsNqJ_KoIwIeJkHqSmMyTuLkWkMaPsJoJcHsIyH}HoJaFaIkCwDyDyFoVmd@iLgUmPuZ_GcLsCmFiJsN{FsIsCaEmFsGuDgE_GcDwc@uUsLuEqRkE}IcCeRuNsUaSuB{D_AsECsE^wDjFeQdKmUjDiGrEeI`Vy`@~Xk^jIsJpGcLzDuEzPsSjGsJh@_A|NyVbBwCcXaUkKuIeFcE}GoFqLuJmi@ma@iHuFc^yVoI{G}BwBsDoCoI{G}FaEwHyDqQiIgB}DQaBXoCbAsAvKwOfN{Rj@y@rLwQbDmD~@wAlA}A|N_SrEaGfFqGzDkFxJwM~@cB~@cB~@cBp@qARa@^}@Ji@Dg@Es@Iy@Wu@a@u@_GwGwGyCwHmDgaA{c@eHeD_Aa@}IcEkKwEof@iUmIuDqDaBwLoF_G}GsBmEw@qF{@gFWyAc@oCmBeCW]Y_@}Z_QeC{AiHoD_VsLaA[}FcBlEiGxU{`@vMsWtBgEpDsHlG{MlIuQ~KcUjCkFdBkD|BoE`AoBzNe[p@uAnDoHrEtBxFtCx@d@tWhMpFlC|@b@l@KZQtLgVjP|HiDbHuCdG_DvGcOiHuOwHkOoHyChG{IzQ"
+        },
+        {
+          "participantId": "6c1b972c-ab74-41b2-925f-f28469a48de6",
+          "name": "Jaga2",
+          "duration": 1420.2,
+          "distance": 18529.137,
+          "geometry": "yroqAoh{ieEq@UeeBoj@xFmQ|uB|o@zB`B|CpBzPzCn@ChAQhIlDjKfDfGdBdD~BJNbArAn@hCGjDkC`JiFpKe@pF\\hEpB~Bxh@nPxBv@nCrA|B|AnD~BjBdCtBxCxAzBxAtBpAjBvA`BhC`ChC~AhErB`MhDvJvDvEdBvClAbMxGve@rOjS|Gfg@rOpKhDvZvJ`Y~In\\lKtFfBpwAhc@htCn~@d^fLhXbLpl@rRhuCv`Ax{@|ZrVtJtPlH~TvK|]|Rda@|Vhk@~]~gEfeCxYjQjSvKryBrpAvzBxvAzyDj|B|vBrvAxUjOza@b\\zc@|b@h_@rh@fUpc@bO~_@vRvl@`bAfaDdJj[bf@n~A|yAt|EruAhrExd@lzAnIx[p@`C`BzEfFvUxFj[tFzl@fAl[nAl}A~Ad}AdAzdA|@vq@rAx[rCtXnE`\\`Qz`Ajl@b}ChEdUxT|jAfIlf@nAbHf@bCr@tCjQx~@rLpk@|DpSnA|FzjAfsGtEjVzWhjAfBnFlBlFpEfL~]hy@b\\bu@|J~YfIlZrb@``C~DxTvMjt@nKfl@~j@~vCpC~M|C~OdC`OnCnMtZlaBxn@~hDhZ|zAdGzZhAxEzjApsGvc@tzBx_@|bBno@~aC`c@l`Bls@xgCpF|RjJt\\`]|mAlRtr@dD|LrHnYvIn]jDzPbD|ShA~I`AzJj@|FfDld@T~_@Dhu@kCxqAUlOk@xd@KrY[xKuD|sBi@vf@b@va@@h@@pAp@tn@fDrwCjGrsDDhd@n@nb@pBxgABlIPfKh@hX?vd@lDjpDf@fJnCv}AxBpSbRf}ApC~Sv\\|{C~Gxb@xKlg@pIfj@|DjShE~NjGrNtI|NrMrNnKpKhFzH|BjG`BhIj@nISdFq@bGcB~FyE~JgH|GwIhE{MjDsTrE{Y~GeFdBwUbD{XzDeX|J}HfD{MdKiM|SyB~G[~DZ`F~AtBl@v@dCpAvRrI`OhHlG|BbAVz@FbBChGiAbBo@`Ci@fCOfCDtBVdCr@xBnAhBzAtApB~@~Bh@fCNnCd@bD~@vCb@r@~@bAbCxAtEzBl]tPbUlLhNdGzFtCbDhBxF~CbF`CfAh@lEx@vFIdFuAhEkAnDoHLWpDsHqAk@gQgIqAAs@r@}RkJcD}AdCoFrKbF`KxExW`MlF`C~EzBlAJxAn@rFnCzGbD_DtGkOoHyChGyChG{IzQ"
+        }
+      ],
+      "rank": 4,
+      "category": "hotel::resorts",
+      "businessType": "hotel",
+      "computedAt": "2026-04-24T03:36:45.534Z"
+    },
+    {
+      "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
+      "poiId": "IT.31AIAE5KWTNJV",
+      "name": "Main Entrance, Parkway Parade",
+      "lat": 1.3020457,
+      "lng": 103.90468322182437,
+      "address": "80 Marine Parade Road, Singapore, 449269",
+      "fairnessScore": 1656.6,
+      "maxTravelTime": 1865.4,
+      "minTravelTime": 1044,
+      "totalTravelTime": 2909.4,
+      "perUserTravelTimes": [
+        {
+          "participantId": "51653f04-06a0-42c0-ad14-b0f30e1026fc",
+          "name": "Jaga1",
+          "duration": 1865.4,
+          "distance": 27222.588,
+          "geometry": "}{iqAqgdzdEsCCgJEE|VmSBoFA{@?o@?A?uAA}CGHaCbB{NnDcPnFoPhHqLvEeHf@w@~BqCfHaGzHkF`B}@fFuCxFuC`GcCzCeA`JyClRcD|BWp@IpBUvDa@~@IjN}AtEe@jKmA`Hq@jSmBjO_BnD]|B_@`NaCxKcDbHqCdJoFrIcGvLiLpGaK`ByCXo@xCcHhDiKpDkOfBkG\\kA~AwFf@{Ap@}BzAkF|FoR|EkMzNsZfEoJzIiR~EcK|@kB|AyJRiDByD[aE{A_DeC_C_d@wKwNkEyHgCwPwFqMmF_EmAyPgHuIeDuJiEyDmBzDqHhAeDCiDSyBGcBEcBBaBHuAZwCb@sCvBcLvOco@vKuc@`Gg_@jB{Mj@{KHgCN_HJqCJcAz@uCdA{`@nDcg@T}CT}CjHef@fXabAdF_NhBoEfCsGhUse@bFqLbHiPjKqVhj@}kAzu@y|A|HgPxMqZ|EgKlPm_@`fAe{BlNcZxd@uaAj`@yy@rFuLx_@_z@bh@kiAvHwNtp@suAv_@ix@tYam@p}AahD`Rmb@nDqJ|T_e@dC}FnB{EjB_HhKgb@|Gaa@hEu\\vA{Yn@ac@yAsv@oGsi@uJwh@oKo]qT}s@{HqY_s@wlBkRsb@kn@_hAw_@en@aF}HsFqIqE}IyRyXkQyRsIoIkJsHoVsOmXkKov@qVgrAad@wKuDmIeDaJcEcH_D{GuDyG}D_GiEaDcCoDiDmGcGqD_EiDsEsDsG}DkI{DeJyD}KuDyMiH{]eHc^cLaj@_h@{rBa]ykAmb@cqAeGsSsKiW_FmIyFmHmI_J_GuF_F{DcFoDgXwMqNiFokAgc@{LuEoQ{HwJiFkJ{GyMmNoDqE}CwE{DeHiEkIqD{IaJaWgJab@sEuSuDeZoCa]_B}k@Tyf@tEcn@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@dHcIzCyDvDeGdB{DxDuItFsOjBcL\\yD`@yLd@qOcJo}@aHgu@s@sRlAwPlDeQ~DqOvUqm@bTsj@dCkI|AuPY_Ti@eP_AeKaAeIm@gDs@oDcBoHgMql@wF_Z{EmTuM_k@{XyoAsC{OuFm[yKe]iNy\\oSe`@{d@k}@qLqV_KoXuGcYqDuO_CeMkDg\\mBk_@wBqi@a@iq@KmG_@}OoBa|@MmGIwHy@{m@`@of@^iV|EacBHyE`@oSnEenA~Cyz@TmJPeH`AyZh@o[v@ePlKezBf@eLx@aROwWC{BaAcIkCgKaAuE{YmvAySabA{FkUmAeEuCoK}EmQgCaLcDeSeBuR[oNf@aUt@qIlBsStCaRvDmOlGkSrEkMnDyJ`JyU`KyXrJiXpHuXdFyUbC}KpAaGpAuHjCySbFeWvL{f@xOse@vRma@xYug@xa@{l@hc@}d@~NwNhA}@bJeHlP{Mz@wCVk@^i@|AsBjIsItTuNfi@w_@`SwNzGmCly@yl@vEgD``@}Xx[gUrNmJdPuGbMoD|X{Ebe@eHt_@kExOaBdO}@dUu@rJBxJD~WNhOz@xIhAzH?fkA|FjVGnCBxd@@x[JrgBmL~d@yDlfDye@~zAq[r]eHzJsC`wF_`B`y@{Gfy@KriAxLbsC`o@xa@vD`It@xCX|n@|EhJsA`FsA`FqAfHgFzF_IlDoJ|A}N@mO}BazBQmQTs]xAas@ZkKjAyFaCogB_Act@k@oi@o@{j@l@yf@hFywDD{HzDebBTqm@y@ag@kAeSqB}TmCqVaD{SmDwOsCkM{Iu]cWk~@gGiRgPam@cEyOuUi|@_s@{fCasA}aF_Oml@oGsYe[a~A}W}tAuCkOeB_C{B}EkJaX{IgUcIiQwHmLsKcIkNwDiZcD}ZoBe|@o@S@qINkQzAw@Hc@D{IfBaGlAgL`DgC|CoA~Ag@fBGpBxCjSzGbRz@`CfDfJdDfJvGzQvAtDrA~CfBpElHjQ~LdVr_@hp@nBhDjApBb@f@fB|CxErItIzMzGpK|M~SfE`Iv@xAzFjLtCjEbNhTpB~CbHdKzF|Dj@Ft@_@\\}@?EQkAo@mBmFmI"
+        },
+        {
+          "participantId": "6c1b972c-ab74-41b2-925f-f28469a48de6",
+          "name": "Jaga2",
+          "duration": 1044,
+          "distance": 13088.136,
+          "geometry": "yroqAoh{ieEq@UeeBoj@xFmQ|uB|o@zB`B|CpBzPzCn@ChAQhIlDjKfDfGdBdD~BJNbArAn@hCGjDkC`JiFpKe@pF\\hEpB~Bxh@nPxBv@nCrA|B|AnD~BjBdCtBxCxAzBxAtBpAjBvA`BhC`ChC~AhErB`MhDvJvDvEdBvClAbMxGve@rOjS|Gfg@rOpKhDvZvJ`Y~In\\lKtFfBpwAhc@htCn~@d^fLhXbLpl@rRhuCv`Ax{@|ZrVtJtPlH~TvK|]|Rda@|Vhk@~]~gEfeCxYjQjSvKryBrpAvzBxvAzyDj|B|vBrvAxUjOza@b\\zc@|b@h_@rh@fUpc@bO~_@vRvl@`bAfaDdJj[bf@n~A|yAt|EruAhrExd@lzAnIx[p@`C`BzEfFvUxFj[tFzl@fAl[nAl}A~Ad}AdAzdA|@vq@rAx[rCtXnE`\\`Qz`Ajl@b}ChEdUxT|jAfIlf@nAbHf@bCr@tCjQx~@rLpk@|DpSnA|FzjAfsGtEjVzWhjAfBnFlBlFpEfL~]hy@b\\bu@|J~YfIlZrb@``C~DxTvMjt@nKfl@~j@~vCpC~M|C~OdC`OnCnMtZlaBxn@~hDhZ|zAdGzZhAxEpClCn@vA|@hDb@lBdEpRtEvVdAhEtEvVhIdg@xD|RfFtK|EfFxH|ChH^zFq@|FwChDiHn@kGm@cHoCyHsDkF{E_EyEuC{EgBsIw@{MPeh@p@ei@`Aqr@dAyq@~CS@qINkQzAw@Hc@D{IfBaGlAgL`DgC|CoA~Ag@fBGpBxCjSzGbRz@`CfDfJdDfJvGzQvAtDrA~CfBpElHjQ~LdVr_@hp@nBhDjApBb@f@fB|CxErItIzMzGpK|M~SfE`Iv@xAzFjLtCjEbNhTpB~CbHdKzF|Dj@Ft@_@\\}@?EQkAo@mBmFmI"
+        }
+      ],
+      "rank": 5,
+      "category": "commercial building",
+      "businessType": "shopping mall/shops",
+      "computedAt": "2026-04-24T03:36:44.920Z"
+    },
+    {
+      "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
+      "poiId": "IT.23VWEXY497PG2",
+      "name": "Parkway Parade",
+      "lat": 1.3020453,
+      "lng": 103.90468322182437,
+      "address": "80 Marine Parade Road, Singapore, 449269",
+      "fairnessScore": 1703.74,
+      "maxTravelTime": 1908.1,
+      "minTravelTime": 1021.8,
+      "totalTravelTime": 2929.8999999999996,
+      "perUserTravelTimes": [
+        {
+          "participantId": "51653f04-06a0-42c0-ad14-b0f30e1026fc",
+          "name": "Jaga1",
+          "duration": 1908.1,
+          "distance": 27222.524,
+          "geometry": "}{iqAqgdzdEsCCgJEE|VmSBoFA{@?o@?A?uAA}CGHaCbB{NnDcPnFoPhHqLvEeHf@w@~BqCfHaGzHkF`B}@fFuCxFuC`GcCzCeA`JyClRcD|BWp@IpBUvDa@~@IjN}AtEe@jKmA`Hq@jSmBjO_BnD]|B_@`NaCxKcDbHqCdJoFrIcGvLiLpGaK`ByCXo@xCcHhDiKpDkOfBkG\\kA~AwFf@{Ap@}BzAkF|FoR|EkMzNsZfEoJzIiR~EcK|@kB|AyJRiDByD[aE{A_DeC_C_d@wKwNkEyHgCwPwFqMmF_EmAyPgHuIeDuJiEyDmBzDqHhAeDCiDSyBGcBEcBBaBHuAZwCb@sCvBcLvOco@vKuc@`Gg_@jB{Mj@{KHgCN_HJqCJcAz@uCdA{`@nDcg@T}CT}CjHef@fXabAdF_NhBoEfCsGhUse@bFqLbHiPjKqVhj@}kAzu@y|A|HgPxMqZ|EgKlPm_@`fAe{BlNcZxd@uaAj`@yy@rFuLx_@_z@bh@kiAvHwNtp@suAv_@ix@tYam@p}AahD`Rmb@nDqJ|T_e@dC}FnB{EjB_HhKgb@|Gaa@hEu\\vA{Yn@ac@yAsv@oGsi@uJwh@oKo]qT}s@{HqY_s@wlBkRsb@kn@_hAw_@en@aF}HsFqIqE}IyRyXkQyRsIoIkJsHoVsOmXkKov@qVgrAad@wKuDmIeDaJcEcH_D{GuDyG}D_GiEaDcCoDiDmGcGqD_EiDsEsDsG}DkI{DeJyD}KuDyMiH{]eHc^cLaj@_h@{rBa]ykAmb@cqAeGsSsKiW_FmIyFmHmI_J_GuF_F{DcFoDgXwMqNiFokAgc@{LuEoQ{HwJiFkJ{GyMmNoDqE}CwE{DeHiEkIqD{IaJaWgJab@sEuSuDeZoCa]_B}k@Tyf@tEcn@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@dHcIzCyDvDeGdB{DxDuItFsOjBcL\\yD`@yLd@qOcJo}@aHgu@s@sRlAwPlDeQ~DqOvUqm@bTsj@dCkI|AuPY_Ti@eP_AeKaAeIm@gDs@oDcBoHgMql@wF_Z{EmTuM_k@{XyoAsC{OuFm[yKe]iNy\\oSe`@{d@k}@qLqV_KoXuGcYqDuO_CeMkDg\\mBk_@wBqi@a@iq@KmG_@}OoBa|@MmGIwHy@{m@`@of@^iV|EacBHyE`@oSnEenA~Cyz@TmJPeH`AyZh@o[v@ePlKezBf@eLx@aROwWC{BaAcIkCgKaAuE{YmvAySabA{FkUmAeEuCoK}EmQgCaLcDeSeBuR[oNf@aUt@qIlBsStCaRvDmOlGkSrEkMnDyJ`JyU`KyXrJiXpHuXdFyUbC}KpAaGpAuHjCySbFeWvL{f@xOse@vRma@xYug@xa@{l@hc@}d@~NwNhA}@bJeHlP{Mz@wCVk@^i@|AsBjIsItTuNfi@w_@`SwNzGmCly@yl@vEgD``@}Xx[gUrNmJdPuGbMoD|X{Ebe@eHt_@kExOaBdO}@dUu@rJBxJD~WNhOz@xIhAzH?fkA|FjVGnCBxd@@x[JrgBmL~d@yDlfDye@~zAq[r]eHzJsC`wF_`B`y@{Gfy@KriAxLbsC`o@xa@vD`It@xCX|n@|EhJsA`FsA`FqAfHgFzF_IlDoJ|A}N@mO}BazBQmQTs]xAas@ZkKjAyFaCogB_Act@k@oi@o@{j@l@yf@hFywDD{HzDebBTqm@y@ag@kAeSqB}TmCqVaD{SmDwOsCkM{Iu]cWk~@gGiRgPam@cEyOuUi|@_s@{fCasA}aF_Oml@oGsYe[a~A}W}tAuCkOeB_C{B}EkJaX{IgUcIiQwHmLsKcIkNwDiZcD}ZoBe|@o@S@qINkQzAw@Hc@D{IfBaGlAgL`DgC|CoA~Ag@fBGpBxCjSzGbRz@`CfDfJdDfJvGzQvAtDrA~CfBpElHjQ~LdVr_@hp@nBhDjApBb@f@fB|CxErItIzMzGpK|M~SfE`Iv@xAzFjLtCjEbNhTpB~CbHdKzF|Dj@Ft@_@\\}@?EQkAo@mBkFmI"
+        },
+        {
+          "participantId": "6c1b972c-ab74-41b2-925f-f28469a48de6",
+          "name": "Jaga2",
+          "duration": 1021.8,
+          "distance": 13088.072,
+          "geometry": "yroqAoh{ieEq@UeeBoj@xFmQ|uB|o@zB`B|CpBzPzCn@ChAQhIlDjKfDfGdBdD~BJNbArAn@hCGjDkC`JiFpKe@pF\\hEpB~Bxh@nPxBv@nCrA|B|AnD~BjBdCtBxCxAzBxAtBpAjBvA`BhC`ChC~AhErB`MhDvJvDvEdBvClAbMxGve@rOjS|Gfg@rOpKhDvZvJ`Y~In\\lKtFfBpwAhc@htCn~@d^fLhXbLpl@rRhuCv`Ax{@|ZrVtJtPlH~TvK|]|Rda@|Vhk@~]~gEfeCxYjQjSvKryBrpAvzBxvAzyDj|B|vBrvAxUjOza@b\\zc@|b@h_@rh@fUpc@bO~_@vRvl@`bAfaDdJj[bf@n~A|yAt|EruAhrExd@lzAnIx[p@`C`BzEfFvUxFj[tFzl@fAl[nAl}A~Ad}AdAzdA|@vq@rAx[rCtXnE`\\`Qz`Ajl@b}ChEdUxT|jAfIlf@nAbHf@bCr@tCjQx~@rLpk@|DpSnA|FzjAfsGtEjVzWhjAfBnFlBlFpEfL~]hy@b\\bu@|J~YfIlZrb@``C~DxTvMjt@nKfl@~j@~vCpC~M|C~OdC`OnCnMtZlaBxn@~hDhZ|zAdGzZhAxEpClCn@vA|@hDb@lBdEpRtEvVdAhEtEvVhIdg@xD|RfFtK|EfFxH|ChH^zFq@|FwChDiHn@kGm@cHoCyHsDkF{E_EyEuC{EgBsIw@{MPeh@p@ei@`Aqr@dAyq@~CS@qINkQzAw@Hc@D{IfBaGlAgL`DgC|CoA~Ag@fBGpBxCjSzGbRz@`CfDfJdDfJvGzQvAtDrA~CfBpElHjQ~LdVr_@hp@nBhDjApBb@f@fB|CxErItIzMzGpK|M~SfE`Iv@xAzFjLtCjEbNhTpB~CbHdKzF|Dj@Ft@_@\\}@?EQkAo@mBkFmI"
+        }
+      ],
+      "rank": 6,
+      "category": "commercial building",
+      "businessType": "shopping mall/shops",
+      "computedAt": "2026-04-24T03:36:45.094Z"
+    },
+    {
+      "roomId": "647d45eb-b17d-4c4e-8060-3e49462d1228",
+      "poiId": "IT.2JRJ89K977IHJ",
+      "name": "Cafe Kreams - Maxwell Chambers",
+      "lat": 1.277347227122462,
+      "lng": 103.84635910548747,
+      "address": "32 Maxwell Road, #01-07, Maxwell Chambers, Singapore",
+      "fairnessScore": 1237.86,
+      "maxTravelTime": 1521.5,
+      "minTravelTime": 1418.2,
+      "totalTravelTime": 2939.7,
+      "perUserTravelTimes": [
+        {
+          "participantId": "213dbc6e-a3ae-4203-bcc2-bcf52edcda4d",
+          "name": "Jagatees",
+          "profile": "driving",
+          "duration": 1418.2,
+          "distance": 21013.299,
+          "geometry": "yroqAoh{ieEq@UeeBoj@xFmQ|uB|o@zB`B|CpBzPzCn@ChAQhIlDjKfDfGdBdD~BJNbArAn@hCGjDkC`JiFpKe@pF\\hEpB~Bxh@nPxBv@nCrA|B|AnD~BjBdCtBxCxAzBxAtBpAjBvA`BhC`ChC~AhErB`MhDvJvDvEdBvClAbMxGve@rOjS|Gfg@rOpKhDvZvJ`Y~In\\lKtFfBpwAhc@htCn~@d^fLhXbLpl@rRhuCv`Ax{@|ZrVtJtPlH~TvK|]|Rda@|Vhk@~]~gEfeCxYjQjSvKryBrpAvzBxvAzyDj|B|vBrvAxUjOza@b\\zc@|b@h_@rh@fUpc@bO~_@vRvl@`bAfaDdJj[bf@n~A|yAt|EruAhrExd@lzAnIx[p@`C`BzEfFvUxFj[tFzl@fAl[nAl}A~Ad}AdAzdA|@vq@rAx[rCtXnE`\\`Qz`Ajl@b}ChEdUxT|jAfIlf@nAbHf@bCr@tCjQx~@rLpk@|DpSnA|FzjAfsGtEjVzWhjAfBnFlBlFpEfL~]hy@b\\bu@|J~YfIlZrb@``C~DxTvMjt@nKfl@~j@~vCpC~M|C~OdC`OnCnMtZlaBxn@~hDhZ|zAdGzZhAxEzjApsGvc@tzBx_@|bBno@~aC`c@l`Bls@xgCpF|RjJt\\`]|mAlRtr@dD|LrHnYvIn]jDzPbD|ShA~I`AzJj@|FfDld@T~_@Dhu@kCxqAUlOk@xd@KrY[xKuD|sBi@vf@b@va@@h@@pAp@tn@fDrwCjGrsDzAtCj@`Ch@jG~@zObBt^n@xLb@dJx@lI`CbGrBdMjDtLzOf\\lSlRpIlFxYjLnRfFf\\pGzPvB`[lCbZn@|WUz_@kCn]_Gd]}G`[gMnp@}a@xyAekAdZ_N|^{JlWeErW{Ah[Ej[rBrb@xIx^bPr[dPrXlWpOxTjB~C|MrQfP`VjgCnxDza@no@f~BtmD`W|_@fnB|bDrOnY`GzIfXje@vO~TziAbkBpiBltCfGzJzFfOxCzIfD`LtE|OlFhU`AfGv@zGn@bHh@jJRrKGpXoBvZcAbH_BlLcCzJ{D|LoI|SezAtjCcb@`t@{JzP{HfMZzGOnBiAfF{@bDy@dDs@pCcBfIuAlJy@`K[nJGtHG~KYnEw@xFsArFkBjG{BjFyD`DiDtCwNfHoVvLgR|HgJdIgFdHeEhG{@dBoCnFq@rAuKvR{CzFwAhD_MhTqJtP_ApBqC|EeFhI}J|OcD~EoDpFkBtBcF~EaA`A{BtBwJbJoGfGmJdIgOjM"
+        },
+        {
+          "participantId": "e05c868c-4fea-4fbf-bbe8-760aae461248",
+          "name": "Alex",
+          "profile": "driving",
+          "duration": 1521.5,
+          "distance": 17310.072,
+          "geometry": "}{iqAqgdzdEsCCgJEE|Vf@?~VB|HFdIDtFOnDc@hHcFlLiPdCiDlD}DpNoQbBuAnDkAnB_@da@{DpPkB~OoBvD[z@I~Ec@vB{@`AdCvDlFhCjC`I~GpFjB`A\\pFp@jFHpJDnE@xKBrP?dC@hIcAdBgA`EaHjJm\\xNy]tBgEju@{iAtCsElr@ygAnJ{NjIaMdQoXlCgEdEwFhErCzExCjKlHnCfBhRlLnMfFvJlDrLvBvFn@tIlAvNhAlRJ`JKtEYzFKfKc@vMiB`LwClNkDlJmEhDqA`NmGbRuIhJmFbGiDlMyGfR_MjWoRjSaQxRwQxMyMnMwMdI{I~K_MhJyJ~CsD|CsD|JcLt@{@fD}E`@q@`LkPpD{FvNiXxTq^fAgBdC{DjIiNbL}OpFaJlEoHrBeDjByClMuT`JyOzAgC~AwClGmK~T{a@zO}VpOkVfB_Dn]yi@rAkFpB{EzBsCfYi[dQyRvCeD`DsDlEsEvRmQjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@z@sLt@gFrEcTpFqYdIsX`HqSdSoc@zQ}XfYeb@zYa_@bPsTb{@clAvNePlMeNfO_P~B{F~]ue@`kAwyA`FcJrCyHnA}Ed@qCf@{ChAoId@oHH{DJwGlB{Ul@eM`@}LjD{jAHi`@A_T]}]So[SiOSkWu@yfAo@qe@Q{GGuG?mAO}OIgKCsEkBcuBAoASc[EgNYuSGuE[q^OmOkGiIwW}UwDqD{DwCkKiIaSqO}FoEgD_CwPeMeKqImD}CmCwBeFeEwImG}NcL}UsQeBuAuGwFkGeFiEqDaJkCuAa@uHeBgMuA}@EoBKoGfGmJdIgOjM"
+        }
+      ],
+      "rank": 1,
+      "category": "food and beverage::cafe",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T05:21:48.022Z"
+    },
+    {
+      "roomId": "647d45eb-b17d-4c4e-8060-3e49462d1228",
+      "poiId": "IT.18W1PGNLHKIJ6",
+      "name": "Cafe O Bugis",
+      "lat": 1.299880283,
+      "lng": 103.85483,
+      "address": "229 Victoria Street, Singapore, 188023",
+      "fairnessScore": 1573.4,
+      "maxTravelTime": 1848.3,
+      "minTravelTime": 1374.5,
+      "totalTravelTime": 3222.8,
+      "perUserTravelTimes": [
+        {
+          "participantId": "213dbc6e-a3ae-4203-bcc2-bcf52edcda4d",
+          "name": "Jagatees",
+          "profile": "driving",
+          "duration": 1374.5,
+          "distance": 18565.405,
+          "geometry": "yroqAoh{ieEq@UeeBoj@xFmQ|uB|o@zB`B|CpBzPzCn@ChAQhIlDjKfDfGdBdD~BJNbArAn@hCGjDkC`JiFpKe@pF\\hEpB~Bxh@nPxBv@nCrA|B|AnD~BjBdCtBxCxAzBxAtBpAjBvA`BhC`ChC~AhErB`MhDvJvDvEdBvClAbMxGve@rOjS|Gfg@rOpKhDvZvJ`Y~In\\lKtFfBpwAhc@htCn~@d^fLhXbLpl@rRhuCv`Ax{@|ZrVtJtPlH~TvK|]|Rda@|Vhk@~]~gEfeCxYjQjSvKryBrpAvzBxvAzyDj|B|vBrvAxUjOza@b\\zc@|b@h_@rh@fUpc@bO~_@vRvl@`bAfaDdJj[bf@n~A|yAt|EruAhrExd@lzAnIx[p@`C`BzEfFvUxFj[tFzl@fAl[nAl}A~Ad}AdAzdA|@vq@rAx[rCtXnE`\\`Qz`Ajl@b}ChEdUxT|jAfIlf@nAbHf@bCr@tCjQx~@rLpk@|DpSnA|FzjAfsGtEjVzWhjAfBnFlBlFpEfL~]hy@b\\bu@|J~YfIlZrb@``C~DxTvMjt@nKfl@~j@~vCpC~M|C~OdC`OnCnMtZlaBxn@~hDhZ|zAdGzZhAxEzjApsGvc@tzBx_@|bBno@~aC`c@l`Bls@xgCpF|RjJt\\`]|mAlRtr@dD|LrHnYvIn]jDzPbD|ShA~I`AzJj@|FfDld@T~_@Dhu@kCxqAUlOk@xd@KrY[xKuD|sBi@vf@b@va@@h@@pAp@tn@fDrwCjGrsDDhd@n@nb@pBxgABlIPfKh@hX?vd@lDjpDf@fJnCv}AxBpSbRf}ApC~Sv\\|{C~Gxb@xKlg@pIfj@|DjShE~NjGrNtI|NrMrNnKpKhFzH|BjG`BhIj@nISdFq@bGcB~FyE~JgH|GwIhE{MjDsTrE{Y~GeFdBwUbD{XzDeX|J}HfD{MdKuW|QqSvQoI|J_\\|]o_@z_@]XiNjMuSxRqBfByEhD}BjBgl@de@g@^}@r@iRpOiLpLuDzDyBrBye@bd@wCpCuD~DsDtDgShOcCrAoIbMeAlCUlADx@DpB`BtAxHpGlEnD`DrCdBpA`DjCdF`ElE`DtEhD|HnF^a@|FiGxCaDZ_@nGyGxCaDlCqClBsB"
+        },
+        {
+          "participantId": "e05c868c-4fea-4fbf-bbe8-760aae461248",
+          "name": "Alex",
+          "profile": "driving",
+          "duration": 1848.3,
+          "distance": 19372.561,
+          "geometry": "}{iqAqgdzdEsCCgJEE|VmSBoFA{@?o@?A?uAA}CGHaCbB{NnDcPnFoPhHqLvEeHf@w@~BqCfHaGzHkF`B}@fFuCxFuC`GcCzCeA`JyClRcD|BWp@IpBUvDa@~@IjN}AtEe@jKmA`Hq@jSmBjO_BnD]|B_@`NaCxKcDbHqCdJoFrIcGvLiLpGaK`ByCXo@xCcHhDiKpDkOfBkG\\kA~AwFf@{Ap@}BzAkF|FoR|EkMzNsZfEoJzIiR~EcK|@kB|AyJRiDByD[aE{A_DeC_C_d@wKwNkEyHgCwPwFqMmF_EmAyPgHuIeDuJiEyDmBzDqHhAeDCiDSyBGcBEcBBaBHuAZwCb@sCvBcLvOco@vKuc@`Gg_@jB{Mj@{KHgCN_HJqCJcAz@uCdA{`@nDcg@T}CT}CjHef@fXabAdF_NhBoEfCsGhUse@bFqLbHiPjKqVhj@}kAzu@y|A|HgPxMqZ|EgKlPm_@`fAe{BlNcZxd@uaAj`@yy@rFuLx_@_z@bh@kiAvHwNtp@suAv_@ix@tYam@p}AahD`Rmb@nDqJ|T_e@dC}FnB{EjB_HhKgb@|Gaa@hEu\\vA{Yn@ac@yAsv@oGsi@uJwh@oKo]qT}s@{HqY_s@wlBkRsb@kn@_hAw_@en@aF}HsFqIqE}IyRyXkQyRsIoIkJsHoVsOmXkKov@qVgrAad@wKuDmIeDaJcEcH_D{GuDyG}D_GiEaDcCoDiDmGcGqD_EiDsEsDsG}DkI{DeJyD}KuDyMiH{]eHc^cLaj@_h@{rBa]ykAmb@cqAeGsSsKiW_FmIyFmHmI_J_GuF_F{DcFoDgXwMqNiFokAgc@{LuEoQ{HwJiFkJ{GyMmNoDqE}CwE{DeHiEkIqD{IaJaWgJab@sEuSuDeZoCa]_B}k@Tyf@tEcn@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@j@mDh@oAl@y@tAeClF}I|JoWbB_JtAwKd@kDh@yLW}OcAwUuA_KiBsJuB}D_EgDoD_AyE[sETiDjA{BnAwApA}AlDm@dEJzGlBfLrDxIdF`HdGdFbIxDpJjC~c@~It_@vExOZ|ZcApHu@tFk@nf@sApE?lJbEfVdKvCjA`A^dIfDt[fMfWhGjIpBv@P~Ct@hJ|BvIxBfCn@nPhEzFn@|DDbDc@rBiA|AkBtRy|@bEkRxKaf@zOik@`AqE`AmFxHm_@lBaIbC{KdIa]nAmFfEuQdKic@|G}ZXsAvWmrAxLmn@`B{HpKmh@zDmPnFwL`FoIjAeBdBgC|RcSnBeBrBeB`MiKfNmLzSwP~RyPhL{JbCqBnJaIde@eb@jZ_UvRyOnPaMlUoNdUoMhT_ObF{EzGcIzH_LhJuT`a@apAdHcVpB}Gb@wC`KyYnNk_@tJmW`BkEdG}R~@_EhI_^dFuQd@oBvAiKbAmGtB}K`DmLjDyJdFqJjDqEtF}FlDuCrQmN|MwJdCuBfKuHnHqFxCeCjNmJ|DiCzWyUj]m_@fBoBfLeLvTsS`OaPnU{[dAyApCuD|e@gn@b^yd@vCiErC_EhAoBrMwTrCmFxHmQfI{RtH_XxGmV|DaMlDmHfTwh@tB}EnAsCr@uAjBoE`E_Ld@iCXuHKkJ`BwUz@sDx@mDjB{EfBqDjHwLf@s@|DeFvCyDb@m@zJsNl@oBPwBp@eEd@sA~@yBvAeBv@eAp@{@zEaFdCgCxF_EdHrFhIzGpNbMbHvF`b@h^nC~BuD~DsDtDgShOcCrAoIbMeAlCUlADx@DpB`BtAxHpGlEnD`DrCdBpA`DjCdF`ElE`DtEhD|HnF^a@|FiGxCaDZ_@nGyGxCaDlCqClBsB"
+        }
+      ],
+      "rank": 2,
+      "category": "food and beverage",
+      "businessType": "commercial building",
+      "computedAt": "2026-04-24T05:21:48.147Z"
+    }
+  ]
+}
