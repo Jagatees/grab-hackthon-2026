@@ -29,6 +29,9 @@ type SyncSpotMapRecommendation = {
   maxTravelTime: number;
   minTravelTime: number;
   totalTravelTime: number;
+  badge: "Balanced" | "Fastest" | "One-sided" | "Host-friendly";
+  explanation: string;
+  voteCount: number;
   rank: number;
   perUserTravelTimes: Array<{
     participantId: string;
@@ -44,6 +47,7 @@ type SyncSpotRoomMapProps = {
   participants: SyncSpotMapParticipant[];
   recommendations: SyncSpotMapRecommendation[];
   activeRecommendationIds: string[];
+  selectedVenueId: string | null;
   onToggleRecommendation: (poiId: string) => void;
 };
 
@@ -106,6 +110,7 @@ export function SyncSpotRoomMap({
   participants,
   recommendations,
   activeRecommendationIds,
+  selectedVenueId,
   onToggleRecommendation
 }: SyncSpotRoomMapProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -234,24 +239,32 @@ export function SyncSpotRoomMap({
             paint: {
               "circle-radius": [
                 "case",
+                ["==", ["get", "isSelected"], true],
+                10,
                 ["==", ["get", "isActive"], true],
                 8,
                 6
               ],
               "circle-color": [
                 "case",
+                ["==", ["get", "isSelected"], true],
+                "#0d8f73",
                 ["==", ["get", "isActive"], true],
                 "#fffaf4",
                 "#f5c451"
               ],
               "circle-stroke-color": [
                 "case",
+                ["==", ["get", "isSelected"], true],
+                "#fffaf4",
                 ["==", ["get", "isActive"], true],
                 "#0d8f73",
                 "#fffaf4"
               ],
               "circle-stroke-width": [
                 "case",
+                ["==", ["get", "isSelected"], true],
+                3,
                 ["==", ["get", "isActive"], true],
                 3,
                 2
@@ -291,6 +304,9 @@ export function SyncSpotRoomMap({
                   name?: string;
                   address?: string;
                   score?: string;
+                  badge?: string;
+                  explanation?: string;
+                  votes?: string;
                   worst?: string;
                   best?: string;
                   total?: string;
@@ -312,10 +328,13 @@ export function SyncSpotRoomMap({
                   <p>${properties?.address ?? ""}</p>
                   <div class="syncspot-map-popup-metrics">
                     <span>Score ${properties?.score ?? "-"}</span>
+                    <span>${properties?.badge ?? "-"}</span>
+                    <span>${properties?.votes ?? "0 votes"}</span>
                     <span>Worst ${properties?.worst ?? "-"}</span>
                     <span>Best ${properties?.best ?? "-"}</span>
                     <span>Total ${properties?.total ?? "-"}</span>
                   </div>
+                  <p>${properties?.explanation ?? ""}</p>
                   <div class="syncspot-map-popup-users">${people}</div>
                 </div>`
               )
@@ -398,6 +417,9 @@ export function SyncSpotRoomMap({
         address: recommendation.address ?? "",
         rank: recommendation.rank,
         score: recommendation.fairnessScore.toFixed(2),
+        badge: recommendation.badge,
+        explanation: recommendation.explanation,
+        votes: `${recommendation.voteCount} vote${recommendation.voteCount === 1 ? "" : "s"}`,
         worst: `${Math.round(recommendation.maxTravelTime / 60)}m`,
         best: `${Math.round(recommendation.minTravelTime / 60)}m`,
         total: `${Math.round(recommendation.totalTravelTime / 60)}m`,
@@ -407,7 +429,8 @@ export function SyncSpotRoomMap({
               `${route.name} (${route.profile ?? "driving"}): ${Math.round(route.duration / 60)}m`
           )
           .join(" | "),
-        isActive: activeRecommendationIds.includes(recommendation.poiId)
+        isActive: activeRecommendationIds.includes(recommendation.poiId),
+        isSelected: recommendation.poiId === selectedVenueId
       }
     }));
 
@@ -449,7 +472,13 @@ export function SyncSpotRoomMap({
       type: "FeatureCollection",
       features: routeFeatures
     });
-  }, [activeRecommendationIds, confirmedParticipants, mapReady, recommendations]);
+  }, [
+    activeRecommendationIds,
+    confirmedParticipants,
+    mapReady,
+    recommendations,
+    selectedVenueId
+  ]);
 
   useEffect(() => {
     const map = mapRef.current;

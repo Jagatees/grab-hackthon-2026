@@ -1,11 +1,13 @@
 import { NextRequest } from "next/server";
 import { createRoom } from "@/lib/syncspot/service";
+import type { RankingMode } from "@/lib/syncspot/types";
 
 export async function POST(request: NextRequest) {
   try {
     const body = (await request.json()) as {
       hostName?: string;
       category?: string;
+      rankingMode?: RankingMode;
     };
 
     if (!body.hostName?.trim()) {
@@ -17,7 +19,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const result = await createRoom(body as { hostName: string; category?: string });
+    const result = await createRoom(body as {
+      hostName: string;
+      category?: string;
+      rankingMode?: RankingMode;
+    });
 
     return Response.json(result, { status: 201 });
   } catch (error) {
@@ -29,4 +35,3 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-

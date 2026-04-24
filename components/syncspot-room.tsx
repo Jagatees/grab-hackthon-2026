@@ -10,6 +10,7 @@ type RoomParticipant = {
   originLat: number | null;
   originLng: number | null;
   originLabel: string | null;
+  votedVenueIds?: string[];
   confirmed: boolean;
 };
 
@@ -34,6 +35,11 @@ type RoomRecommendation = {
   maxTravelTime: number;
   minTravelTime: number;
   totalTravelTime: number;
+  averageTravelTime: number;
+  spread: number;
+  badge: "Balanced" | "Fastest" | "One-sided" | "Host-friendly";
+  explanation: string;
+  voteCount: number;
   rank: number;
   perUserTravelTimes: Array<{
     participantId: string;
@@ -45,16 +51,27 @@ type RoomRecommendation = {
   }>;
 };
 
+type RoomMessage = {
+  messageId: string;
+  participantId: string;
+  participantName: string;
+  body: string;
+  createdAt: string;
+};
+
 type RoomSnapshot = {
   room: {
     roomId: string;
     roomCode: string;
     hostId: string;
     category: string;
-    status: "waiting" | "ready" | "computed";
+    rankingMode: "fairest" | "fastest" | "midpoint";
+    selectedVenueId: string | null;
+    status: "waiting" | "ready" | "computed" | "finalized";
   };
   participants: RoomParticipant[];
   recommendations: RoomRecommendation[];
+  messages: RoomMessage[];
 };
 
 type SyncSpotRoomProps = {
@@ -82,12 +99,34 @@ function formatDuration(seconds: number) {
   return `${minutes}m`;
 }
 
+function buildGoogleMapsDirectionsUrl(input: {
+  originLat: number;
+  originLng: number;
+  destinationLat: number;
+  destinationLng: number;
+}) {
+  const url = new URL("https://www.google.com/maps/dir/");
+
+  url.searchParams.set("api", "1");
+  url.searchParams.set("origin", `${input.originLat},${input.originLng}`);
+  url.searchParams.set(
+    "destination",
+    `${input.destinationLat},${input.destinationLng}`
+  );
+  url.searchParams.set("travelmode", "driving");
+
+  return url.toString();
+}
+
 export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
   const searchParams = useSearchParams();
   const participantId = searchParams.get("participantId");
   const [snapshot, setSnapshot] = useState<RoomSnapshot | null>(null);
   const [joinName, setJoinName] = useState("");
   const [category, setCategory] = useState("cafe");
+  const [rankingMode, setRankingMode] = useState<"fairest" | "fastest" | "midpoint">(
+    "fairest"
+  );
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [copyLabel, setCopyLabel] = useState("Copy invite link");
@@ -95,6 +134,7 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
   const [originResults, setOriginResults] = useState<PlaceResult[]>([]);
   const [originStatus, setOriginStatus] = useState<string | null>(null);
   const [activeRecommendationIds, setActiveRecommendationIds] = useState<string[]>([]);
+  const [chatBody, setChatBody] = useState("");
 
   async function loadRoom() {
     const response = await fetch(`/api/syncspot/rooms/${roomId}`, {
@@ -108,6 +148,7 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
 
     setSnapshot(data);
     setCategory(data.room.category);
+    setRankingMode(data.room.rankingMode);
   }
 
   useEffect(() => {
@@ -128,6 +169,11 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
     [participantId, snapshot]
   );
   const isHost = currentParticipant?.participantId === snapshot?.room.hostId;
+  const currentVotes = new Set(currentParticipant?.votedVenueIds ?? []);
+  const selectedRecommendation =
+    snapshot?.recommendations.find(
+      (recommendation) => recommendation.poiId === snapshot.room.selectedVenueId
+    ) ?? null;
   const renderedRecommendations =
     snapshot?.recommendations.filter((recommendation) =>
       activeRecommendationIds.includes(recommendation.poiId)
@@ -344,7 +390,8 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            category
+            category,
+            rankingMode
           })
         }
       );
@@ -382,7 +429,8 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          category
+          category,
+          rankingMode
         })
       });
       const data = (await response.json()) as RoomSnapshot & { error?: string };
@@ -411,6 +459,165 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
     setActiveRecommendationIds([]);
   }
 
+  async function copyFinalSummary(recommendation: RoomRecommendation) {
+    const summary = [
+      `SyncSpot final meetup: ${recommendation.name}`,
+      recommendation.address ?? "No address",
+      ...recommendation.perUserTravelTimes.map(
+        (time) => `${time.name}: ${formatDuration(time.duration)}`
+      )
+    ].join("\n");
+
+    try {
+      await navigator.clipboard.writeText(summary);
+      setCopyLabel("Copied");
+      window.setTimeout(() => {
+        setCopyLabel("Copy invite link");
+      }, 1800);
+    } catch {
+      setError("Unable to copy final summary.");
+    }
+  }
+
+  async function reopenRoom() {
+    if (!snapshot || !currentParticipant) {
+      return;
+    }
+
+    setLoading("Reopening room...");
+    setError(null);
+
+    try {
+      const response = await fetch(`/api/syncspot/rooms/${snapshot.room.roomId}/reopen`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          participantId: currentParticipant.participantId
+        })
+      });
+      const data = (await response.json()) as RoomSnapshot & { error?: string };
+
+      if (!response.ok) {
+        throw new Error(data.error ?? "Unable to reopen room.");
+      }
+
+      setSnapshot(data);
+    } catch (reopenError) {
+      setError(reopenError instanceof Error ? reopenError.message : "Unable to reopen room.");
+    } finally {
+      setLoading(null);
+    }
+  }
+
+  async function sendMessage() {
+    if (!snapshot || !currentParticipant || !chatBody.trim()) {
+      return;
+    }
+
+    setLoading("Sending message...");
+    setError(null);
+
+    try {
+      const response = await fetch(`/api/syncspot/rooms/${snapshot.room.roomId}/messages`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          participantId: currentParticipant.participantId,
+          body: chatBody
+        })
+      });
+      const data = (await response.json()) as RoomSnapshot & { error?: string };
+
+      if (!response.ok) {
+        throw new Error(data.error ?? "Unable to send message.");
+      }
+
+      setSnapshot(data);
+      setChatBody("");
+    } catch (messageError) {
+      setError(messageError instanceof Error ? messageError.message : "Unable to send message.");
+    } finally {
+      setLoading(null);
+    }
+  }
+
+  async function toggleVote(venueId: string) {
+    if (!snapshot || !currentParticipant) {
+      return;
+    }
+
+    setLoading("Saving vote...");
+    setError(null);
+
+    try {
+      const response = await fetch(`/api/syncspot/rooms/${snapshot.room.roomId}/vote`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          participantId: currentParticipant.participantId,
+          venueId
+        })
+      });
+      const data = (await response.json()) as RoomSnapshot & { error?: string };
+
+      if (!response.ok) {
+        throw new Error(data.error ?? "Unable to record vote.");
+      }
+
+      setSnapshot(data);
+    } catch (voteError) {
+      setError(voteError instanceof Error ? voteError.message : "Unable to record vote.");
+    } finally {
+      setLoading(null);
+    }
+  }
+
+  async function finalizeVenue(venueId: string) {
+    if (!snapshot || !currentParticipant) {
+      return;
+    }
+
+    setLoading("Finalizing venue...");
+    setError(null);
+
+    try {
+      const response = await fetch(
+        `/api/syncspot/rooms/${snapshot.room.roomId}/finalize`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            participantId: currentParticipant.participantId,
+            venueId
+          })
+        }
+      );
+      const data = (await response.json()) as RoomSnapshot & { error?: string };
+
+      if (!response.ok) {
+        throw new Error(data.error ?? "Unable to finalize venue.");
+      }
+
+      setSnapshot(data);
+    } catch (finalizeError) {
+      setError(
+        finalizeError instanceof Error
+          ? finalizeError.message
+          : "Unable to finalize venue."
+      );
+    } finally {
+      setLoading(null);
+    }
+  }
+
   if (!snapshot) {
     return (
       <main className="syncspot-room-shell">
@@ -427,6 +634,7 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
         participants={snapshot.participants}
         recommendations={snapshot.recommendations}
         activeRecommendationIds={activeRecommendationIds}
+        selectedVenueId={snapshot.room.selectedVenueId}
         onToggleRecommendation={toggleRecommendationRoutes}
       />
       <section className="syncspot-room-card">
@@ -444,7 +652,8 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
               </button>
             </div>
             <p className="syncspot-muted">
-              Status: {snapshot.room.status} · Category: {snapshot.room.category}
+              Status: {snapshot.room.status} · Category: {snapshot.room.category} · Mode:{" "}
+              {snapshot.room.rankingMode}
             </p>
             <p className="syncspot-share-url">
               Invite: {shareUrl || `/room/${snapshot.room.roomId}`}
@@ -488,15 +697,20 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                     <div>
                       <div className="syncspot-participant-row">
                         <strong>{participant.name}</strong>
-                        <span
-                          className={`syncspot-pill ${
-                            participant.confirmed
-                              ? "syncspot-pill-confirmed"
-                              : "syncspot-pill-pending"
-                          }`}
-                        >
-                          {participant.confirmed ? "Confirmed" : "Pending"}
-                        </span>
+                        <div className="syncspot-inline-actions">
+                          {(participant.votedVenueIds?.length ?? 0) > 0 ? (
+                            <span className="syncspot-pill syncspot-pill-confirmed">Voted</span>
+                          ) : null}
+                          <span
+                            className={`syncspot-pill ${
+                              participant.confirmed
+                                ? "syncspot-pill-confirmed"
+                                : "syncspot-pill-pending"
+                            }`}
+                          >
+                            {participant.confirmed ? "Confirmed" : "Pending"}
+                          </span>
+                        </div>
                       </div>
                       <span>{participant.originLabel ?? "Origin not confirmed yet"}</span>
                     </div>
@@ -577,6 +791,21 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                     <option value="park">Park</option>
                   </select>
                 </label>
+                <label className="syncspot-field">
+                  <span>Ranking mode</span>
+                  <select
+                    onChange={(event) =>
+                      setRankingMode(
+                        event.target.value as "fairest" | "fastest" | "midpoint"
+                      )
+                    }
+                    value={rankingMode}
+                  >
+                    <option value="fairest">Fairest for everyone</option>
+                    <option value="fastest">Fastest overall</option>
+                    <option value="midpoint">Closest midpoint</option>
+                  </select>
+                </label>
                 <div className="syncspot-inline-actions">
                   <button
                     className="syncspot-secondary-btn"
@@ -584,7 +813,7 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                     onClick={() => void updateRoomCategory()}
                     type="button"
                   >
-                    {loading === "Updating room..." ? loading : "Save category"}
+                    {loading === "Updating room..." ? loading : "Save settings"}
                   </button>
                   <button
                     className="syncspot-primary-btn"
@@ -631,8 +860,8 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
             <div>
               <h2>Recommendations</h2>
               <p className="syncspot-muted">
-                Click any place card to toggle its routes on the map. You can compare multiple
-                options at the same time.
+                Compare the shortlist, vote on favorites, and click any place card to toggle its
+                routes on the map.
               </p>
             </div>
             {activeRecommendationIds.length > 0 ? (
@@ -675,10 +904,20 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                   </div>
                   <p>{recommendation.address ?? "No address"}</p>
                   <div className="syncspot-metrics">
+                    <span>{recommendation.badge}</span>
+                    <span>
+                      {recommendation.voteCount} vote
+                      {recommendation.voteCount === 1 ? "" : "s"}
+                    </span>
+                  </div>
+                  <div className="syncspot-metrics">
                     <span>Worst: {formatDuration(recommendation.maxTravelTime)}</span>
                     <span>Best: {formatDuration(recommendation.minTravelTime)}</span>
                     <span>Total: {formatDuration(recommendation.totalTravelTime)}</span>
                   </div>
+                  <p className="syncspot-recommendation-explanation">
+                    {recommendation.explanation}
+                  </p>
                   <ul className="syncspot-time-list">
                     {recommendation.perUserTravelTimes.map((time) => (
                       <li key={time.participantId}>
@@ -690,6 +929,34 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                       </li>
                     ))}
                   </ul>
+                  <div className="syncspot-inline-actions">
+                    {currentParticipant ? (
+                      <button
+                        className="syncspot-secondary-btn"
+                        disabled={loading !== null || snapshot.room.status === "finalized"}
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          void toggleVote(recommendation.poiId);
+                        }}
+                        type="button"
+                      >
+                        {currentVotes.has(recommendation.poiId) ? "Remove vote" : "Vote"}
+                      </button>
+                    ) : null}
+                    {isHost ? (
+                      <button
+                        className="syncspot-primary-btn"
+                        disabled={loading !== null || snapshot.room.status === "finalized"}
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          void finalizeVenue(recommendation.poiId);
+                        }}
+                        type="button"
+                      >
+                        Finalize
+                      </button>
+                    ) : null}
+                  </div>
                 </article>
               ))}
             </div>
@@ -698,6 +965,164 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
 
         {error ? <p className="syncspot-error">{error}</p> : null}
       </section>
+
+      {selectedRecommendation ? (
+        <section className="syncspot-final-overlay">
+          <div className="syncspot-final-card">
+            <div className="syncspot-final-hero">
+              <div className="syncspot-final-badge-row">
+                <span className="syncspot-final-badge">Room finalized</span>
+                <span className="syncspot-final-badge">{selectedRecommendation.badge}</span>
+              </div>
+              <div className="syncspot-final-score">
+                <span>Top pick</span>
+                <strong>#{selectedRecommendation.rank}</strong>
+              </div>
+            </div>
+
+            <div className="syncspot-final-body">
+              <div className="syncspot-final-title-row">
+                <div>
+                  <h2>{selectedRecommendation.name}</h2>
+                  <p>{selectedRecommendation.address ?? "No address"}</p>
+                </div>
+                <div className="syncspot-final-votes">
+                  <span>Votes</span>
+                  <strong>{selectedRecommendation.voteCount}</strong>
+                </div>
+              </div>
+
+              <div className="syncspot-metrics">
+                <span>Worst: {formatDuration(selectedRecommendation.maxTravelTime)}</span>
+                <span>Best: {formatDuration(selectedRecommendation.minTravelTime)}</span>
+                <span>Total: {formatDuration(selectedRecommendation.totalTravelTime)}</span>
+              </div>
+
+              <p className="syncspot-recommendation-explanation">
+                {selectedRecommendation.explanation}
+              </p>
+
+              <ul className="syncspot-time-list">
+                {selectedRecommendation.perUserTravelTimes.map((time) => (
+                  <li key={time.participantId}>
+                    <span>{time.name}</span>
+                    <span>{formatDuration(time.duration)}</span>
+                    {(() => {
+                      const participant = snapshot.participants.find(
+                        (item) => item.participantId === time.participantId
+                      );
+
+                      if (
+                        !participant ||
+                        participant.originLat === null ||
+                        participant.originLng === null
+                      ) {
+                        return null;
+                      }
+
+                      const googleMapsUrl = buildGoogleMapsDirectionsUrl({
+                        originLat: participant.originLat,
+                        originLng: participant.originLng,
+                        destinationLat: selectedRecommendation.lat,
+                        destinationLng: selectedRecommendation.lng
+                      });
+
+                      return (
+                        <a
+                          className="syncspot-secondary-btn syncspot-link-btn"
+                          href={googleMapsUrl}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          Open route
+                        </a>
+                      );
+                    })()}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="syncspot-inline-actions">
+                <button
+                  className="syncspot-secondary-btn"
+                  onClick={() => void copyFinalSummary(selectedRecommendation)}
+                  type="button"
+                >
+                  Copy result summary
+                </button>
+                {isHost ? (
+                  <button
+                    className="syncspot-primary-btn"
+                    disabled={loading !== null}
+                    onClick={() => void reopenRoom()}
+                    type="button"
+                  >
+                    {loading === "Reopening room..." ? loading : "Reopen voting"}
+                  </button>
+                ) : null}
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {currentParticipant ? (
+        <section className="syncspot-chat-dock">
+          <div className="syncspot-chat-card">
+            <div className="syncspot-chat-header">
+              <div>
+                <strong>Room chat</strong>
+                <span>Talk through the decision here.</span>
+              </div>
+              <span className="syncspot-pill syncspot-pill-confirmed">
+                {snapshot.messages.length}
+              </span>
+            </div>
+
+            <div className="syncspot-chat-messages">
+              {snapshot.messages.length === 0 ? (
+                <p className="syncspot-muted">No messages yet. Start the discussion.</p>
+              ) : (
+                snapshot.messages.map((message) => (
+                  <article
+                    className={`syncspot-chat-message ${
+                      message.participantId === currentParticipant.participantId
+                        ? "syncspot-chat-message-self"
+                        : ""
+                    }`}
+                    key={message.messageId}
+                  >
+                    <strong>{message.participantName}</strong>
+                    <p>{message.body}</p>
+                  </article>
+                ))
+              )}
+            </div>
+
+            <div className="syncspot-chat-compose">
+              <textarea
+                onChange={(event) => setChatBody(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" && !event.shiftKey) {
+                    event.preventDefault();
+                    void sendMessage();
+                  }
+                }}
+                placeholder="Say where you want to go..."
+                value={chatBody}
+              />
+              <button
+                className="syncspot-primary-btn"
+                disabled={loading !== null || !chatBody.trim()}
+                onClick={() => void sendMessage()}
+                type="button"
+              >
+                {loading === "Sending message..." ? loading : "Send"}
+              </button>
+            </div>
+          </div>
+        </section>
+      ) : null}
     </main>
   );
 }

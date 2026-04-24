@@ -1,7 +1,9 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import type {
+  RankingMode,
   SyncSpotDb,
+  SyncSpotMessage,
   SyncSpotParticipant,
   SyncSpotRecommendation,
   SyncSpotRoom,
@@ -13,10 +15,23 @@ const DB_PATH = path.join(process.cwd(), "data", "syncspot-db.json");
 const EMPTY_DB: SyncSpotDb = {
   rooms: [],
   participants: [],
-  recommendations: []
+  recommendations: [],
+  messages: []
 };
 
 let writeQueue = Promise.resolve();
+
+function normalizeRoom(room: SyncSpotRoom): SyncSpotRoom {
+  return {
+    ...room,
+    rankingMode: (room.rankingMode ?? "fairest") as RankingMode,
+    selectedVenueId: room.selectedVenueId ?? null,
+    status:
+      room.selectedVenueId && room.status !== "finalized"
+        ? "finalized"
+        : room.status ?? "waiting"
+  };
+}
 
 function normalizeParticipant(participant: SyncSpotParticipant): SyncSpotParticipant {
   const profile = (participant.travelProfile ?? "driving") as TravelProfile;
@@ -24,8 +39,39 @@ function normalizeParticipant(participant: SyncSpotParticipant): SyncSpotPartici
   return {
     ...participant,
     travelProfile: profile,
-    avoid: participant.avoid ?? []
+    avoid: participant.avoid ?? [],
+    votedVenueIds: participant.votedVenueIds ?? []
   };
+}
+
+function normalizeRecommendation(
+  recommendation: SyncSpotRecommendation
+): SyncSpotRecommendation {
+  const durations = recommendation.perUserTravelTimes.map((item) => item.duration);
+  const averageTravelTime =
+    recommendation.averageTravelTime ??
+    (durations.length
+      ? durations.reduce((sum, item) => sum + item, 0) / durations.length
+      : 0);
+  const spread =
+    recommendation.spread ??
+    (durations.length
+      ? Math.max(...durations) - Math.min(...durations)
+      : 0);
+
+  return {
+    ...recommendation,
+    averageTravelTime,
+    spread,
+    rankingMode: (recommendation.rankingMode ?? "fairest") as RankingMode,
+    badge: recommendation.badge ?? "Balanced",
+    explanation: recommendation.explanation ?? "",
+    voteCount: recommendation.voteCount ?? 0
+  };
+}
+
+function normalizeMessage(message: SyncSpotMessage): SyncSpotMessage {
+  return message;
 }
 
 async function ensureDbFile() {
@@ -47,7 +93,10 @@ export async function readSyncSpotDb(): Promise<SyncSpotDb> {
 
     return {
       ...parsed,
-      participants: (parsed.participants ?? []).map(normalizeParticipant)
+      rooms: (parsed.rooms ?? []).map(normalizeRoom),
+      participants: (parsed.participants ?? []).map(normalizeParticipant),
+      recommendations: (parsed.recommendations ?? []).map(normalizeRecommendation),
+      messages: (parsed.messages ?? []).map(normalizeMessage)
     };
   } catch {
     return structuredClone(EMPTY_DB);
@@ -84,14 +133,30 @@ export function getRoomSnapshot(
   const participants = db.participants
     .filter((participant) => participant.roomId === room.roomId)
     .sort((a, b) => a.joinedAt.localeCompare(b.joinedAt));
+  const voteCounts = participants.reduce<Record<string, number>>((accumulator, participant) => {
+    for (const venueId of participant.votedVenueIds ?? []) {
+      accumulator[venueId] = (accumulator[venueId] ?? 0) + 1;
+    }
+
+    return accumulator;
+  }, {});
+
   const recommendations = db.recommendations
     .filter((recommendation) => recommendation.roomId === room.roomId)
+    .map((recommendation) => ({
+      ...recommendation,
+      voteCount: voteCounts[recommendation.poiId] ?? 0
+    }))
     .sort((a, b) => a.rank - b.rank);
+  const messages = db.messages
+    .filter((message) => message.roomId === room.roomId)
+    .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
 
   return {
     room,
     participants,
-    recommendations
+    recommendations,
+    messages
   };
 }
 
@@ -103,7 +168,9 @@ export function recalculateRoomStatus(
   const confirmedCount = participants.filter((participant) => participant.confirmed).length;
 
   room.status =
-    recommendations.length > 0
+    room.selectedVenueId
+      ? "finalized"
+      : recommendations.length > 0
       ? "computed"
       : confirmedCount >= 2
         ? "ready"

@@ -1,9 +1,5 @@
 import { NextRequest } from "next/server";
-import {
-  computeRecommendations,
-  getRoomSnapshotById
-} from "@/lib/syncspot/service";
-import type { RankingMode } from "@/lib/syncspot/types";
+import { getRoomSnapshotById, sendRoomMessage } from "@/lib/syncspot/service";
 
 type Params = Promise<{
   roomId: string;
@@ -17,12 +13,11 @@ export async function GET(
     const { roomId } = await params;
     const snapshot = await getRoomSnapshotById(roomId);
 
-    return Response.json(snapshot.recommendations);
+    return Response.json(snapshot.messages);
   } catch (error) {
     return Response.json(
       {
-        error:
-          error instanceof Error ? error.message : "Unable to load recommendations."
+        error: error instanceof Error ? error.message : "Unable to load messages."
       },
       { status: 404 }
     );
@@ -36,21 +31,30 @@ export async function POST(
   try {
     const { roomId } = await params;
     const body = (await request.json()) as {
-      category?: string;
-      country?: string;
-      candidateLimit?: number;
-      rankingMode?: RankingMode;
-      profile?: string;
-      avoid?: string[];
+      participantId?: string;
+      body?: string;
     };
-    const snapshot = await computeRecommendations(roomId, body);
+
+    if (!body.participantId || !body.body) {
+      return Response.json(
+        {
+          error: "participantId and body are required."
+        },
+        { status: 400 }
+      );
+    }
+
+    const snapshot = await sendRoomMessage({
+      roomId,
+      participantId: body.participantId,
+      body: body.body
+    });
 
     return Response.json(snapshot);
   } catch (error) {
     return Response.json(
       {
-        error:
-          error instanceof Error ? error.message : "Unable to compute recommendations."
+        error: error instanceof Error ? error.message : "Unable to send message."
       },
       { status: 500 }
     );

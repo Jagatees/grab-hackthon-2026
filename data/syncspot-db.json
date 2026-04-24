@@ -7,7 +7,9 @@
       "category": "cafe",
       "status": "computed",
       "createdAt": "2026-04-24T03:14:44.102Z",
-      "updatedAt": "2026-04-24T03:14:46.106Z"
+      "updatedAt": "2026-04-24T03:14:46.106Z",
+      "rankingMode": "fairest",
+      "selectedVenueId": null
     },
     {
       "roomId": "21e01069-256e-4070-8a3a-02fc88330958",
@@ -16,7 +18,9 @@
       "category": "restaurant",
       "status": "waiting",
       "createdAt": "2026-04-24T03:19:43.683Z",
-      "updatedAt": "2026-04-24T03:19:43.683Z"
+      "updatedAt": "2026-04-24T03:19:43.683Z",
+      "rankingMode": "fairest",
+      "selectedVenueId": null
     },
     {
       "roomId": "b0bc156d-7c30-4138-be93-a80fb090b241",
@@ -25,7 +29,9 @@
       "category": "cafe",
       "status": "waiting",
       "createdAt": "2026-04-24T03:21:46.551Z",
-      "updatedAt": "2026-04-24T03:21:46.551Z"
+      "updatedAt": "2026-04-24T03:21:46.551Z",
+      "rankingMode": "fairest",
+      "selectedVenueId": null
     },
     {
       "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
@@ -34,7 +40,9 @@
       "category": "cafe",
       "status": "computed",
       "createdAt": "2026-04-24T03:23:01.233Z",
-      "updatedAt": "2026-04-24T03:27:32.420Z"
+      "updatedAt": "2026-04-24T03:27:32.420Z",
+      "rankingMode": "fairest",
+      "selectedVenueId": null
     },
     {
       "roomId": "82e26f71-c553-4163-a9e2-29a36faf2293",
@@ -43,7 +51,9 @@
       "category": "cafe",
       "status": "ready",
       "createdAt": "2026-04-24T03:25:32.526Z",
-      "updatedAt": "2026-04-24T03:25:46.345Z"
+      "updatedAt": "2026-04-24T03:25:46.345Z",
+      "rankingMode": "fairest",
+      "selectedVenueId": null
     },
     {
       "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
@@ -52,7 +62,9 @@
       "category": "park",
       "status": "computed",
       "createdAt": "2026-04-24T03:34:54.155Z",
-      "updatedAt": "2026-04-24T04:45:07.633Z"
+      "updatedAt": "2026-04-24T04:45:07.633Z",
+      "rankingMode": "fairest",
+      "selectedVenueId": null
     },
     {
       "roomId": "dcc84f57-deaa-4788-910d-e2e15f0bbcbd",
@@ -61,7 +73,9 @@
       "category": "cafe",
       "status": "waiting",
       "createdAt": "2026-04-24T05:08:30.492Z",
-      "updatedAt": "2026-04-24T05:08:40.830Z"
+      "updatedAt": "2026-04-24T05:08:40.830Z",
+      "rankingMode": "fairest",
+      "selectedVenueId": null
     },
     {
       "roomId": "062ec917-ec21-4a19-ab04-00a5a43f3697",
@@ -70,7 +84,9 @@
       "category": "park",
       "status": "ready",
       "createdAt": "2026-04-24T05:14:37.163Z",
-      "updatedAt": "2026-04-24T05:17:06.049Z"
+      "updatedAt": "2026-04-24T05:17:06.049Z",
+      "rankingMode": "fairest",
+      "selectedVenueId": null
     },
     {
       "roomId": "647d45eb-b17d-4c4e-8060-3e49462d1228",
@@ -79,7 +95,20 @@
       "category": "cafe",
       "status": "computed",
       "createdAt": "2026-04-24T05:21:11.110Z",
-      "updatedAt": "2026-04-24T05:21:48.445Z"
+      "updatedAt": "2026-04-24T06:11:59.588Z",
+      "rankingMode": "fairest",
+      "selectedVenueId": null
+    },
+    {
+      "roomId": "925d1171-c3e9-45fc-9a42-825b10681411",
+      "roomCode": "CQZ492",
+      "hostId": "e0cdddba-11b6-46be-b547-43b5435d03e8",
+      "category": "cafe",
+      "rankingMode": "fairest",
+      "selectedVenueId": null,
+      "status": "computed",
+      "createdAt": "2026-04-24T06:12:34.879Z",
+      "updatedAt": "2026-04-24T06:23:27.829Z"
     }
   ],
   "participants": [
@@ -94,7 +123,8 @@
       "joinedAt": "2026-04-24T03:14:44.102Z",
       "updatedAt": "2026-04-24T03:14:44.612Z",
       "travelProfile": "driving",
-      "avoid": []
+      "avoid": [],
+      "votedVenueIds": []
     },
     {
       "participantId": "818e8025-988a-4a61-83a1-0cfbbce98e63",
@@ -107,7 +137,8 @@
       "joinedAt": "2026-04-24T03:14:44.154Z",
       "updatedAt": "2026-04-24T03:14:44.621Z",
       "travelProfile": "driving",
-      "avoid": []
+      "avoid": [],
+      "votedVenueIds": []
     },
     {
       "participantId": "f61beedc-61a7-4c16-a27f-7df7a47bfa36",
@@ -120,7 +151,8 @@
       "joinedAt": "2026-04-24T03:19:43.683Z",
       "updatedAt": "2026-04-24T03:19:43.683Z",
       "travelProfile": "driving",
-      "avoid": []
+      "avoid": [],
+      "votedVenueIds": []
     },
     {
       "participantId": "05bb0193-dbb3-4c40-81d7-912a9ae817a7",
@@ -133,7 +165,8 @@
       "joinedAt": "2026-04-24T03:21:46.551Z",
       "updatedAt": "2026-04-24T03:21:46.551Z",
       "travelProfile": "driving",
-      "avoid": []
+      "avoid": [],
+      "votedVenueIds": []
     },
     {
       "participantId": "325affd1-1246-429e-9eb2-105452e5f8fd",
@@ -146,7 +179,8 @@
       "joinedAt": "2026-04-24T03:23:01.233Z",
       "updatedAt": "2026-04-24T03:27:25.716Z",
       "travelProfile": "driving",
-      "avoid": []
+      "avoid": [],
+      "votedVenueIds": []
     },
     {
       "participantId": "907dcfc2-8de0-432a-883f-ed0522a6890b",
@@ -159,7 +193,8 @@
       "joinedAt": "2026-04-24T03:23:19.483Z",
       "updatedAt": "2026-04-24T03:27:27.390Z",
       "travelProfile": "driving",
-      "avoid": []
+      "avoid": [],
+      "votedVenueIds": []
     },
     {
       "participantId": "cf3c076b-d203-4df1-9c4b-d4649333b66a",
@@ -172,7 +207,8 @@
       "joinedAt": "2026-04-24T03:25:32.526Z",
       "updatedAt": "2026-04-24T03:25:40.575Z",
       "travelProfile": "driving",
-      "avoid": []
+      "avoid": [],
+      "votedVenueIds": []
     },
     {
       "participantId": "ba414f4e-cb1f-4f1f-9f7d-e7795988bb05",
@@ -185,7 +221,8 @@
       "joinedAt": "2026-04-24T03:25:40.016Z",
       "updatedAt": "2026-04-24T03:25:46.345Z",
       "travelProfile": "driving",
-      "avoid": []
+      "avoid": [],
+      "votedVenueIds": []
     },
     {
       "participantId": "51653f04-06a0-42c0-ad14-b0f30e1026fc",
@@ -198,7 +235,8 @@
       "joinedAt": "2026-04-24T03:34:54.155Z",
       "updatedAt": "2026-04-24T04:45:07.633Z",
       "travelProfile": "driving",
-      "avoid": []
+      "avoid": [],
+      "votedVenueIds": []
     },
     {
       "participantId": "6c1b972c-ab74-41b2-925f-f28469a48de6",
@@ -211,7 +249,8 @@
       "joinedAt": "2026-04-24T03:35:04.622Z",
       "updatedAt": "2026-04-24T04:44:15.918Z",
       "travelProfile": "driving",
-      "avoid": []
+      "avoid": [],
+      "votedVenueIds": []
     },
     {
       "participantId": "14585a24-06cb-48e7-b669-ff8596264732",
@@ -224,7 +263,8 @@
       "avoid": [],
       "confirmed": false,
       "joinedAt": "2026-04-24T05:08:30.492Z",
-      "updatedAt": "2026-04-24T05:08:30.492Z"
+      "updatedAt": "2026-04-24T05:08:30.492Z",
+      "votedVenueIds": []
     },
     {
       "participantId": "4b0d06b7-c925-41ac-9a99-679e24ebce14",
@@ -237,7 +277,8 @@
       "avoid": [],
       "confirmed": false,
       "joinedAt": "2026-04-24T05:08:40.830Z",
-      "updatedAt": "2026-04-24T05:08:40.830Z"
+      "updatedAt": "2026-04-24T05:08:40.830Z",
+      "votedVenueIds": []
     },
     {
       "participantId": "21fb8e5e-482e-49b3-bde5-3871bf0ce5c9",
@@ -250,7 +291,8 @@
       "avoid": [],
       "confirmed": true,
       "joinedAt": "2026-04-24T05:14:37.163Z",
-      "updatedAt": "2026-04-24T05:15:32.251Z"
+      "updatedAt": "2026-04-24T05:15:32.251Z",
+      "votedVenueIds": []
     },
     {
       "participantId": "380b27fd-42bf-4eb7-b93f-5a109231b4d5",
@@ -263,7 +305,8 @@
       "avoid": [],
       "confirmed": true,
       "joinedAt": "2026-04-24T05:15:53.822Z",
-      "updatedAt": "2026-04-24T05:16:52.192Z"
+      "updatedAt": "2026-04-24T05:16:52.192Z",
+      "votedVenueIds": []
     },
     {
       "participantId": "213dbc6e-a3ae-4203-bcc2-bcf52edcda4d",
@@ -276,7 +319,8 @@
       "avoid": [],
       "confirmed": true,
       "joinedAt": "2026-04-24T05:21:11.110Z",
-      "updatedAt": "2026-04-24T05:21:44.498Z"
+      "updatedAt": "2026-04-24T05:21:44.498Z",
+      "votedVenueIds": []
     },
     {
       "participantId": "e05c868c-4fea-4fbf-bbe8-760aae461248",
@@ -289,7 +333,40 @@
       "avoid": [],
       "confirmed": true,
       "joinedAt": "2026-04-24T05:21:23.233Z",
-      "updatedAt": "2026-04-24T05:21:36.415Z"
+      "updatedAt": "2026-04-24T06:00:28.114Z",
+      "votedVenueIds": [
+        "IT.18W1PGNLHKIJ6"
+      ]
+    },
+    {
+      "participantId": "e0cdddba-11b6-46be-b547-43b5435d03e8",
+      "roomId": "925d1171-c3e9-45fc-9a42-825b10681411",
+      "name": "1",
+      "originLat": 1.3332213754926983,
+      "originLng": 103.74332702714366,
+      "originLabel": "50 Jurong Gateway Road, Singapore, 608549",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T06:12:34.879Z",
+      "updatedAt": "2026-04-24T06:13:04.891Z"
+    },
+    {
+      "participantId": "10a4c7e8-a9f5-4537-ae6e-4c984664bb98",
+      "roomId": "925d1171-c3e9-45fc-9a42-825b10681411",
+      "name": "2",
+      "originLat": 1.2800171758814427,
+      "originLng": 103.84500533776782,
+      "originLabel": "1 Kadayanallur Street, Singapore, 069184",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [
+        "IT.010M3FG6R47C0"
+      ],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T06:13:20.672Z",
+      "updatedAt": "2026-04-24T06:14:05.414Z"
     }
   ],
   "recommendations": [
@@ -321,7 +398,13 @@
       "rank": 1,
       "category": "food and beverage::restaurant",
       "businessType": "food and beverage",
-      "computedAt": "2026-04-24T03:14:46.103Z"
+      "computedAt": "2026-04-24T03:14:46.103Z",
+      "averageTravelTime": 1165.9,
+      "spread": 340.39999999999986,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "d6c308c4-5fb3-401d-85cb-32a10dadb5d1",
@@ -351,7 +434,13 @@
       "rank": 2,
       "category": "food and beverage",
       "businessType": "food and beverage",
-      "computedAt": "2026-04-24T03:14:45.958Z"
+      "computedAt": "2026-04-24T03:14:45.958Z",
+      "averageTravelTime": 1100.75,
+      "spread": 1210.3000000000002,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "d6c308c4-5fb3-401d-85cb-32a10dadb5d1",
@@ -381,7 +470,13 @@
       "rank": 3,
       "category": "food and beverage",
       "businessType": "commercial building",
-      "computedAt": "2026-04-24T03:14:45.818Z"
+      "computedAt": "2026-04-24T03:14:45.818Z",
+      "averageTravelTime": 1050.75,
+      "spread": 1287.9,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
@@ -411,7 +506,13 @@
       "rank": 1,
       "category": "food and beverage",
       "businessType": "food and beverage",
-      "computedAt": "2026-04-24T03:27:31.720Z"
+      "computedAt": "2026-04-24T03:27:31.720Z",
+      "averageTravelTime": 626.0999999999999,
+      "spread": 1048,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
@@ -441,7 +542,13 @@
       "rank": 2,
       "category": "food and beverage::restaurant",
       "businessType": "food and beverage",
-      "computedAt": "2026-04-24T03:27:32.140Z"
+      "computedAt": "2026-04-24T03:27:32.140Z",
+      "averageTravelTime": 1259.25,
+      "spread": 535.5,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
@@ -471,7 +578,13 @@
       "rank": 3,
       "category": "food and beverage::cafe",
       "businessType": "food and beverage",
-      "computedAt": "2026-04-24T03:27:31.880Z"
+      "computedAt": "2026-04-24T03:27:31.880Z",
+      "averageTravelTime": 1225.9,
+      "spread": 725.3999999999999,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
@@ -501,7 +614,13 @@
       "rank": 4,
       "category": "food and beverage",
       "businessType": "food and beverage",
-      "computedAt": "2026-04-24T03:27:32.271Z"
+      "computedAt": "2026-04-24T03:27:32.271Z",
+      "averageTravelTime": 1343.6,
+      "spread": 646.4,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
@@ -531,7 +650,13 @@
       "rank": 5,
       "category": "food and beverage",
       "businessType": "food and beverage",
-      "computedAt": "2026-04-24T03:27:32.418Z"
+      "computedAt": "2026-04-24T03:27:32.418Z",
+      "averageTravelTime": 1393.6,
+      "spread": 725.3999999999999,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "2e3a92ed-3488-408e-bea1-211e929ef0cc",
@@ -561,7 +686,13 @@
       "rank": 6,
       "category": "food and beverage",
       "businessType": "commercial building",
-      "computedAt": "2026-04-24T03:27:32.010Z"
+      "computedAt": "2026-04-24T03:27:32.010Z",
+      "averageTravelTime": 1472.4,
+      "spread": 734.8,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
@@ -593,7 +724,13 @@
       "rank": 1,
       "category": "residential",
       "businessType": "residential",
-      "computedAt": "2026-04-24T03:36:45.653Z"
+      "computedAt": "2026-04-24T03:36:45.653Z",
+      "averageTravelTime": 1501,
+      "spread": 86,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
@@ -625,7 +762,13 @@
       "rank": 2,
       "category": "hotel",
       "businessType": "hotel",
-      "computedAt": "2026-04-24T03:36:45.236Z"
+      "computedAt": "2026-04-24T03:36:45.236Z",
+      "averageTravelTime": 1595.6,
+      "spread": 454.39999999999986,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
@@ -657,7 +800,13 @@
       "rank": 3,
       "category": "hotel::resorts",
       "businessType": "hotel",
-      "computedAt": "2026-04-24T03:36:45.409Z"
+      "computedAt": "2026-04-24T03:36:45.409Z",
+      "averageTravelTime": 1628.75,
+      "spread": 419.9000000000001,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
@@ -689,7 +838,13 @@
       "rank": 4,
       "category": "hotel::resorts",
       "businessType": "hotel",
-      "computedAt": "2026-04-24T03:36:45.534Z"
+      "computedAt": "2026-04-24T03:36:45.534Z",
+      "averageTravelTime": 1671.5,
+      "spread": 502.5999999999999,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
@@ -721,7 +876,13 @@
       "rank": 5,
       "category": "commercial building",
       "businessType": "shopping mall/shops",
-      "computedAt": "2026-04-24T03:36:44.920Z"
+      "computedAt": "2026-04-24T03:36:44.920Z",
+      "averageTravelTime": 1454.7,
+      "spread": 821.4000000000001,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "aee86a0a-f7a9-465d-b548-6441c20efce2",
@@ -753,7 +914,13 @@
       "rank": 6,
       "category": "commercial building",
       "businessType": "shopping mall/shops",
-      "computedAt": "2026-04-24T03:36:45.094Z"
+      "computedAt": "2026-04-24T03:36:45.094Z",
+      "averageTravelTime": 1464.9499999999998,
+      "spread": 886.3,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "647d45eb-b17d-4c4e-8060-3e49462d1228",
@@ -787,7 +954,13 @@
       "rank": 1,
       "category": "food and beverage::cafe",
       "businessType": "food and beverage",
-      "computedAt": "2026-04-24T05:21:48.022Z"
+      "computedAt": "2026-04-24T05:21:48.022Z",
+      "averageTravelTime": 1469.85,
+      "spread": 103.29999999999995,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
     },
     {
       "roomId": "647d45eb-b17d-4c4e-8060-3e49462d1228",
@@ -821,7 +994,159 @@
       "rank": 2,
       "category": "food and beverage",
       "businessType": "commercial building",
-      "computedAt": "2026-04-24T05:21:48.147Z"
+      "computedAt": "2026-04-24T05:21:48.147Z",
+      "averageTravelTime": 1611.4,
+      "spread": 473.79999999999995,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "",
+      "voteCount": 0
+    },
+    {
+      "roomId": "925d1171-c3e9-45fc-9a42-825b10681411",
+      "poiId": "IT.010M3FG6R47C0",
+      "name": "Cafe Melba at Mediapolis - Mediacorp Campus",
+      "lat": 1.2957895,
+      "lng": 103.7926149,
+      "address": "1 Stars Avenue, #03-01, Singapore, 138507",
+      "fairnessScore": 870.23,
+      "maxTravelTime": 1010,
+      "minTravelTime": 853.6,
+      "totalTravelTime": 1863.6,
+      "averageTravelTime": 931.8,
+      "spread": 156.39999999999998,
+      "perUserTravelTimes": [
+        {
+          "participantId": "e0cdddba-11b6-46be-b547-43b5435d03e8",
+          "name": "1",
+          "profile": "driving",
+          "duration": 853.6,
+          "distance": 8391.244,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqWbAgGRw@vWs]zEiGhReQ~DmDpRsQzHcJfHiMFsCk@{DwAqBs@eAqCgAaQs@yV~@a[lAeCVm@F_XbC}]|EsARsMtAgTfB}MFaNq@uOiAyB]{AW}Ew@jC{EtAyCfEkJhDaHhHcTdA}CfHcVtCsInBgGtByGjCaI|@yClJ}[pCuI`AiBhAoFd@_BvCkJdBsFtJa[|A_FvEeOvCkJzCyJvGyP`EuL`@aBxAaEf@aBNw@rBoGv@qCrBkF~C_JzD_MbCmDpBiDlCeCbCsBh@oFBYJoABe@ZkChAwMVqDd@uChGyRlFcQ`E^fFj@p@J"
+        },
+        {
+          "participantId": "10a4c7e8-a9f5-4537-ae6e-4c984664bb98",
+          "name": "2",
+          "profile": "driving",
+          "duration": 1010,
+          "distance": 8325.08,
+          "geometry": "u}bmAkieaeEU]eFiI?}@gAeBsDyGk@cAa@e@oIaK}FuEmLoHsI`F{WdNiEtBgBr@mAfI[bA}FvMe@bAW`@xLbGxCtCjA|@vAz@tGtDfFbDbD|BdD~C|HrIlK~MzBpCr@dAvAlBzD`GxDhInD~GhJrQjE|L~CbJbAlCtA|DjAzB|C`FjHjG~RtQzPnO^\\pJzHbEpD|FvH`DxEnBhFjGhOjClHfAfGlA`FmCpAaSfJiUjKyWtJcRtFaFdA}JjCwFtA_LxCsQrFwLjEyIhEwKxGyL`LeEvEyI~KcEpGiSpb@eJvPaC`Fm@nAiYfk@gDhGaCnF}BpEq@|EU~A{@bKo@nMJRvBdFjDxL~@bDhNvq@zFjj@`Vr|@dKbXtEbKnBvDpJ|SzPl[f^vg@jPlTbNvNzHxHzRxPbS|OfRhMbTzMfOrIfLdIpKdJdOfS|H|PjEtNjDzO~AlTGnUiGz`@kB`I{BzGyTpi@_Orc@_GfO_D|KuHz[wDnTmA`L}AlVm@tMq@hf@m@`T_@bNcFze@sBtPaVfx@ga@xv@}OtYyMhU_FnImOnZgcAnlB_I~O}N`ZmU`o@uNbf@sLjl@mIxk@cFzm@qBln@oFhvBc@zPsF`wBkNfxFoDhq@cFx^sJxa@}Oj`@eUfc@qPtWeXnd@ay@nuAaJpR_HnMic@baA?~BKzAmHtScOd_@oCtGmCpGeBdEeLzVaGbKoFlImJhMiBxBkAbBmA~Ak@g@gCyBeUiTEE_Ay@sRcQoD_EiPyQmSc^{EcEqDsEgCkEeC{CW[sCsCuCgAwCY}CUgEXeF|AyZzRm\\fa@aSlSeLpLq@l@mDlEeBhBmDjE_GdG_DtDs^r`@mHhIuHbGoEhCqOnGiI`BeGp@{@DyANwOJsNWcF_@yGUm[kAgA@yIz@qGzAcCjAeBx@kExB_AeDe@yA{B}Ge@uEAeDVqDd@uChGyRlFcQ`E^fFj@p@J"
+        }
+      ],
+      "rank": 1,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "Everyone stays under 17 min.",
+      "voteCount": 0,
+      "category": "food and beverage",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T06:13:41.548Z"
+    },
+    {
+      "roomId": "925d1171-c3e9-45fc-9a42-825b10681411",
+      "poiId": "IT.2JRJ89K977IHJ",
+      "name": "Cafe Kreams - Maxwell Chambers",
+      "lat": 1.277347227122462,
+      "lng": 103.84635910548747,
+      "address": "32 Maxwell Road, #01-07, Maxwell Chambers, Singapore",
+      "fairnessScore": 1081.89,
+      "maxTravelTime": 1214.6,
+      "minTravelTime": 554.8,
+      "totalTravelTime": 1769.3999999999999,
+      "averageTravelTime": 884.6999999999999,
+      "spread": 659.8,
+      "perUserTravelTimes": [
+        {
+          "participantId": "e0cdddba-11b6-46be-b547-43b5435d03e8",
+          "name": "1",
+          "profile": "driving",
+          "duration": 1214.6,
+          "distance": 14968.086,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@z@sLt@gFrEcTpFqYdIsX`HqSdSoc@zQ}XfYeb@zYa_@bPsTb{@clAvNePlMeNfO_P~B{F~]ue@`kAwyA`FcJrCyHnA}Ed@qCf@{ChAoId@oHH{DJwGlB{Ul@eM`@}LjD{jAHi`@A_T]}]So[SiOSkWu@yfAo@qe@Q{GGuG?mAO}OIgKCsEkBcuBAoASc[EgNYuSGuE[q^OmOkGiIwW}UwDqD{DwCkKiIaSqO}FoEgD_CwPeMeKqImD}CmCwBeFeEwImG}NcL}UsQeBuAuGwFkGeFiEqDaJkCuAa@uHeBgMuA}@EoBKoGfGmJdIgOjM"
+        },
+        {
+          "participantId": "10a4c7e8-a9f5-4537-ae6e-4c984664bb98",
+          "name": "2",
+          "profile": "driving",
+          "duration": 554.8,
+          "distance": 1386.475,
+          "geometry": "u}bmAkieaeEU]eFiI?}@gAeBsDyGk@cAa@e@oIaK}FuEmLoHsI`F{WdNiEtBgBr@mAfI[bA}FvMe@bAW`@xLbGpHnB`FtCtYtPrC`BvD|BlKfH`AXv@gAhAaAlE}DtSuOzEkEl@i@vAkAdGyEpTqNnHuExCsBbD[nRgN~LuIx`@_ZxAiAd@_B~EcGlKyKxYmYlQkQfBeBdAeAzG_HtEoGrEgIzFmK|EuIbGnDeFhI}J|OcD~EoDpFkBtBcF~EaA`A{BtBwJbJoGfGmJdIgOjM"
+        }
+      ],
+      "rank": 2,
+      "rankingMode": "fairest",
+      "badge": "Fastest",
+      "explanation": "Everyone stays under 20 min.",
+      "voteCount": 0,
+      "category": "food and beverage::cafe",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T06:13:41.760Z"
+    },
+    {
+      "roomId": "925d1171-c3e9-45fc-9a42-825b10681411",
+      "poiId": "IT.1Y2WDN8Z4ISEL",
+      "name": "Cafe O - Raffles Holland V",
+      "lat": 1.3106391,
+      "lng": 103.796113675,
+      "address": "118 Holland Avenue, 01-01, Singapore, 278997",
+      "fairnessScore": 1104.21,
+      "maxTravelTime": 1283.9,
+      "minTravelTime": 1112,
+      "totalTravelTime": 2395.9,
+      "averageTravelTime": 1197.95,
+      "spread": 171.9000000000001,
+      "perUserTravelTimes": [
+        {
+          "participantId": "e0cdddba-11b6-46be-b547-43b5435d03e8",
+          "name": "1",
+          "profile": "driving",
+          "duration": 1112,
+          "distance": 8389.454,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYjBmFhXsWrEgKVsHa@_IgB}GwCiFmJkLaLwJ{L{KwUuJo\\uMoJwDwPiFyKmDcFuAsJ{C_Bg@wDkAkJwCpAoFb@iBtD{NnBwNlAmNZyL?mQwAua@cDol@gAaS_@yGGcAkBg]Y_F[wFs@oLOiCg@qIg@qIMmBsBe]s@oLwFo_AgBya@g@yQc@kMcAad@xAuXb@kIdGu]~DcNzEaPnOua@`GyNhDkInH}NlCyExg@_{@`JmNpR__@xJkRfGqLhk@}gApAgCpGmL~Sea@dAsBnA{Bj@kAxHuOvCqFrKkUjC_GjM{b@~B_OdAsMj@mIh@qJC_KKiVsAoUkGor@gBgRi@uFg@uE_@aEiAwKeH{o@u@sJ[kDy@{QOeDGaDByLn@sMt@uE~A{HbEoNtDoMhAsDhBcGxAwFh@{B\\_BXgAtA}Fl@wBnAiEhDmKdCeHlCsHhDuHhDuHpDeGbTy\\fG}KbByCh@cA|FiK}B{A{O{Ia]aQgBmAaAw@_[uVyIyG{HgF}BiAcIaEadAw_@yHsCqDqAiU_JiFyBx@kCXsAjBkI|@_EhAeG\\kAwAOyAIy@EkG}@{HO"
+        },
+        {
+          "participantId": "10a4c7e8-a9f5-4537-ae6e-4c984664bb98",
+          "name": "2",
+          "profile": "driving",
+          "duration": 1283.9,
+          "distance": 11068.191,
+          "geometry": "u}bmAkieaeEU]eFiI?}@gAeBsDyGk@cAa@e@oIaK}FuEmLoHsI`F{WdNiEtBgBr@mAfI[bA}FvMe@bAW`@xLbGxCtCjA|@vAz@tGtDfFbDbD|BdD~C|HrIlK~MzBpCr@dAvAlBzD`GxDhInD~GhJrQjE|L~CbJbAlCtA|DjAzB|C`FjHjG~RtQzPnO^\\pJzHbEpD|FvH`DxEnBhFjGhOjClHfAfGlA`FmCpAaSfJiUjKyWtJcRtFaFdA}JjCwFtA_LxCsQrFwLjEyIhEwKxGyL`LeEvEyI~KcEpGiSpb@eJvPaC`Fm@nAiYfk@gDhGaCnF}BpEq@|EU~A{@bKo@nMJRvBdFjDxL~@bDhNvq@zFjj@`Vr|@dKbXtEbKnBvDpJ|SzPl[f^vg@jPlTbNvNzHxHzRxPbS|OfRhMbTzMfOrIfLdIpKdJdOfS|H|PjEtNjDzO~AlTGnUiGz`@kB`I{BzGyTpi@_Orc@_GfO_D|KuHz[wDnTmA`L}AlVm@tMq@hf@m@`T_@bNcFze@sBtPaVfx@ga@xv@}OtYyMhU_FnImOnZgcAnlB_I~O}N`ZmU`o@uNbf@sLjl@mIxk@cFzm@qBln@oFhvBc@zPsF`wBkNfxFoDhq@cFx^sJxa@}Oj`@eUfc@qPtWeXnd@ay@nuAaJpR_HnMic@baA?~BKzAmHtScOd_@oCtGmCpGeBdEeLzVaGbKoFlImJhMiBxBkAbBmA~Ak@g@gCyBeUiTEE_Ay@sRcQoD_EiPyQmSc^wPm^aDaK{BmHuHgVc\\udAuFmQyHwUkDcIeFwK{F_JmHyJwHuGcIyHeCmCiVkM}KwE}JwDoCeA}H_C}SsDub@qFu\\uEgYoEuW}EyFeByFeBaIaCaVkIa[cL_SyIkLkD_RkEuS_DoO{BmG}@a[}Dql@sIqq@gKa_@_DykAaOoGu@s_@kEiVaByJ_@g[XefAqC}DYgKgAgASyDk@yB_@iEy@ky@_SuPcE}x@qT{RmFm]_FoIgB_B]cBe@yF_BwF_B{UwGs`@yKwLmCgH@sCb@aCt@oBpAoBhBsF~IuAhI}DzTaCdNeCnN[zA{@nEeJnd@sBfIoBzHcBdFOf@_@hAGPgBrFmEbKo@tAgFdJgGhJ_BbC}E|IsNtXqKxQgKlUoB`FoArEaAzEo@xEa@zFGfEFfEXtEx@rGlAnFpExMtCnI|AtEtHbQfIzQtFbEdCxAxB`A~OrGpHtDbE`@tBJ~@DfAFxCJbDNvCJhDNdEPbBFdGfAlEx@`JrBv@RnCr@XsAjBkI|@_EhAeG\\kAwAOyAIy@EkG}@{HO"
+        }
+      ],
+      "rank": 3,
+      "rankingMode": "fairest",
+      "badge": "Balanced",
+      "explanation": "Everyone stays under 21 min.",
+      "voteCount": 0,
+      "category": "food and beverage",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T06:13:41.619Z"
+    }
+  ],
+  "messages": [
+    {
+      "messageId": "8f30774f-d589-4d06-bf90-f844fc443a75",
+      "roomId": "647d45eb-b17d-4c4e-8060-3e49462d1228",
+      "participantId": "213dbc6e-a3ae-4203-bcc2-bcf52edcda4d",
+      "participantName": "Jagatees",
+      "body": "Hi",
+      "createdAt": "2026-04-24T06:11:59.588Z"
+    },
+    {
+      "messageId": "019ab66b-622a-4d9e-82c6-7207422bf56f",
+      "roomId": "925d1171-c3e9-45fc-9a42-825b10681411",
+      "participantId": "10a4c7e8-a9f5-4537-ae6e-4c984664bb98",
+      "participantName": "2",
+      "body": "Hey i want cafe today",
+      "createdAt": "2026-04-24T06:13:34.482Z"
+    },
+    {
+      "messageId": "8fc29f85-b6c1-4164-84e3-345a54da9848",
+      "roomId": "925d1171-c3e9-45fc-9a42-825b10681411",
+      "participantId": "e0cdddba-11b6-46be-b547-43b5435d03e8",
+      "participantName": "1",
+      "body": "okay",
+      "createdAt": "2026-04-24T06:13:39.015Z"
     }
   ]
 }

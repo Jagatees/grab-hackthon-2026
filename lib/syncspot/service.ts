@@ -6,6 +6,7 @@ import {
   updateSyncSpotDb
 } from "@/lib/syncspot/store";
 import type {
+  RankingMode,
   SyncSpotParticipant,
   SyncSpotRecommendation,
   SyncSpotRoom,
@@ -66,21 +67,131 @@ function deriveCenter(participants: SyncSpotParticipant[]) {
   };
 }
 
-function scoreCandidate(durations: number[]) {
+function spreadDuration(durations: number[]) {
+  return Math.max(...durations) - Math.min(...durations);
+}
+
+function averageDuration(durations: number[]) {
+  return durations.reduce((sum, duration) => sum + duration, 0) / durations.length;
+}
+
+function midpointDistanceScore(
+  candidate: { latitude: number; longitude: number },
+  center: { latitude: number; longitude: number }
+) {
+  const latDiff = candidate.latitude - center.latitude;
+  const lngDiff = candidate.longitude - center.longitude;
+
+  return Math.sqrt(latDiff ** 2 + lngDiff ** 2) * 1_000_000;
+}
+
+function scoreCandidate(
+  durations: number[],
+  mode: RankingMode,
+  candidate: { latitude: number; longitude: number },
+  center: { latitude: number; longitude: number }
+) {
   const maxTravelTime = Math.max(...durations);
   const minTravelTime = Math.min(...durations);
   const totalTravelTime = durations.reduce((sum, duration) => sum + duration, 0);
+  const spread = spreadDuration(durations);
+  const averageTravelTime = averageDuration(durations);
+  const midpointScore = midpointDistanceScore(candidate, center);
   const fairnessScore =
-    0.6 * maxTravelTime +
-    0.3 * (maxTravelTime - minTravelTime) +
-    0.1 * totalTravelTime;
+    mode === "fastest"
+      ? 0.7 * totalTravelTime + 0.2 * maxTravelTime + 0.1 * spread
+      : mode === "midpoint"
+        ? midpointScore + 0.1 * maxTravelTime + 0.05 * spread
+        : 0.5 * maxTravelTime +
+          0.25 * spread +
+          0.15 * averageTravelTime +
+          0.1 * totalTravelTime;
 
   return {
     fairnessScore,
     maxTravelTime,
     minTravelTime,
-    totalTravelTime
+    totalTravelTime,
+    averageTravelTime,
+    spread
   };
+}
+
+function pickBadge(
+  room: SyncSpotRoom,
+  recommendation: {
+    maxTravelTime: number;
+    spread: number;
+    totalTravelTime: number;
+    perUserTravelTimes: SyncSpotRecommendation["perUserTravelTimes"];
+  },
+  allCandidates: Array<{
+    totalTravelTime: number;
+    spread: number;
+  }>
+): SyncSpotRecommendation["badge"] {
+  const hostTravelTime =
+    recommendation.perUserTravelTimes.find(
+      (item) => item.participantId === room.hostId
+    )?.duration ?? null;
+
+  const others = recommendation.perUserTravelTimes
+    .filter((item) => item.participantId !== room.hostId)
+    .map((item) => item.duration);
+
+  if (
+    hostTravelTime !== null &&
+    others.length > 0 &&
+    hostTravelTime + 8 * 60 < averageDuration(others)
+  ) {
+    return "Host-friendly";
+  }
+
+  const fastestTotal = Math.min(...allCandidates.map((item) => item.totalTravelTime));
+
+  if (recommendation.totalTravelTime === fastestTotal) {
+    return "Fastest";
+  }
+
+  if (recommendation.spread >= 12 * 60) {
+    return "One-sided";
+  }
+
+  return "Balanced";
+}
+
+function buildExplanation(recommendation: {
+  maxTravelTime: number;
+  spread: number;
+  totalTravelTime: number;
+  perUserTravelTimes: SyncSpotRecommendation["perUserTravelTimes"];
+  badge: SyncSpotRecommendation["badge"];
+}) {
+  const underThreshold = recommendation.maxTravelTime <= 25 * 60;
+
+  if (underThreshold) {
+    return `Everyone stays under ${Math.round(recommendation.maxTravelTime / 60)} min.`;
+  }
+
+  if (recommendation.spread <= 6 * 60) {
+    return "Travel times are well balanced across the group.";
+  }
+
+  if (recommendation.badge === "Fastest") {
+    return "Fastest overall, but it slightly favors one side.";
+  }
+
+  if (recommendation.badge === "Host-friendly") {
+    return "Convenient for the host, but the compromise leans their way.";
+  }
+
+  if (recommendation.badge === "One-sided") {
+    return "Convenient for most, but less fair to one participant.";
+  }
+
+  return `Solid compromise with a group total of ${Math.round(
+    recommendation.totalTravelTime / 60
+  )} min.`;
 }
 
 export async function createRoom(input: { hostName: string; category?: string }) {
@@ -93,6 +204,8 @@ export async function createRoom(input: { hostName: string; category?: string })
       roomCode: createRoomCode(),
       hostId,
       category: input.category?.trim() || "cafe",
+      rankingMode: "fairest",
+      selectedVenueId: null,
       status: "waiting",
       createdAt: now,
       updatedAt: now
@@ -106,6 +219,7 @@ export async function createRoom(input: { hostName: string; category?: string })
       originLabel: null,
       travelProfile: "driving",
       avoid: [],
+      votedVenueIds: [],
       confirmed: false,
       joinedAt: now,
       updatedAt: now
@@ -148,6 +262,7 @@ export async function joinRoom(input: {
       originLabel: null,
       travelProfile: "driving",
       avoid: [],
+      votedVenueIds: [],
       confirmed: false,
       joinedAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
@@ -176,7 +291,12 @@ export async function getRoomSnapshotById(roomId: string) {
 
 export async function updateRoom(
   roomId: string,
-  input: { category?: string; status?: SyncSpotRoom["status"] }
+  input: {
+    category?: string;
+    rankingMode?: RankingMode;
+    status?: SyncSpotRoom["status"];
+    selectedVenueId?: string | null;
+  }
 ) {
   return updateSyncSpotDb(async (db) => {
     const room = db.rooms.find((candidate) => candidate.roomId === roomId);
@@ -189,8 +309,16 @@ export async function updateRoom(
       room.category = input.category.trim();
     }
 
+    if (input.rankingMode) {
+      room.rankingMode = input.rankingMode;
+    }
+
     if (input.status) {
       room.status = input.status;
+    }
+
+    if (input.selectedVenueId !== undefined) {
+      room.selectedVenueId = input.selectedVenueId;
     }
 
     room.updatedAt = new Date().toISOString();
@@ -209,6 +337,7 @@ export async function updateParticipant(
     originLabel?: string | null;
     travelProfile?: TravelProfile;
     avoid?: string[];
+    votedVenueIds?: string[];
     confirmed?: boolean;
   }
 ) {
@@ -247,6 +376,10 @@ export async function updateParticipant(
       participant.avoid = input.avoid;
     }
 
+    if (input.votedVenueIds !== undefined) {
+      participant.votedVenueIds = input.votedVenueIds;
+    }
+
     if (input.confirmed !== undefined) {
       participant.confirmed = input.confirmed;
     }
@@ -272,6 +405,7 @@ export async function computeRecommendations(
     category?: string;
     country?: string;
     candidateLimit?: number;
+    rankingMode?: RankingMode;
     profile?: string;
     avoid?: string[];
   }
@@ -296,6 +430,7 @@ export async function computeRecommendations(
   }
 
   const category = input?.category?.trim() || room.category || "cafe";
+  const rankingMode = input?.rankingMode ?? room.rankingMode ?? "fairest";
   const center = deriveCenter(participants);
   const location = `${center.latitude.toFixed(6)},${center.longitude.toFixed(6)}`;
   const candidateLimit = Math.min(Math.max(input?.candidateLimit ?? 6, 1), 10);
@@ -383,7 +518,10 @@ export async function computeRecommendations(
     }
 
     const summary = scoreCandidate(
-      perUserTravelTimes.map((item) => item.duration)
+      perUserTravelTimes.map((item) => item.duration),
+      rankingMode,
+      candidate.location,
+      center
     );
 
     scoredRecommendations.push({
@@ -397,8 +535,14 @@ export async function computeRecommendations(
       maxTravelTime: summary.maxTravelTime,
       minTravelTime: summary.minTravelTime,
       totalTravelTime: summary.totalTravelTime,
+      averageTravelTime: summary.averageTravelTime,
+      spread: summary.spread,
       perUserTravelTimes,
       rank: 0,
+      rankingMode,
+      badge: "Balanced",
+      explanation: "",
+      voteCount: 0,
       category: candidate.category ?? null,
       businessType: candidate.business_type ?? null,
       computedAt: new Date().toISOString()
@@ -410,7 +554,8 @@ export async function computeRecommendations(
     .map((recommendation, index) => ({
       ...recommendation,
       rank: index + 1
-    }));
+    }))
+    .slice(0, 3);
 
   if (ranked.length === 0) {
     throw new Error(
@@ -426,17 +571,189 @@ export async function computeRecommendations(
     }
 
     latestRoom.category = category;
+    latestRoom.rankingMode = rankingMode;
+    latestRoom.selectedVenueId = null;
+
+    const rankedWithMetadata = ranked.map((recommendation) => {
+      const badge = pickBadge(latestRoom, recommendation, ranked);
+
+      return {
+        ...recommendation,
+        badge,
+        explanation: buildExplanation({
+          ...recommendation,
+          badge
+        })
+      };
+    });
+
     latestDb.recommendations = latestDb.recommendations.filter(
       (candidate) => candidate.roomId !== roomId
     );
-    latestDb.recommendations.push(...ranked);
+    latestDb.recommendations.push(...rankedWithMetadata);
+
+    latestDb.participants = latestDb.participants.map((participant) =>
+      participant.roomId === roomId
+        ? {
+            ...participant,
+            votedVenueIds: []
+          }
+        : participant
+    );
 
     const latestParticipants = latestDb.participants.filter(
       (candidate) => candidate.roomId === roomId
     );
 
-    recalculateRoomStatus(latestRoom, latestParticipants, ranked);
+    recalculateRoomStatus(latestRoom, latestParticipants, rankedWithMetadata);
 
     return getRoomSnapshot(latestDb, latestRoom);
+  });
+}
+
+export async function toggleVenueVote(input: {
+  roomId: string;
+  participantId: string;
+  venueId: string;
+}) {
+  return updateSyncSpotDb(async (db) => {
+    const room = db.rooms.find((candidate) => candidate.roomId === input.roomId);
+    const participant = db.participants.find(
+      (candidate) =>
+        candidate.roomId === input.roomId &&
+        candidate.participantId === input.participantId
+    );
+    const venue = db.recommendations.find(
+      (candidate) =>
+        candidate.roomId === input.roomId && candidate.poiId === input.venueId
+    );
+
+    if (!room || !participant || !venue) {
+      throw new Error("Unable to record vote.");
+    }
+
+    if (room.status === "finalized") {
+      throw new Error("Room is already finalized.");
+    }
+
+    const currentVotes = new Set(participant.votedVenueIds ?? []);
+
+    if (currentVotes.has(input.venueId)) {
+      currentVotes.delete(input.venueId);
+    } else {
+      currentVotes.add(input.venueId);
+    }
+
+    participant.votedVenueIds = Array.from(currentVotes);
+    participant.updatedAt = new Date().toISOString();
+    room.updatedAt = new Date().toISOString();
+
+    return getRoomSnapshot(db, room);
+  });
+}
+
+export async function finalizeVenue(input: {
+  roomId: string;
+  participantId: string;
+  venueId: string;
+}) {
+  return updateSyncSpotDb(async (db) => {
+    const room = db.rooms.find((candidate) => candidate.roomId === input.roomId);
+    const venue = db.recommendations.find(
+      (candidate) =>
+        candidate.roomId === input.roomId && candidate.poiId === input.venueId
+    );
+
+    if (!room || !venue) {
+      throw new Error("Unable to finalize venue.");
+    }
+
+    if (room.hostId !== input.participantId) {
+      throw new Error("Only the host can finalize the venue.");
+    }
+
+    room.selectedVenueId = input.venueId;
+    room.status = "finalized";
+    room.updatedAt = new Date().toISOString();
+
+    const participants = db.participants.filter(
+      (candidate) => candidate.roomId === input.roomId
+    );
+    const recommendations = db.recommendations.filter(
+      (candidate) => candidate.roomId === input.roomId
+    );
+
+    recalculateRoomStatus(room, participants, recommendations);
+
+    return getRoomSnapshot(db, room);
+  });
+}
+
+export async function reopenVenue(input: {
+  roomId: string;
+  participantId: string;
+}) {
+  return updateSyncSpotDb(async (db) => {
+    const room = db.rooms.find((candidate) => candidate.roomId === input.roomId);
+
+    if (!room) {
+      throw new Error("Unable to reopen room.");
+    }
+
+    if (room.hostId !== input.participantId) {
+      throw new Error("Only the host can reopen the room.");
+    }
+
+    room.selectedVenueId = null;
+    room.updatedAt = new Date().toISOString();
+
+    const participants = db.participants.filter(
+      (candidate) => candidate.roomId === input.roomId
+    );
+    const recommendations = db.recommendations.filter(
+      (candidate) => candidate.roomId === input.roomId
+    );
+
+    recalculateRoomStatus(room, participants, recommendations);
+
+    return getRoomSnapshot(db, room);
+  });
+}
+
+export async function sendRoomMessage(input: {
+  roomId: string;
+  participantId: string;
+  body: string;
+}) {
+  return updateSyncSpotDb(async (db) => {
+    const room = db.rooms.find((candidate) => candidate.roomId === input.roomId);
+    const participant = db.participants.find(
+      (candidate) =>
+        candidate.roomId === input.roomId &&
+        candidate.participantId === input.participantId
+    );
+
+    if (!room || !participant) {
+      throw new Error("Unable to send message.");
+    }
+
+    const trimmedBody = input.body.trim();
+
+    if (!trimmedBody) {
+      throw new Error("Message cannot be empty.");
+    }
+
+    db.messages.push({
+      messageId: randomUUID(),
+      roomId: input.roomId,
+      participantId: input.participantId,
+      participantName: participant.name,
+      body: trimmedBody,
+      createdAt: new Date().toISOString()
+    });
+
+    room.updatedAt = new Date().toISOString();
+
+    return getRoomSnapshot(db, room);
   });
 }

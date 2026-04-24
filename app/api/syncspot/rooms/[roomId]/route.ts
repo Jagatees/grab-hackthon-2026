@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { getRoomSnapshotById, updateRoom } from "@/lib/syncspot/service";
+import type { RankingMode, RoomStatus } from "@/lib/syncspot/types";
 
 type Params = Promise<{
   roomId: string;
@@ -32,7 +33,9 @@ export async function PATCH(
     const { roomId } = await params;
     const body = (await request.json()) as {
       category?: string;
-      status?: "waiting" | "ready" | "computed";
+      rankingMode?: RankingMode;
+      selectedVenueId?: string | null;
+      status?: RoomStatus;
     };
     const snapshot = await updateRoom(roomId, body);
 
@@ -46,4 +49,3 @@ export async function PATCH(
     );
   }
 }
-

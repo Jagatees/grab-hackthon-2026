@@ -1113,6 +1113,20 @@ textarea {
   padding-top: 0.4rem;
   border-top: 1px solid rgba(82, 61, 44, 0.08);
   font-size: 0.82rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.syncspot-link-btn {
+  padding: 0.45rem 0.72rem;
+  font-size: 0.76rem;
+  text-decoration: none;
+}
+
+.syncspot-recommendation-explanation {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--foreground);
 }
 
 .syncspot-origin-search {
@@ -1255,6 +1269,212 @@ textarea {
   padding-right: 0.2rem;
 }
 
+.syncspot-final-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(20, 14, 27, 0.28);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  pointer-events: none;
+}
+
+.syncspot-final-card {
+  width: min(100%, 640px);
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(27, 13, 50, 0.28);
+  background: rgba(255, 250, 244, 0.96);
+  pointer-events: auto;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.syncspot-final-hero {
+  position: relative;
+  min-height: 200px;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background:
+    radial-gradient(circle at top right, rgba(255, 164, 36, 0.85), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.18), transparent 28%),
+    linear-gradient(135deg, #1f0d4f 0%, #43208a 48%, #7c2cff 100%);
+  color: #fff;
+}
+
+.syncspot-final-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.syncspot-final-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.syncspot-final-score {
+  display: grid;
+  justify-items: end;
+  gap: 0.2rem;
+  text-align: right;
+}
+
+.syncspot-final-score span {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.syncspot-final-score strong {
+  font-size: 2rem;
+}
+
+.syncspot-final-body {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.syncspot-final-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.syncspot-final-title-row h2 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.syncspot-final-title-row p {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+}
+
+.syncspot-final-votes {
+  min-width: 78px;
+  padding: 0.7rem;
+  border-radius: 16px;
+  background: rgba(13, 143, 115, 0.08);
+  display: grid;
+  gap: 0.2rem;
+  justify-items: center;
+}
+
+.syncspot-final-votes span {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.syncspot-final-votes strong {
+  font-size: 1.4rem;
+  color: var(--accent-strong);
+}
+
+.syncspot-chat-dock {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 36;
+  width: min(360px, calc(100vw - 2rem));
+}
+
+.syncspot-chat-card {
+  display: grid;
+  gap: 0.85rem;
+  padding: 0.95rem;
+  border-radius: 22px;
+  border: 1px solid rgba(82, 61, 44, 0.09);
+  background: rgba(255, 252, 248, 0.88);
+  box-shadow: 0 20px 45px rgba(65, 43, 28, 0.14);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.syncspot-chat-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.syncspot-chat-header strong {
+  display: block;
+}
+
+.syncspot-chat-header span {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.syncspot-chat-messages {
+  display: grid;
+  gap: 0.55rem;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.syncspot-chat-message {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(82, 61, 44, 0.08);
+}
+
+.syncspot-chat-message-self {
+  background: rgba(13, 143, 115, 0.1);
+  border-color: rgba(13, 143, 115, 0.16);
+}
+
+.syncspot-chat-message strong {
+  font-size: 0.78rem;
+}
+
+.syncspot-chat-message p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.syncspot-chat-compose {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.syncspot-chat-compose textarea {
+  width: 100%;
+  min-height: 82px;
+  resize: vertical;
+  padding: 0.82rem 0.95rem;
+  border: 1px solid rgba(82, 61, 44, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--foreground);
+}
+
+.syncspot-chat-compose textarea:focus {
+  outline: 2px solid rgba(13, 143, 115, 0.24);
+  outline-offset: 2px;
+}
+
 /* ─── Mobile ──────────────────────────────────────────────── */
 
 @media (max-width: 600px) {
@@ -1303,6 +1523,22 @@ textarea {
 
   .syncspot-room-card {
     width: 100%;
+  }
+
+  .syncspot-final-overlay {
+    align-items: flex-end;
+    padding: 1rem;
+  }
+
+  .syncspot-final-title-row {
+    flex-direction: column;
+  }
+
+  .syncspot-chat-dock {
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    bottom: 1rem;
   }
 
   .syncspot-list-item,
