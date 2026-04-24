@@ -1004,6 +1004,19 @@ textarea {
   font-weight: 700;
 }
 
+.syncspot-host-actions-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.syncspot-host-actions-row .syncspot-primary-btn,
+.syncspot-host-actions-row .syncspot-secondary-btn {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
 .syncspot-error {
   margin: 0;
   color: #a6402b;
@@ -1040,14 +1053,6 @@ textarea {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   padding: 1rem 1.1rem;
-}
-
-.syncspot-share-url {
-  margin: 0.35rem 0 0;
-  font-size: 0.72rem;
-  line-height: 1.4;
-  color: var(--muted);
-  overflow-wrap: anywhere;
 }
 
 .syncspot-room-join {
@@ -1281,49 +1286,34 @@ textarea {
   color: var(--muted);
 }
 
-.syncspot-render-manager {
+.syncspot-host-selection {
   display: grid;
-  gap: 0.65rem;
-  padding-top: 0.25rem;
-}
-
-.syncspot-render-manager strong {
-  font-size: 0.82rem;
-}
-
-.syncspot-render-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-}
-
-.syncspot-render-chip {
-  display: inline-flex;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.55rem 0.8rem;
-  border: 1px solid rgba(13, 143, 115, 0.2);
-  border-radius: 999px;
+  padding: 0.8rem 0.9rem;
+  border-radius: 16px;
+  border: 1px solid rgba(13, 143, 115, 0.18);
   background: rgba(13, 143, 115, 0.08);
+}
+
+.syncspot-host-selection div {
+  display: grid;
+  gap: 0.22rem;
+  min-width: 0;
+}
+
+.syncspot-host-selection strong {
+  font-size: 0.82rem;
   color: var(--accent-strong);
-  cursor: pointer;
-  transition:
-    transform 120ms ease,
-    background 120ms ease,
-    border-color 120ms ease;
 }
 
-.syncspot-render-chip:hover {
-  transform: translateY(-1px);
-  background: rgba(13, 143, 115, 0.14);
-  border-color: rgba(13, 143, 115, 0.3);
-}
-
-.syncspot-render-chip span:last-child {
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+.syncspot-host-selection span {
+  font-size: 0.76rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .syncspot-room-summary h1 {
@@ -1503,44 +1493,45 @@ textarea {
 
 .syncspot-chat-card {
   display: grid;
-  gap: 0.85rem;
-  padding: 0.95rem;
-  border-radius: 22px;
+  gap: 0.65rem;
+  padding: 0.8rem;
+  border-radius: 20px;
   border: 1px solid rgba(82, 61, 44, 0.09);
-  background: rgba(255, 252, 248, 0.88);
-  box-shadow: 0 20px 45px rgba(65, 43, 28, 0.14);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: rgba(255, 252, 248, 0.84);
+  box-shadow: 0 16px 34px rgba(65, 43, 28, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .syncspot-chat-header {
   display: flex;
   justify-content: space-between;
-  gap: 0.75rem;
-  align-items: flex-start;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .syncspot-chat-header strong {
   display: block;
+  font-size: 0.98rem;
 }
 
 .syncspot-chat-header span {
   color: var(--muted);
-  font-size: 0.76rem;
+  font-size: 0.72rem;
 }
 
 .syncspot-chat-messages {
   display: grid;
-  gap: 0.55rem;
-  max-height: 220px;
+  gap: 0.45rem;
+  max-height: 170px;
   overflow-y: auto;
 }
 
 .syncspot-chat-message {
   display: grid;
-  gap: 0.3rem;
-  padding: 0.7rem 0.8rem;
-  border-radius: 16px;
+  gap: 0.18rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(82, 61, 44, 0.08);
 }
@@ -1551,34 +1542,44 @@ textarea {
 }
 
 .syncspot-chat-message strong {
-  font-size: 0.78rem;
+  font-size: 0.74rem;
 }
 
 .syncspot-chat-message p {
   margin: 0;
-  font-size: 0.86rem;
-  line-height: 1.45;
+  font-size: 0.8rem;
+  line-height: 1.35;
 }
 
 .syncspot-chat-compose {
-  display: grid;
-  gap: 0.65rem;
+  position: relative;
 }
 
 .syncspot-chat-compose textarea {
   width: 100%;
-  min-height: 82px;
-  resize: vertical;
-  padding: 0.82rem 0.95rem;
+  min-height: 58px;
+  max-height: 104px;
+  resize: none;
+  padding: 0.78rem 5.6rem 0.78rem 0.9rem;
   border: 1px solid rgba(82, 61, 44, 0.12);
-  border-radius: 16px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.9);
   color: var(--foreground);
+  line-height: 1.35;
 }
 
 .syncspot-chat-compose textarea:focus {
   outline: 2px solid rgba(13, 143, 115, 0.24);
   outline-offset: 2px;
+}
+
+.syncspot-chat-send {
+  position: absolute;
+  right: 0.45rem;
+  bottom: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  box-shadow: none;
 }
 
 /* ─── Participant origin view / edit ─────────────────────── */
@@ -1890,6 +1891,10 @@ textarea {
 
   .syncspot-room-header {
     gap: 1rem;
+  }
+
+  .syncspot-host-actions-row {
+    grid-template-columns: 1fr;
   }
 
   .syncspot-room-card {

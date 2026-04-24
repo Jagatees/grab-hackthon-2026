@@ -154,7 +154,33 @@
       "selectedVenueId": null,
       "status": "computed",
       "createdAt": "2026-04-24T07:09:53.141Z",
-      "updatedAt": "2026-04-24T07:10:32.099Z"
+      "updatedAt": "2026-04-24T07:41:45.480Z"
+    },
+    {
+      "roomId": "6a52e5c4-8056-4a9a-8e01-c4deefc959ee",
+      "roomCode": "P6ONNK",
+      "hostId": "74e67f5b-4930-417b-bdf1-e90e86773aa1",
+      "category": "IKEA",
+      "selectedArea": null,
+      "customQuery": "IKEA Tampines",
+      "rankingMode": "fairest",
+      "selectedVenueId": null,
+      "status": "computed",
+      "createdAt": "2026-04-24T07:49:14.248Z",
+      "updatedAt": "2026-04-24T07:53:11.723Z"
+    },
+    {
+      "roomId": "8c2ec29b-3ee8-42ab-9a89-301646d70cc9",
+      "roomCode": "T8VPJA",
+      "hostId": "e0003055-b727-472f-bf12-bf2e81cdb87a",
+      "category": "cafe",
+      "selectedArea": null,
+      "customQuery": null,
+      "rankingMode": "fairest",
+      "selectedVenueId": null,
+      "status": "waiting",
+      "createdAt": "2026-04-24T08:04:33.442Z",
+      "updatedAt": "2026-04-24T08:04:33.442Z"
     }
   ],
   "participants": [
@@ -452,7 +478,7 @@
       "votedVenueIds": [],
       "confirmed": true,
       "joinedAt": "2026-04-24T07:09:53.141Z",
-      "updatedAt": "2026-04-24T07:10:19.257Z"
+      "updatedAt": "2026-04-24T07:16:00.770Z"
     },
     {
       "participantId": "0c29d820-9f12-4651-847d-3e3d9dc9025e",
@@ -467,6 +493,48 @@
       "confirmed": true,
       "joinedAt": "2026-04-24T07:10:04.607Z",
       "updatedAt": "2026-04-24T07:10:11.424Z"
+    },
+    {
+      "participantId": "74e67f5b-4930-417b-bdf1-e90e86773aa1",
+      "roomId": "6a52e5c4-8056-4a9a-8e01-c4deefc959ee",
+      "name": "jaga",
+      "originLat": 1.3332213754926983,
+      "originLng": 103.74332702714366,
+      "originLabel": "50 Jurong Gateway Road, Singapore, 608549",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T07:49:14.248Z",
+      "updatedAt": "2026-04-24T07:50:22.531Z"
+    },
+    {
+      "participantId": "3a93462d-50d7-466e-ac78-9a4bb84739ff",
+      "roomId": "6a52e5c4-8056-4a9a-8e01-c4deefc959ee",
+      "name": "Sam",
+      "originLat": 1.3670945,
+      "originLng": 103.9280097,
+      "originLabel": "3 Tampines Avenue, Singapore, 529784",
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": true,
+      "joinedAt": "2026-04-24T07:50:34.701Z",
+      "updatedAt": "2026-04-24T07:50:39.270Z"
+    },
+    {
+      "participantId": "e0003055-b727-472f-bf12-bf2e81cdb87a",
+      "roomId": "8c2ec29b-3ee8-42ab-9a89-301646d70cc9",
+      "name": "jagatees",
+      "originLat": null,
+      "originLng": null,
+      "originLabel": null,
+      "travelProfile": "driving",
+      "avoid": [],
+      "votedVenueIds": [],
+      "confirmed": false,
+      "joinedAt": "2026-04-24T08:04:33.442Z",
+      "updatedAt": "2026-04-24T08:04:33.442Z"
     }
   ],
   "recommendations": [
@@ -1349,18 +1417,18 @@
       "lat": 1.2957895,
       "lng": 103.7926149,
       "address": "1 Stars Avenue, #03-01, Singapore, 138507",
-      "fairnessScore": 2274.64,
-      "maxTravelTime": 1781.2,
-      "minTravelTime": 822.4,
-      "totalTravelTime": 2603.6,
-      "averageTravelTime": 1301.8,
-      "spread": 958.8000000000001,
+      "fairnessScore": 2426.96,
+      "maxTravelTime": 1922,
+      "minTravelTime": 841.6,
+      "totalTravelTime": 2763.6,
+      "averageTravelTime": 1381.8,
+      "spread": 1080.4,
       "perUserTravelTimes": [
         {
           "participantId": "cd29f21a-702c-4941-94da-680e8901a985",
           "name": "Jagatees",
           "profile": "driving",
-          "duration": 1781.2,
+          "duration": 1922,
           "distance": 24998.384,
           "geometry": "{~~uAcqb~dE?XyArEn@l^zKQfGILbJPrQQdAe@n@k@P{W|@}JRiBf@cB`Ff@~P[`KUbH}@hIuF~Q}B`FuClGyGlGoJnHyMnJkHhGcHxGuS|TmC|CgBxBuB~BeF|FsFtFyGjEeF~BwJdEsMvCyNzBmXnDaIz@sO~BkDX{AP[kCkCySoAyIs@_FaIgr@yA}FyAcBwAo@eCe@gFm@_SdHi@X_TrK{KtGoJpHcLnMmIrLwGrKkG`PoDzOc@tB]vCOdAaBjOm@tP]tPZhQrDpLzBxCbCfDpMvGpeA~PbC`@bn@bLj{A`VbW|BxjApO`y@nKlPtCvI~BjH`EjFtE~DvGjBjJTjJ_AlHuC`IwEtEuIjFe[jLaKjFkH`G_EjFaEjHkBbKuAvOwCheB`Cjs@`Elm@lJtt@tKhs@vMfq@xQ~s@x[r}@`Mv[xe@naAfJjHbNjRna@rf@hQjPfNrGzUxH|IfDbFQdGnAvDb@jCb@~M~AnJzB~LrDjInC|MrG|IvFnLzJ~NzO`HhGxEhBrFbAvBVpm@dAnfA~BdLXx^jAf`CeAlkAmCr_@Wx_@s@rKUrNs@ph@wBxu@}@tbAsH`m@kGfMsAvmAwPzeBq[rq@gLj^sGvYqExZmEz~@aK~j@sFpUiBd_AwGhv@mCtZaAxsCiBn_@Jjz@s@lb@g@p{@sCp}@_EnsAsI`_@}CfZsC|Jo@jeCiObd@sCprAqJ~s@{C|PgAdx@aFjy@uF~o@_G~bAiKh{@{K~}@cQrq@{Lh[{F|x@yNpCe@fTeEbYuElE{@fLgB`v@_ObtBw_@zRkDz_BiYjxA{Wzz@oMrF_Aj}@mK~qAeMf_@wCxs@cGfg@_Edc@wDz\\{Dzp@}K`l@wLdYyJbQwFzl@cR|a@gPrh@yVd]{QnXsPjLoItR}MvX}SnUaTl\\w[dCoChLgMnMiN~MoQlLwOhLeP~\\qj@~c@ow@nJuPvXkf@dFaKpHwNpJiPdLwSnO}R~BeCjPeQjNmMhH}F|HwFzb@_\\tVkPjeAil@tp@a]zKaGtGkD`FkD`EkD~D_EjCaE~BuDjBuD~AkE~@uF^wFJ_G_AaFkBuEuBkFkEwDuEiCwFkAuEUuFJwGt@_FrAaF`DuEtEkD`F_B`FkAjG_@jH?jI?`ITvH~@jLjA~HhFx^?zAg@bCzD`QnHdWbKjYzOfWzMpNvPhMtOnIhcBvn@tL`FvZrOfOxKdGtEdFrFrDnE`DpE`FbK`Ttk@ze@hzAxD|KbBhFvDjLxIhZdS`r@pIdY`DpKbDvKhE|N|AnGjCrJbOtp@tQ~y@lGlTjFfL`OpTtU`Sp^nQjP~EpnCt_AbWjJxKhGlIfGtVrRjRhSpSfYpFfIb]jh@ba@rl@dYbf@j[vr@pSjh@nGzS~d@rxAbYhcAnG`YfHnf@~BnCVX`@jBX~BbA~JpAjL`BfTj@vU^dYkAhU}ArVsDh[y@tXz@~JhClIbG`JbLrGvNnDl_@vCpY~CdI~@dFt@hEl@b]zAnVVj`@?~n@o@x^aA|FOlOOlTw@`L_@l\\o@nLSrJQzEIbo@ShmAYlXI`OHrLXlM^tM~@fDPpBThUlD~b@jIbHfBvCp@xOvDxp@zO`ShGbPdF`e@hRbP~FbTfJlTzK~TnLnG|E|K|F~`@|[zVvOlTfLxPjGtOhBnD`@xIVbLJ`Ks@hKoAvG{AdH{CrEeErW}UHIzE}EpEaE~d@m^ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBjTko@zIqT`GaOzk@_y@rEmM[{Iq@qCgEaLoD_EiPyQmSc^{EcEqDsEgCkEeC{CW[sCsCuCgAwCY}CUgEXeF|AyZzRm\\fa@aSlSeLpLq@l@mDlEeBhBmDjE_GdG_DtDs^r`@mHhIuHbGoEhCqOnGiI`BeGp@{@DyANwOJsNWcF_@yGUm[kAgA@yIz@qGzAcCjAeBx@kExB_AeDe@yA{B}Ge@uEAeDVqDd@uChGyRlFcQ`E^fFj@p@J"
         },
@@ -1368,9 +1436,9 @@
           "participantId": "0c29d820-9f12-4651-847d-3e3d9dc9025e",
           "name": "Sam",
           "profile": "driving",
-          "duration": 822.4,
-          "distance": 8391.244,
-          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqWbAgGRw@vWs]zEiGhReQ~DmDpRsQzHcJfHiMFsCk@{DwAqBs@eAqCgAaQs@yV~@a[lAeCVm@F_XbC}]|EsARsMtAgTfB}MFaNq@uOiAyB]{AW}Ew@jC{EtAyCfEkJhDaHhHcTdA}CfHcVtCsInBgGtByGjCaI|@yClJ}[pCuI`AiBhAoFd@_BvCkJdBsFtJa[|A_FvEeOvCkJzCyJvGyP`EuL`@aBxAaEf@aBNw@rBoGv@qCrBkF~C_JzD_MbCmDpBiDlCeCbCsBh@oFBYJoABe@ZkChAwMVqDd@uChGyRlFcQ`E^fFj@p@J"
+          "duration": 841.6,
+          "distance": 9303.813,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBjTko@zIqT`GaOzk@_y@rEmM[{Iq@qCgEaLoD_EiPyQmSc^{EcEqDsEgCkEeC{CW[sCsCuCgAwCY}CUgEXeF|AyZzRm\\fa@aSlSeLpLq@l@mDlEeBhBmDjE_GdG_DtDs^r`@mHhIuHbGoEhCqOnGiI`BeGp@{@DyANwOJsNWcF_@yGUm[kAgA@yIz@qGzAcCjAeBx@kExB_AeDe@yA{B}Ge@uEAeDVqDd@uChGyRlFcQ`E^fFj@p@J"
         }
       ],
       "rank": 1,
@@ -1380,47 +1448,7 @@
       "voteCount": 0,
       "category": "food and beverage",
       "businessType": "food and beverage",
-      "computedAt": "2026-04-24T07:10:32.097Z"
-    },
-    {
-      "roomId": "da5be7c7-fc62-4a25-b9b1-907a5ba0b1f8",
-      "poiId": "IT.1OCJO46WKX0EG",
-      "name": "Cafe De Muse - Shaw House",
-      "lat": 1.305538701,
-      "lng": 103.8311459,
-      "address": "350 Orchard Road, #01-K5/K6, Singapore, 238868",
-      "fairnessScore": 2493.28,
-      "maxTravelTime": 1669.9,
-      "minTravelTime": 1372.3,
-      "totalTravelTime": 3042.2,
-      "averageTravelTime": 1521.1,
-      "spread": 297.60000000000014,
-      "perUserTravelTimes": [
-        {
-          "participantId": "cd29f21a-702c-4941-94da-680e8901a985",
-          "name": "Jagatees",
-          "profile": "driving",
-          "duration": 1669.9,
-          "distance": 20991.661,
-          "geometry": "{~~uAcqb~dE?XyArEn@l^zKQfGILbJPrQQdAe@n@k@P{W|@}JRiBf@cB`Ff@~P[`KUbH}@hIuF~Q}B`FuClGyGlGoJnHyMnJkHhGcHxGuS|TmC|CgBxBuB~BeF|FsFtFyGjEeF~BwJdEsMvCyNzBmXnDaIz@sO~BkDX{AP[kCkCySoAyIs@_FaIgr@yA}FyAcBwAo@eCe@gFm@_SdHi@X_TrK{KtGoJpHcLnMmIrLwGrKkG`PoDzOc@tB]vCOdAaBjOm@tP]tPZhQrDpLzBxCbCfDpMvGpeA~PbC`@bn@bLj{A`VbW|BxjApO`y@nKlPtCvI~BjH`EjFtE~DvGjBjJTjJ_AlHuC`IwEtEuIjFe[jLaKjFkH`G_EjFaEjHkBbKuAvOwCheB`Cjs@`Elm@lJtt@tKhs@vMfq@xQ~s@x[r}@`Mv[xe@naAfJjHbNjRna@rf@hQjPfNrGzUxH|IfDbFQdGnAvDb@jCb@~M~AnJzB~LrDjInC|MrG|IvFnLzJ~NzO`HhGxEhBrFbAvBVpm@dAnfA~BdLXx^jAf`CeAlkAmCr_@Wx_@s@rKUrNs@ph@wBxu@}@tbAsH`m@kGfMsAvmAwPzeBq[rq@gLj^sGvYqExZmEz~@aK~j@sFpUiBd_AwGhv@mCtZaAxsCiBn_@Jjz@s@lb@g@p{@sCp}@_EnsAsI`_@}CfZsC|Jo@jeCiObd@sCprAqJ~s@{C|PgAdx@aFjy@uF~o@_G~bAiKh{@{K~}@cQrq@{Lh[{F|x@yNpCe@fTeEbYuElE{@fLgB`v@_ObtBw_@zRkDz_BiYjxA{Wzz@oMrF_Aj}@mK~qAeMf_@wCxs@cGfg@_Edc@wDz\\{Dzp@}K`l@wLdYyJbQwFzl@cR|a@gPrh@yVd]{QnXsPjLoItR}MvX}SnUaTl\\w[dCoChLgMnMiN~MoQlLwOhLeP~\\qj@~c@ow@nJuPvXkf@dFaKpHwNpJiPdLwSnO}R~BeCjPeQjNmMhH}FxCqGbDeDj_@c[`GmEls@if@nMyNhJmQbEoOxAiRNq[b@{q@x@cWtI{l@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@j@mDh@oAl@y@tAeClF}I|JoWbB_JtAwKd@kDh@yLW}OcAwUuA_KiBsJuB}D_EgDoD_AyE[sETiDjA{BnAwApA}AlDm@dEJzGlBfLrDxIdF`HdGdFbIxDpJjC~c@~It_@vExOZ|ZcApHu@tFk@nf@sApE?lJbEfVdKvCjA`A^dIfDt[fMfWhGjIpBv@P~Ct@hJ|BvIxBfCn@nPhErLnD`Fr@|Jp@jEHbJVpKHdCDzBGvEOjBA|Ge@|Ko@nAIpIm@l_@gBtJ_AfLs@xJ}@rRgBlK_BxNuArMgAfUkAbJm@~BYn`@mD|CW|]aDjQeAxOaAz@Y~FcBlLuDnLkHdKaJfI}JrGaLtH}KzIyLzF_N|EoPjAkGnDiRjFu]vDsVpAwHxAqAv@_A|@eA~@uArCgCj@t@xBvCzHxLnEdM~C~K|B|Sp@fFf@`Hb@jCTdB~AxHnAfCtAvBn@bAdHxFfIdEdJzAx@BR?rUbArRZ~CZnD\\rb@`KhBr@td@xRfDxAhIzBbJ|CfEvA@@jFlBfBgDpDeD`L}NjAeAtCmClFkGjG{FjJmF~K}Ct@GhAEbACpA?hG^`NeC~EqA|EqAxC}HhHkRv@qBfE}KVu@bAkCtB{EvLcX`Red@Xo@JUzCiHr@cBb@aA`CyF`F}KtCyGvDkJrBmFjDiIZm@"
-        },
-        {
-          "participantId": "0c29d820-9f12-4651-847d-3e3d9dc9025e",
-          "name": "Sam",
-          "profile": "driving",
-          "duration": 1372.3,
-          "distance": 15385.07,
-          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqCiEeCgMoH_H{BkSkFiMsCgEaAaDq@cCa@cEs@uFiA}I_DqNuHeEcDaGuEoPmS_@u@sC{FyCcLiCmLY}FKkBm@}SEgP_DeNoBsDcBwAqDoAuPZyPPqPR}OVg_@RaTk@cDWaE[{SoCwSmBmKaByJiCeQiFgJaEee@}S}n@{YcG_D|AeD|CsGdHcO|l@mkA`r@cpAl[{g@xd@uaAj`@yy@rFuLx_@_z@bh@kiAvHwNtp@suAv_@ix@tYam@p}AahD`Rmb@nDqJ|T_e@dC}FnB{EjB_HhKgb@|Gaa@hEu\\vA{Yn@ac@yAsv@oGsi@uJwh@oKo]qT}s@{HqY_s@wlBkRsb@kn@_hAw_@en@aF}HsFqIqE}IyRyXkQyRsIoIkJsHoVsOmXkKov@qVgrAad@wKuDmIeDaJcEcH_D{GuDyG}D_GiEaDcCoDiDmGcGqD_EiDsEsDsG}DkI{DeJyD}KuDyMiH{]eHc^cLaj@_h@{rBa]ykAmb@cqAeGsSsKiW_FmIyFmHmI_J_GuF_F{DcFoDgXwMqNiFokAgc@{LuEoQ{HwJiFkJ{GyMmNoDqE}CwE{DeHiEkIqD{IaJaWgJab@sEuSuDeZoCa]_B}k@Tyf@tEcn@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@j@mDh@oAl@y@tAeClF}I|JoWbB_JtAwKd@kDh@yLW}OcAwUuA_KiBsJuB}D_EgDoD_AyE[sETiDjA{BnAwApA}AlDm@dEJzGlBfLrDxIdF`HdGdFbIxDpJjC~c@~It_@vExOZ|ZcApHu@tFk@nf@sApE?lJbEfVdKvCjA`A^dIfDt[fMfWhGjIpBv@P~Ct@hJ|BvIxBfCn@nPhErLnD`Fr@|Jp@jEHbJVpKHdCDzBGvEOjBA|Ge@|Ko@nAIpIm@l_@gBtJ_AfLs@xJ}@rRgBlK_BxNuArMgAfUkAbJm@~BYn`@mD|CW|]aDjQeAxOaAz@Y~FcBlLuDnLkHdKaJfI}JrGaLtH}KzIyLzF_N|EoPjAkGnDiRjFu]vDsVpAwHxAqAv@_A|@eA~@uArCgCj@t@xBvCzHxLnEdM~C~K|B|Sp@fFf@`Hb@jCTdB~AxHnAfCtAvBn@bAdHxFfIdEdJzAx@BR?rUbArRZ~CZnD\\rb@`KhBr@td@xRfDxAhIzBbJ|CfEvA@@jFlBfBgDpDeD`L}NjAeAtCmClFkGjG{FjJmF~K}Ct@GhAEbACpA?hG^`NeC~EqA|EqAxC}HhHkRv@qBfE}KVu@bAkCtB{EvLcX`Red@Xo@JUzCiHr@cBb@aA`CyF`F}KtCyGvDkJrBmFjDiIZm@"
-        }
-      ],
-      "rank": 2,
-      "rankingMode": "fastest",
-      "badge": "Balanced",
-      "explanation": "Travel times are well balanced across the group.",
-      "voteCount": 0,
-      "category": "food and beverage::restaurant",
-      "businessType": "food and beverage",
-      "computedAt": "2026-04-24T07:10:31.813Z"
+      "computedAt": "2026-04-24T07:41:45.478Z"
     },
     {
       "roomId": "da5be7c7-fc62-4a25-b9b1-907a5ba0b1f8",
@@ -1429,18 +1457,18 @@
       "lat": 1.2817161816817562,
       "lng": 103.8456606872692,
       "address": "87 Club Street, Singapore",
-      "fairnessScore": 2631.02,
-      "maxTravelTime": 1850.9,
-      "minTravelTime": 1300.2,
-      "totalTravelTime": 3151.1000000000004,
-      "averageTravelTime": 1575.5500000000002,
-      "spread": 550.7,
+      "fairnessScore": 2669.68,
+      "maxTravelTime": 1850.8,
+      "minTravelTime": 1364.8,
+      "totalTravelTime": 3215.6,
+      "averageTravelTime": 1607.8,
+      "spread": 486,
       "perUserTravelTimes": [
         {
           "participantId": "cd29f21a-702c-4941-94da-680e8901a985",
           "name": "Jagatees",
           "profile": "driving",
-          "duration": 1850.9,
+          "duration": 1850.8,
           "distance": 25689.474,
           "geometry": "{~~uAcqb~dE?XyArEn@l^zKQfGILbJPrQQdAe@n@k@P{W|@}JRiBf@cB`Ff@~P[`KUbH}@hIuF~Q}B`FqBj@mBMpFeNnDsOt@mHNcIMmIi@i`@IkDaA}a@eAm`@i@aTk@iPYmNkAsy@w@gLsFoMeEsEkFgEmEyBuI{BgFw@w]uDgO}AmD_@uD[DiCXqCbBiNxIcSlD_G~DmFvGwHjMgKvCkD~CqEzClCfMfKvWdTlA`AbjBzzA~c@r_@xNtLbX|KtG~@dGRdGc@vGwAfFsDbFmEbE_F~Vy_@jQc[fEyGxZkf@`r@uoAjXaf@bQyWfK}NbQeUdrAmaBbdAarAfa@kd@tVmZv]wZbI}FlGwDzJ_FzNcIz_@{Rpn@aUvo@kQh`@}Knt@wSbzA_a@~WuHvd@wMhiAe^hS_J|fB}bAdc@w]|b@g[hu@ie@fv@y`@|KuFhW{KjSkJd}@k]zl@qQtaA_V~{@kTxg@sRbb@qVjSgQ~E}Ede@ur@dJkOtE_K~GwP~EoSpEsSpEcWpFyWjN{u@hQa{@|Lsm@`M_o@jQuyArAkY|IwuArAor@d@u~@sBc_BeDci@eQs~A}DuZgIad@qDkWi_As~FwOuq@cH_e@oEsVgQkjAoMk}@aDkToJ}p@wHur@oG{m@gD{m@iEqcA_AycAF_x@NwJXoVn@cf@lAuiAh@_j@Mej@gCie@cGge@gLge@qJs\\yGwTgMm`@mHoZsEc]cAwXZuILkERwC|@iLbBqLhDePnEwOnHiQnIyO`PaSzOaOjUyNdU{J~KoEtN}DzPmCnSeBpC_@fGm@xhBcHvZ{@xrC}Gdg@mA`aBaCbyAmAr_AQpu@y@vu@QxaCp@zFBtiCp@|v@?rn@aB~a@yApRkBtS_C~WoDjbAwRxw@gQnu@wVdkBqq@|_@eJ`\\kGdYgDfWuBrRo@nZUfV`@fT|@vTtBbUvDrUtEhUtFfUxE`OxCtpE|kAvk@jNtnCxr@x~A~_@dLjCd]`JfUtEjQlCbS`Bfh@xDlz@tA`cBcHvnAaVht@{Ov{Am`@`NaDvo@kOxiAeZpMyC`Im@bb@uKvo@gS`h@_NjR}Ch{Cyu@vfAiYdtAw^jYkFp_@uFt_@qDdDSdEQpe@cAvYi@l]u@lUk@|~@Yzq@kAdQc@tj@mA`LGfhBeClkBCf]bAhNd@|ZdE|X|Enw@~Ux_@bTpP`L~YtWfLpLhg@rj@rNvO`g@|i@`[|\\dHxHfHzHnNbOjGhGlQzMhiA|~@bBtA~FrFlThTjUjWrS|Wxo@reA~JnPnJbQ`Xlv@~Uxn@~^naA`Ld\\bHrS~l@nfBn@xApDvI`KpSbS~[`QbTtMnNlVlUly@vg@vCtA~@^zEnBbCbAfDrAfCdAfBt@`DjA|R`IvJ|CnQjErVxD`eAhNhRfDlZlHdUxHj_@lRhOtKdR|Qp[n^tKvN`f@d|@lNlSjQvSvg@~a@~OjI|Q~FtTrF~KrAbU`BvP~@|Tw@d[}DbLaCzOkErXgNnHyE`J_Hnb@ej@rGsH|NuP~`@_f@nFcH~LeOxUwObUaGdc@uEpb@aAbW?fo@jDza@jBde@aEn`@mPrj@aSxu@}Jpj@}B~_@L~YtExYpJ`q@hVrj@bWtThFd~@b_@f}@fd@jc@xTjAv@dC~@bEb@vDqBnLuMrE_G~BwGdAcMh@yJ\\iGhHa\\`IcPlAcCzAkF`AuHhNqZrGyLhLqT|AyCjFwJ|AcDhEcIpBoEzCwGvHiPpQ_`@fBkEtSmd@p@yAnY~Np[zO~BjArVfMzWrLhElBlE|BlShKlRlInHpDjAl@dMzF`OzGbQdI|FlCnDbBxLbGpHnBx@y@lEcG`CiClCsBbEkCvEoArE}AdQcFzDiAhA[dDaAa@e@oIaK}FuEmLoHsI`F{WdNiEtBgBr@_MiH"
         },
@@ -1448,19 +1476,179 @@
           "participantId": "0c29d820-9f12-4651-847d-3e3d9dc9025e",
           "name": "Sam",
           "profile": "driving",
-          "duration": 1300.2,
+          "duration": 1364.8,
           "distance": 16222.011,
           "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@|A{C~@}CpAgGxFaSbFaQnHqSlQs`@`Vah@`GoQhEgXr@ySqAqTcCuP}DeO{HoPsOiS{JgJmLkIuMaI}TgNcSyMcS_PmRyPyIcIgL{LcK{LwRwTkSq[}E_JsLqToNkYaMk[sOui@qBmHkXqgAoNwh@aFmQiH}RuGsNqJ_KoIwIeJkHqSmMyTuLkWkMaPsJoJcHsIyH}HoJaFaIkCwDyDyFoVmd@iLgUmPuZ_GcLsCmFiJsN{FsIsCaEmFsGuDgE_GcDwc@uUsLuEqRkE}IcCeRuNsUaSuB{D_AsECsE^wDjFeQdKmUjDiGrEeI`Vy`@~Xk^jIsJpGcLzDuEzPsSjGsJh@_A|NyVbBwCrEqHhDnC|CbClPrMfGvEf@`@bEjDlJ\\\\AxDu@xCcAvHiPpQ_`@fBkEtSmd@p@yAnY~Np[zO~BjArVfMzWrLhElBlE|BlShKlRlInHpDjAl@dMzF`OzGbQdI|FlCnDbBxLbGpHnBx@y@lEcG`CiClCsBbEkCvEoArE}AdQcFzDiAhA[dDaAa@e@oIaK}FuEmLoHsI`F{WdNiEtBgBr@_MiH"
         }
       ],
-      "rank": 3,
+      "rank": 2,
       "rankingMode": "fastest",
       "badge": "Balanced",
-      "explanation": "Solid compromise with a group total of 53 min.",
+      "explanation": "Solid compromise with a group total of 54 min.",
       "voteCount": 0,
       "category": "food and beverage",
       "businessType": "food and beverage",
-      "computedAt": "2026-04-24T07:10:32.004Z"
+      "computedAt": "2026-04-24T07:41:45.141Z"
+    },
+    {
+      "roomId": "da5be7c7-fc62-4a25-b9b1-907a5ba0b1f8",
+      "poiId": "IT.2JRJ89K977IHJ",
+      "name": "Cafe Kreams - Maxwell Chambers",
+      "lat": 1.277347227122462,
+      "lng": 103.84635910548747,
+      "address": "32 Maxwell Road, #01-07, Maxwell Chambers, Singapore",
+      "fairnessScore": 2723,
+      "maxTravelTime": 1991.3,
+      "minTravelTime": 1219.5,
+      "totalTravelTime": 3210.8,
+      "averageTravelTime": 1605.4,
+      "spread": 771.8,
+      "perUserTravelTimes": [
+        {
+          "participantId": "cd29f21a-702c-4941-94da-680e8901a985",
+          "name": "Jagatees",
+          "profile": "driving",
+          "duration": 1991.3,
+          "distance": 26549.903,
+          "geometry": "{~~uAcqb~dE?XyArEn@l^zKQfGILbJPrQQdAe@n@k@P{W|@}JRiBf@cB`Ff@~P[`KUbH}@hIuF~Q}B`FqBj@mBMpFeNnDsOt@mHNcIMmIi@i`@IkDaA}a@eAm`@i@aTk@iPYmNkAsy@w@gLsFoMeEsEkFgEmEyBuI{BgFw@w]uDgO}AmD_@uD[DiCXqCbBiNxIcSlD_G~DmFvGwHjMgKvCkD~CqEzClCfMfKvWdTlA`AbjBzzA~c@r_@xNtLbX|KtG~@dGRdGc@vGwAfFsDbFmEbE_F~Vy_@jQc[fEyGxZkf@`r@uoAjXaf@bQyWfK}NbQeUdrAmaBbdAarAfa@kd@tVmZv]wZbI}FlGwDzJ_FzNcIz_@{Rpn@aUvo@kQh`@}Knt@wSbzA_a@~WuHvd@wMhiAe^hS_J|fB}bAdc@w]|b@g[hu@ie@fv@y`@|KuFhW{KjSkJd}@k]zl@qQtaA_V~{@kTxg@sRbb@qVjSgQ~E}Ede@ur@dJkOtE_K~GwP~EoSpEsSpEcWpFyWjN{u@hQa{@|Lsm@`M_o@jQuyArAkY|IwuArAor@d@u~@sBc_BeDci@eQs~A}DuZgIad@qDkWi_As~FwOuq@cH_e@oEsVgQkjAoMk}@aDkToJ}p@wHur@oG{m@gD{m@iEqcA_AycAF_x@NwJXoVn@cf@lAuiAh@_j@Mej@gCie@cGge@gLge@qJs\\yGwTgMm`@mHoZsEc]cAwXZuILkERwC|@iLbBqLhDePnEwOnHiQnIyO`PaSzOaOjUyNdU{J~KoEtN}DzPmCnSeBpC_@fGm@xhBcHvZ{@xrC}Gdg@mA`aBaCbyAmAr_AQpu@y@vu@QxaCp@zFBtiCp@|v@?rn@aB~a@yApRkBtS_C~WoDjbAwRxw@gQnu@wVdkBqq@|_@eJ`\\kGdYgDfWuBrRo@nZUfV`@fT|@vTtBbUvDrUtEhUtFfUxE`OxCtpE|kAvk@jNtnCxr@x~A~_@dLjCd]`JfUtEjQlCbS`Bfh@xDlz@tA`cBcHvnAaVht@{Ov{Am`@`NaDvo@kOxiAeZpMyC`Im@bb@uKvo@gS`h@_NjR}Ch{Cyu@vfAiYdtAw^jYkFp_@uFt_@qDdDSdEQpe@cAvYi@l]u@lUk@|~@Yzq@kAdQc@tj@mA`LGfhBeClkBCf]bAhNd@|ZdE|X|Enw@~Ux_@bTpP`L~YtWfLpLhg@rj@rNvO`g@|i@`[|\\dHxHfHzHnNbOjGhGlQzMhiA|~@bBtA~FrFlThTjUjWrS|Wxo@reA~JnPnJbQ`Xlv@~Uxn@~^naA`Ld\\bHrS~l@nfBn@xApDvI`KpSbS~[`QbTtMnNlVlUly@vg@vCtA~@^zEnBbCbAfDrAfCdAfBt@`DjA|R`IvJ|CnQjErVxD`eAhNhRfDlZlHdUxHj_@lRhOtKdR|Qp[n^tKvN`f@d|@lNlSjQvSvg@~a@~OjI|Q~FtTrF~KrAbU`BvP~@|Tw@d[}DbLaCzOkErXgNnHyE`J_Hnb@ej@rGsH|NuP~`@_f@nFcH~LeOxUwObUaGdc@uEpb@aAbW?fo@jDza@jBde@aEn`@mPrj@aSxu@}Jpj@}B~_@L~YtExYpJ`q@hVrj@bWtThFd~@b_@f}@fd@jc@xTjAv@dC~@bEb@vDqBnLuMrE_G~BwGdAcMh@yJ\\iGhHa\\`IcPlAcCzAkF`AuHhNqZrGyLhLqT|AyCjFwJ|AcDhEcIpBoEzCwGvHiPpQ_`@fBkEtSmd@p@yA|AeDvFwLtDaIlEcJ`I}PfHkO`BiDf@eAlIiPlKsTfJyLjFsGtCaDvI_HvUcL|J{EhZkQrA{ApC}C~AsU|@oFdBkXrMqYzAeDzAeD`BwCxBlAb\\nQbLjGjb@~UlBfA~CfB`m@n[~BnA~_@pRjX`NbHzDrHdExRbKzAv@xDlBxAx@lj@hX`GxCdMjGzK~FvBjA`l@p[zDtBbGnDeFhI}J|OcD~EoDpFkBtBcF~EaA`A{BtBwJbJoGfGmJdIgOjM"
+        },
+        {
+          "participantId": "0c29d820-9f12-4651-847d-3e3d9dc9025e",
+          "name": "Sam",
+          "profile": "driving",
+          "duration": 1219.5,
+          "distance": 14968.086,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPjEuG~`@}m@lUob@jNc_@hJq`@zEca@pDkn@tM_wFdF}vB`@aQ`FyuBpCun@`Fuo@vIsl@hMml@rNug@bVsn@jNaZfIaQjdAomBbN}WnGeLtS}^rK}SvKaS`Po\\hVo`A~AsIdA}GvCoXz@gK`@eQF{k@@iPrBmk@z@sLt@gFrEcTpFqYdIsX`HqSdSoc@zQ}XfYeb@zYa_@bPsTb{@clAvNePlMeNfO_P~B{F~]ue@`kAwyA`FcJrCyHnA}Ed@qCf@{ChAoId@oHH{DJwGlB{Ul@eM`@}LjD{jAHi`@A_T]}]So[SiOSkWu@yfAo@qe@Q{GGuG?mAO}OIgKCsEkBcuBAoASc[EgNYuSGuE[q^OmOkGiIwW}UwDqD{DwCkKiIaSqO}FoEgD_CwPeMeKqImD}CmCwBeFeEwImG}NcL}UsQeBuAuGwFkGeFiEqDaJkCuAa@uHeBgMuA}@EoBKoGfGmJdIgOjM"
+        }
+      ],
+      "rank": 3,
+      "rankingMode": "fastest",
+      "badge": "One-sided",
+      "explanation": "Convenient for most, but less fair to one participant.",
+      "voteCount": 0,
+      "category": "food and beverage::cafe",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T07:41:44.561Z"
+    },
+    {
+      "roomId": "6a52e5c4-8056-4a9a-8e01-c4deefc959ee",
+      "poiId": "IT.0V1U64JIBF83Z",
+      "name": "IKEA Alexandra",
+      "lat": 1.288127893336977,
+      "lng": 103.80566611768927,
+      "address": "317 Alexandra Road, Singapore, 159965",
+      "fairnessScore": 1701.73,
+      "maxTravelTime": 1922.8,
+      "minTravelTime": 1024.8,
+      "totalTravelTime": 2947.6,
+      "averageTravelTime": 1473.8,
+      "spread": 898,
+      "perUserTravelTimes": [
+        {
+          "participantId": "74e67f5b-4930-417b-bdf1-e90e86773aa1",
+          "name": "jaga",
+          "profile": "driving",
+          "duration": 1024.8,
+          "distance": 10615.217,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqC~DwDxAeBxHuHtJwMlJaMxMqShVa\\`GuI|DcF~Vo^tCmDjG}GlHbFhCdBd\\nTzRnM|FjEpO|K|GtEvB~AhAp@hBhA`DlB`C|AbDpBtHtE\\ThVdPrb@`OfFd@lBKnDoAxPoFjC}BhDeCfCyAl`@kQjIyCdP}DzIeBhYaClKk@zFOnVa@~Vm@zt@c@vEQbDUbF}@lFuBvKwJz@oCjGaUxFcXzB_Pf@uCbF}YrAmH^uBfLgm@f@uCVcB~AcJ~YorAjHe_@jK}j@pL}f@dP{s@rIg^vCaMrFgU|HkP|HkPnO}QzQoSdF}Ddi@ya@`iAq_A~CuCtZoTvMqKpZaYtQyNpYoV|TkRpD}C|gAw|@pLoK`ReRfs@ss@lHoH~e@kf@ho@}n@hGeGhTeTfBeBbAaArEsEze@me@tMsMbCaCf[gYzEeDbu@eg@bNaJjPwK~OkKhO{JlXcRfRaS`LmKbTyV|SoYbZm`@|EgGdLqOlXqd@rm@quAjJsX|Mab@rh@etA`DeI|Rm_@bi@{gAzq@yvAfq@wtArFcKbCqEpN_X`HmM~Qq]dDqGfg@uaA~MaZ`FyKnTcf@hR}`@dYwk@nQqW~BiC`DoD~SqUrYsUvIcH|QcOvbAc{@z_@oXzXcT`m@ul@j\\ic@xW_g@hjA_wBpjAkrBhUg\\zFqH|@kA`NkQzC}DxGuIfc@cu@`MsUzWck@zF}LfKyTdVib@jKeQzG_M|LaTlYme@bKwPl@}FpFsM~CmGtFaLpGaMzE{J`EgIvC}G|CoJtAaH|@cH`@yHJqDK{E]{QJgZu@mIU}DWuD]mC_@eBaAoCgBaDcEeFqGqDgGiDgQkJon@wYgFcDqBaBiJoHsIyLoDcHaAoBwAiC{AoCuKyR_K}PiAmByDqFwAsC_K}QiC{DwIeLqEsEiNgMcEeDwLuJuKcI_OwKgp@of@yBgBmFkE_BqAkCwByAiA{IaH}@s@oIqHgNaMg@yAIo@R{@t@a@|B^n@f@|TrQvApAdO`MfE~CnBxAbUtPzEpDzSxOtCtBfBrAdVnQ~C~BnPvLj@aAvBkDz@It@?n@NpFhE"
+        },
+        {
+          "participantId": "3a93462d-50d7-466e-ac78-9a4bb84739ff",
+          "name": "Sam",
+          "profile": "driving",
+          "duration": 1922.8,
+          "distance": 21963.186,
+          "geometry": "_jmrAyggfeEaAaC_@k@mAwAyBh@_ARsBb@rClJtBdKvDxJ|EvEtD`BfFRvAJhBArBOfCi@lBeAnAw@x@}DXmB|Ey[nCy`@XeJd@cM`Byd@vA{Y|@aWf@wXFeDBsHpGEhDAxNIt\\@tf@Gpu@J|s@?|DAtjADdO@rQ@hGKnSPnDEfDBfDCtKh@pf@vDvVjDpQ~D|MlDjOrFrJ`E|DxArAh@zD|A~BhAvMhF|e@fTbiAth@`WbLtQdIrb@vRpCnA`i@xUpVnKnp@tYbd@jRboAni@nSdJdChArG`CjTpLnl@fVbOnKdH`GpElElHhJ~InMrLnRvGnO`Uvl@~ElMf@xDxDjM|Pbk@xPzk@rb@drAnHjQzJ`TbJlNnKxObUxWxc@fj@rk@hq@dKjJpMdLvNxJhc@|UlPpHrMbGjz@|_@vJbGlL~HnPzMrPrOhQ`ShO`SxM|ShGhLxDbJ|K~Xfp@zgB`Md]|Ib^~ExWnDrWvArSt@bTHpZm@rZuAlUkC`VoEda@oIbm@}Jjs@kAnI{En\\oNraAk@tEgE|]aDj_@cEp^yCjVcJjc@oI~[yEzOcDzJ_ExK}EzLaGlNgfBt|DmEpKgEzK}IpVgDnIoCjGyFhLoIbOqN`UgZnd@oDfGeCbFmC|GwBnH_BzHoA`Jm@rGUpFI`GBtFL~F\\fFt@jHxA~IfBvIxg@txB`CtJfDdLhDhKdD~IdDdIhl@psAhExKfDvJrCxJvCpLrBnKzArJnAvK`AxKh@rLTpOAvLa@tNcArPmAbMyBvNaCnMiCdKsQxi@gJjWqDhIgIjTuCtHmAbDmGtPkf@dqAcB|EkBhEmArCyBdFsI`SiKvToCnFqHtNmSpb@_A~BiEbLeCxEoBfEuBnGy@fDe@fDc@lKGxJNjNlAtOvOln@zDtLlArDfArDbE`OhK~c@z@lVWxf@yAda@_Ap[^~TzC~UrE`P`G`NrQtc@pGhRtBnNnAnNkBhTqHfYi[jhAWj@cExJe@hAuF~MmIlVoK|ZqHfTeFfSmAnKi@pHS`PNzK`@xJjBtMrAjGh@fC|@xE~ErW\\~Ad@~BtIhc@bHpa@nFtg@jDzy@bDdz@bB|uB|@nHJpF@|A^dRb@~PTrR~@vdAV~`@JpP?|{@mA|]sCbRcOxoAiGn|@qJ|tA}@~UmDnpB[~P@td@fCbw@^bPQpIQbKeAbOkB|MwChNgD|N_EnNmDxLkGlOsGfOeGjTsDfJwDvLsCpOi@tJCvJXzHv@rHlBdKlC`JzDnJxEdJ~F`JdIzJfEzDfFrDpL`H|IzGvErEjE|DbIbK|J`O|KrSx[dr@|S|f@|Qre@zE~KrSbg@vc@r{@~GjNpHpTxCbPfBjJlBnXt@fT]rUgArQMzCaA|SgDfh@s@nPYxK?fKt@`YlBzWhC~W~CjUjEzTzOln@vIh[vLp]jLbYlOd[hVzc@|mAhrBvp@fjA`PfW~GtLr]jl@nLtQhNpXlE`KzElL`EtKjUxk@xD`KpJnU~EdKtHfN|HhLzIlLpItJxHlHvKvIzNrJxf@|ZfFtCpI|EdDrBl[fO|W|J`IjDbTbLfSjKjF~ChF`D~HtEhAp@pHnElGrDp\\|R|OhGzFhB~ErA|FrAhHrA`KvA~Fv@rNfAzNl@hb@fAhm@lCvy@tDdS|AjShC`OzBjI~@dw@rJz}@|IhJ|A`M~C~FzBtHdEbMnJt^zZjSzQjKjKtKhMhEhGpGlMxNf\\lPxd@tChIvE|LxFnKrA|ChAjB|GtJlm@bs@`p@`t@nBzBlBvBlCrCnBzBdBnBdRbSxG~G`SpVzHpItPtQhClC|UtVdMjLn@p@x@l@t@j@zFrE`QhK|QhGhQjFtG|A~F|AfPjEfHfBhDr@lIvBzHhBvT|FjjArSrw@vMld@hKzn@nQhFxAz`@pL|fAfYrSrFll@|Nl`@zGrIz@pFj@bAJzLlAzFVfP`@rSd@b`@xArI\\dLl@bGIhEBhR~@hTrB|LdA|Fr@`MtAlObBxFx@|NjBvDb@`ZdDjSRvFNrDWbF}AtJwEni@ks@rWeXxB}BhBqBzUsWdDuD`f@ek@~ViYjF}E~H_HjDsCnGyEhAkAdFyCpGkEd_@}T`KwFdDgB~BqAd[wPrJiFrOoIxDuBfLkGnOgIbVyMl@]bM{G|PyKp`@q`@~MePhMkM|MuOp@u@tEsFhGrFrApAdDdD|CrC~i@ta@n@f@|TrQvApAdO`MfE~CnBxAbUtPzEpDzSxOtCtBfBrAdVnQ~C~BnPvLj@aAvBkDz@It@?n@NpFhE"
+        }
+      ],
+      "rank": 1,
+      "rankingMode": "fairest",
+      "badge": "Host-friendly",
+      "explanation": "Convenient for the host, but the compromise leans their way.",
+      "voteCount": 0,
+      "category": "general merchandise",
+      "businessType": "shopping mall/shops",
+      "computedAt": "2026-04-24T07:53:11.721Z"
+    },
+    {
+      "roomId": "6a52e5c4-8056-4a9a-8e01-c4deefc959ee",
+      "poiId": "IT.1TS41X5Z7AD4L",
+      "name": "itea - Tampines",
+      "lat": 1.353618,
+      "lng": 103.953056,
+      "address": "201B Tampines Street 21, #01-K1, Singapore, 522201",
+      "fairnessScore": 1976.61,
+      "maxTravelTime": 2189.5,
+      "minTravelTime": 649,
+      "totalTravelTime": 2838.5,
+      "averageTravelTime": 1419.25,
+      "spread": 1540.5,
+      "perUserTravelTimes": [
+        {
+          "participantId": "74e67f5b-4930-417b-bdf1-e90e86773aa1",
+          "name": "jaga",
+          "profile": "driving",
+          "duration": 2189.5,
+          "distance": 28526.916,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqCiEeCgMoH_H{BkSkFiMsCgEaAaDq@cCa@cEs@uFiA}I_DqNuHeEcDaGuEoPmS_@u@sC{FyCcLiCmLY}FKkBm@}SEgP_DeNoBsDcBwAqDoAuPZyPPqPR}OVg_@RaTk@cDWaE[{SoCwSmBmKaByJiCeQiFgJaEee@}S}n@{YcG_D|AeD|CsGdHcO|l@mkA`r@cpAl[{g@xd@uaAj`@yy@rFuLx_@_z@bh@kiAvHwNtp@suAv_@ix@tYam@p}AahD`Rmb@nDqJ|T_e@dC}FnB{EjB_HhKgb@|Gaa@hEu\\vA{Yn@ac@yAsv@oGsi@uJwh@oKo]qT}s@{HqY_s@wlBkRsb@kn@_hAw_@en@aF}HsFqIqE}IyRyXkQyRsIoIkJsHoVsOmXkKov@qVgrAad@wKuDmIeDaJcEcH_D{GuDyG}D_GiEaDcCoDiDmGcGqD_EiDsEsDsG}DkI{DeJyD}KuDyMiH{]eHc^cLaj@_h@{rBa]ykAmb@cqAeGsSsKiW_FmIyFmHmI_J_GuF_F{DcFoDgXwMqNiFokAgc@{LuEoQ{HwJiFkJ{GyMmNoDqE}CwE{DeHiEkIqD{IaJaWgJab@sEuSuDeZoCa]_B}k@Tyf@tEcn@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@dHcIzCyDvDeGdB{DxDuItFsOjBcL\\yD`@yLd@qOcJo}@aHgu@s@sRlAwPlDeQ~DqOvUqm@bTsj@dCkI|AuPY_Ti@eP_AeKaAeIm@gDs@oDcBoHgMql@wF_Z{EmTuM_k@{XyoAsC{OuFm[yKe]iNy\\oSe`@{d@k}@qLqV_KoXuGcYqDuO_CeMkDg\\mBk_@wBqi@a@iq@KmG_@}OoBa|@MmGIwHy@{m@`@of@^iV|EacBHyE`@oSnEenA~Cyz@TmJPeH`AyZh@o[v@ePlKezBf@eLx@aROwWC{BaAcIkCgKaAuE{YmvAySabA{FkUmAeEuCoK}EmQgCaLcDeSeBuR[oNf@aUt@qIlBsStCaRvDmOlGkSrEkMnDyJ`JyU`KyXrJiXpHuXdFyUbC}KpAaGpAuHjCySbFeWvL{f@xOse@vRma@xYug@xa@{l@hc@}d@~NwNhA}@bJeHlP{MllDu_CvDgCrtAi_AnOaL~LoMxGcHvMmRnE{IpE{Iv@eBrJyVvDeNrBuKrA{K|@_LVkGRyGh@ia@?cd@y@e\\cEoZoGoYiAqEYkAqF{Oo]siAgP{h@gb@wtAkT{r@uFgVeBoLm@kF[qCIu@YuDaAqNa@sOYgRZ{N@eKw@cbAcBk\\mC}c@cEie@uYmyBuSkuAcMiz@sRwxAmDqWuDuV{J}}@kWmzBk[apCwQmbByBySIs@_@sDwA{MsGid@aOkx@sk@{sCoDiQsSiaA}CkLwC}J_KiWmFqLom@_oAeTsc@qPg_@uTok@_Xkt@{n@kcBu~@mgCkOu`@sDiJsP{c@aTgn@e@kAoFqPiRcg@wVgr@sV}q@mt@mtBsFoPyBmHqBiHsBiI}Io`@iCuLqEyUkCuOwBaOaC{RmBmQeDc\\sDsa@yAm[OkEa@kP_@mOUyQGaMVqj@zE_vBtCi_ArC}cAfDknAfE}|An@mY^q[CqUScLWeF]cFg@eFs@cFcAiFkAeFuBsHoCeHiCcFcY_c@a_@ai@}cAkpAydBawBix@mbAuR}WyHwJ}t@{_A{SiYqJ_MsWs[_c@eh@sVi[}o@_x@wTeX_vAsjBk}@_hAczAeiBo[g]oGmDsBqCaCiC_PyQqKuIqI}DqIyBkEc@{J?yDDmCReEl@iBXwHjBaEz@{G\\gFxBeHxCkPxHoLjGgNpK{ArBqAjBuBzDqJjOiG|JwAvByBpEoCaByJsFwLuFgGcCiMcE{IcCoI~AoD~@eB~@q@~@oA~B_BdDFvWb@rC?bP?lA?vM@lTYjAMnMAvA"
+        },
+        {
+          "participantId": "3a93462d-50d7-466e-ac78-9a4bb84739ff",
+          "name": "Sam",
+          "profile": "driving",
+          "duration": 649,
+          "distance": 6286.308,
+          "geometry": "_jmrAyggfeEaAaC_@k@mAwAyBh@_ARsBb@eE{ToE{MiH}Nm\\uo@a[wi@aDiDsDmGkCgDiC^}`A~H{t@dHiLp@oL\\}LCqJMiI_@{H_AmQsBaLcBiOoCu]iJeTmGib@iOwTwIoOyHm]qLqLaEaGsBaJ}CdBoFtBkJQyB{@_IIgH~@iIdCkMnE_LnNk\\dO_YlPoYzi@wiAjb@wu@rGiNpK{UxUgj@|Mm[~p@s~AzSuc@nN{U`MiQrOqTjt@sz@`r@ov@lKiLjR{XrUc^`Vig@nMc]tLg_@fIm]lF{X|QioAxGai@`UysAhVubBnPekApFi]dFwWxEqU|Mel@tKc^fEiL|HeUb\\uu@RsDBc@HYH[`B_EnH{QvFmRvKyTvSu\\xIwMbRaYtm@sw@pQsP|PoPrLwM|SeGzD_@hHg@rFShGv@`Es@bE}CpA|A`ItHza@t_@nGdG~TtTdN~MzHrH`\\l]~JdKbSvS`CnCxBxBlF|F~d@de@rE|FhHzKrD|HhD|Kt@~DlApFp@vIj@xNKzWpAxGj@`Cx@nClBxB~@|@fC`B~CbBlCjAzz@ZdEJpOd@vKhArHtA~Cr@~IlBrDv@?`C?pB@zBRlS@z@FvWb@rC?bP?lA?vM@lTYjAMnMAvA"
+        }
+      ],
+      "rank": 2,
+      "rankingMode": "fairest",
+      "badge": "One-sided",
+      "explanation": "Convenient for most, but less fair to one participant.",
+      "voteCount": 0,
+      "category": "food and beverage",
+      "businessType": "food and beverage",
+      "computedAt": "2026-04-24T07:53:11.358Z"
+    },
+    {
+      "roomId": "6a52e5c4-8056-4a9a-8e01-c4deefc959ee",
+      "poiId": "IT.21UMZJUYRTWOQ",
+      "name": "IKEA Tampines (Level 1 Car Park)",
+      "lat": 1.3736794331203632,
+      "lng": 103.93194885663775,
+      "address": "60 Tampines North Drive 2, Singapore, 528764",
+      "fairnessScore": 2090.45,
+      "maxTravelTime": 2278.7,
+      "minTravelTime": 231.3,
+      "totalTravelTime": 2510,
+      "averageTravelTime": 1255,
+      "spread": 2047.3999999999999,
+      "perUserTravelTimes": [
+        {
+          "participantId": "74e67f5b-4930-417b-bdf1-e90e86773aa1",
+          "name": "jaga",
+          "profile": "driving",
+          "duration": 2278.7,
+          "distance": 29926.359,
+          "geometry": "wojpAuf_{dErJzG|AgClAeBlAmB`@q@sFsDsMqIaMaI_PeJwCeBiFqCiEeCgMoH_H{BkSkFiMsCgEaAaDq@cCa@cEs@uFiA}I_DqNuHeEcDaGuEoPmS_@u@sC{FyCcLiCmLY}FKkBm@}SEgP_DeNoBsDcBwAqDoAuPZyPPqPR}OVg_@RaTk@cDWaE[{SoCwSmBmKaByJiCeQiFgJaEee@}S}n@{YcG_D|AeD|CsGdHcO|l@mkA`r@cpAl[{g@xd@uaAj`@yy@rFuLx_@_z@bh@kiAvHwNtp@suAv_@ix@tYam@p}AahD`Rmb@nDqJ|T_e@dC}FnB{EjB_HhKgb@|Gaa@hEu\\vA{Yn@ac@yAsv@oGsi@uJwh@oKo]qT}s@{HqY_s@wlBkRsb@kn@_hAw_@en@aF}HsFqIqE}IyRyXkQyRsIoIkJsHoVsOmXkKov@qVgrAad@wKuDmIeDaJcEcH_D{GuDyG}D_GiEaDcCoDiDmGcGqD_EiDsEsDsG}DkI{DeJyD}KuDyMiH{]eHc^cLaj@_h@{rBa]ykAmb@cqAeGsSsKiW_FmIyFmHmI_J_GuF_F{DcFoDgXwMqNiFokAgc@{LuEoQ{HwJiFkJ{GyMmNoDqE}CwE{DeHiEkIqD{IaJaWgJab@sEuSuDeZoCa]_B}k@Tyf@tEcn@fG{c@rK_e@jKw[nNe\\bRw^hTkZtl@op@`iByeBdvDomDbT_Ub[yY|IyIhQwOryBi}Bn`@cc@td@cj@lo@ut@pb@_f@rS_V`jAunA|h@cl@tMkUzL}VtHgYdEwQtGqZnCeLfF_UtIm`@nL{`@fh@akAbOy\\jCaG`U{g@ru@}cBhSkb@dFmLFMjRgi@jGgTxm@_oBnMs^lI{SbRe]vPqUhV{Ubt@at@dHcIzCyDvDeGdB{DxDuItFsOjBcL\\yD`@yLd@qOcJo}@aHgu@s@sRlAwPlDeQ~DqOvUqm@bTsj@dCkI|AuPY_Ti@eP_AeKaAeIm@gDs@oDcBoHgMql@wF_Z{EmTuM_k@{XyoAsC{OuFm[yKe]iNy\\oSe`@{d@k}@qLqV_KoXuGcYqDuO_CeMkDg\\mBk_@wBqi@a@iq@KmG_@}OoBa|@MmGIwHy@{m@`@of@^iV|EacBHyE`@oSnEenA~Cyz@TmJPeH`AyZh@o[v@ePlKezBf@eLx@aROwWC{BaAcIkCgKaAuE{YmvAySabA{FkUmAeEuCoK}EmQgCaLcDeSeBuR[oNf@aUt@qIlBsStCaRvDmOlGkSrEkMnDyJ`JyU`KyXrJiXpHuXdFyUbC}KpAaGpAuHjCySbFeWvL{f@xOse@vRma@xYug@xa@{l@hc@}d@~NwNhA}@bJeHlP{Mz@wCVk@^i@|AsBjIsItTuNfi@w_@`SwNvEqEx_@cZpTyPhB{A~FeEzVaRph@}_@pd@_^dX_c@`Iea@Tgg@wKi|@koC_sIiZqd@{ZkSetBy_@ei@kDanBoG_m@}@aJWyK]_ToBuWyEc]aPoTcSiHoMmQc^kG_N_m@gcAif@_fAky@syB_~A{eDw]yp@wh@cj@_h@ek@qXmZgGyGcJaJaR}QsDqDm`@sVo~@sc@ad@qQwc@aRkb@_Msz@oOuWaDq`@}BgWwAg\\Jqa@vCch@jJag@lLwHfBmt@dOkj@lCgm@kDan@kLutEwvAabGy~B{UeKwz@k^qZ{Ma[aMo\\gNmKgGcEyBuKqFey@y^ggAod@}mAmh@e{Aoo@gCu@gToGqeAiUi`A}T}[_IctBkg@y~@kRkbA{Syj@aNih@sKeh@uMkl@qO_YwJwScJaZ}OyQyLiPcNaQcQcHqIyHoKuRiZoLaSuF_OgYsl@ug@m`AkVmf@aRyZsIcJaLiMiZ{XsUeOyGaE{IqEgPsIkHeFaI{Gs[iYwLaL{HgH}I}FiImEaJ_EcHsBiPsCmG[cINsI|AqGrDqEpFiCfGo@rILbGr@xCzCxGvFtFzGrCxH`AfIStLaCrImDdOwJhHsFjIyGfSgP`PmM|MmIjMmMzYmYle@cm@~U__@|EcJ~EsJ|FaNh^wy@xK_]~Tgw@hI{]|Gc^pUm}AfZsgBnPm}@rCyN[cCC[Ba@TeA`@cCdDsSnDqRx\\s}ApCsNhGuMzCaFlGqHxJmIxDiBjB{DdBoFvJjDhF|A|LlEbTxHzMzEnKtEbUzIb`@bMvMtEpQ`FpI~BnLbAnDDrHXhFRzKG`Bc@fBaAt@yA`@{CQqCq@_CyAmBgBeAcCQqCByIzCcIzCcEbAeBA}Ce@sSeHwEuA{LqDwE{AkDkAw@{BMyAb@gCpCwIQiCg@aC{@kBRgB`B}E"
+        },
+        {
+          "participantId": "3a93462d-50d7-466e-ac78-9a4bb84739ff",
+          "name": "Sam",
+          "profile": "driving",
+          "duration": 231.3,
+          "distance": 1268.728,
+          "geometry": "_jmrAyggfeEaAaC_@k@mAwAyBh@_ARsBb@eE{ToE{MiH}Nm\\uo@a[wi@aDiDsDmGkCgD}EoGcDaE{FcIuOyO{T}TmCmD_C{DkHqM}EmK{@eDm@cByCyCsBuD}@wAeAmA{@i@{B]_KhBcFZeEIgEk@_HuB_Cq@}e@_OsF_BiHgCyUuG{CGsCVi@NsA`@yA^iFdNw@pBaAhCy@xByFxPmDtKoLh`@qBjGc@hBC~AHdBr@rCh@zBEr@K`@M`@m@dAiBj@kDkAw@{BMyAb@gCpCwIQiCg@aC{@kBRgB`B}E"
+        }
+      ],
+      "rank": 3,
+      "rankingMode": "fairest",
+      "badge": "Fastest",
+      "explanation": "Fastest overall, but it slightly favors one side.",
+      "voteCount": 0,
+      "category": "general merchandise",
+      "businessType": "shopping mall/shops",
+      "computedAt": "2026-04-24T07:53:10.956Z"
     }
   ],
   "messages": [
@@ -1495,6 +1683,14 @@
       "participantName": "2222",
       "body": "hey i want go ikea",
       "createdAt": "2026-04-24T06:50:30.156Z"
+    },
+    {
+      "messageId": "d6902b40-a520-42c1-993b-cc46e39d5ee2",
+      "roomId": "da5be7c7-fc62-4a25-b9b1-907a5ba0b1f8",
+      "participantId": "0c29d820-9f12-4651-847d-3e3d9dc9025e",
+      "participantName": "Sam",
+      "body": "Hi",
+      "createdAt": "2026-04-24T07:39:39.077Z"
     }
   ]
 }

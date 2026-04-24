@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { SyncSpotRoomMap } from "@/components/syncspot-room-map";
 
@@ -96,12 +96,11 @@ const MODE_LABELS: Record<string, string> = {
 const TOPIC_OPTIONS = [
   { value: "cafe", label: "Cafe" },
   { value: "restaurant", label: "Restaurant" },
+  { value: "market", label: "Market" },
   { value: "shop", label: "Shop" },
   { value: "mall", label: "Mall" },
   { value: "hotel", label: "Hotel" },
-  { value: "park", label: "Park" },
-  { value: "bar", label: "Bar" },
-  { value: "supermarket", label: "Supermarket" }
+  { value: "park", label: "Park" }
 ] as const;
 
 const AREA_OPTIONS = [
@@ -116,18 +115,6 @@ const AREA_OPTIONS = [
   { value: "tampines", label: "Tampines" },
   { value: "woodlands", label: "Woodlands" }
 ] as const;
-
-const AREA_BIAS: Record<string, { lat: number; lng: number }> = {
-  ang_mo_kio: { lat: 1.3691, lng: 103.8454 },
-  bishan: { lat: 1.3508, lng: 103.8485 },
-  bugis: { lat: 1.3009, lng: 103.8559 },
-  jurong_east: { lat: 1.3331, lng: 103.7437 },
-  marina_bay: { lat: 1.2823, lng: 103.8585 },
-  one_north: { lat: 1.2996, lng: 103.7873 },
-  orchard: { lat: 1.3048, lng: 103.8318 },
-  tampines: { lat: 1.3526, lng: 103.9442 },
-  woodlands: { lat: 1.4361, lng: 103.7865 }
-};
 
 function isPostcodeQuery(value: string) {
   return /^\d{6}$/.test(value.trim());
@@ -176,7 +163,6 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
   const [joinName, setJoinName] = useState("");
   const [category, setCategory] = useState("cafe");
   const [selectedArea, setSelectedArea] = useState("");
-  const [customQuery, setCustomQuery] = useState("");
   const [hostFiltersDirty, setHostFiltersDirty] = useState(false);
   const [rankingMode, setRankingMode] = useState<"fairest" | "fastest" | "midpoint">(
     "fairest"
@@ -186,11 +172,11 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
   const [copyLabel, setCopyLabel] = useState("Copy invite link");
   const [showInfo, setShowInfo] = useState(false);
   const [editingOrigin, setEditingOrigin] = useState(false);
+  const editingOriginRef = useRef(false);
+  const originInputRef = useRef<HTMLInputElement | null>(null);
   const [originQuery, setOriginQuery] = useState("");
   const [originResults, setOriginResults] = useState<PlaceResult[]>([]);
   const [originStatus, setOriginStatus] = useState<string | null>(null);
-  const [hostQueryResults, setHostQueryResults] = useState<PlaceResult[]>([]);
-  const [hostQueryStatus, setHostQueryStatus] = useState<string | null>(null);
   const [activeRecommendationIds, setActiveRecommendationIds] = useState<string[]>([]);
   const [chatBody, setChatBody] = useState("");
 
@@ -209,16 +195,19 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
     if (!hostFiltersDirty) {
       setCategory(data.room.category);
       setSelectedArea(data.room.selectedArea ?? "");
-      setCustomQuery(data.room.customQuery ?? "");
       setRankingMode(data.room.rankingMode);
     }
   }
 
   useEffect(() => {
+    editingOriginRef.current = editingOrigin;
+  }, [editingOrigin]);
+
+  useEffect(() => {
     void loadRoom();
 
     const interval = setInterval(() => {
-      void loadRoom();
+      if (!editingOriginRef.current) void loadRoom();
     }, 5000);
 
     return () => clearInterval(interval);
@@ -237,11 +226,6 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
     snapshot?.recommendations.find(
       (recommendation) => recommendation.poiId === snapshot.room.selectedVenueId
     ) ?? null;
-  const renderedRecommendations =
-    snapshot?.recommendations.filter((recommendation) =>
-      activeRecommendationIds.includes(recommendation.poiId)
-    ) ?? [];
-
   useEffect(() => {
     if (!snapshot?.recommendations.length) {
       setActiveRecommendationIds([]);
@@ -264,75 +248,6 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
 
     setOriginQuery((current) => (current.trim() ? current : currentParticipant.originLabel ?? ""));
   }, [currentParticipant?.originLabel]);
-
-  useEffect(() => {
-    if (!isHost) {
-      setHostQueryResults([]);
-      setHostQueryStatus(null);
-      return;
-    }
-
-    const trimmedQuery = customQuery.trim();
-
-    if (trimmedQuery.length < 2) {
-      setHostQueryResults([]);
-      setHostQueryStatus(null);
-      return;
-    }
-
-    const controller = new AbortController();
-    const timeoutId = window.setTimeout(async () => {
-      setHostQueryStatus("Searching places...");
-
-      try {
-        const params = new URLSearchParams({
-          keyword: trimmedQuery,
-          country: "SGP",
-          limit: "5"
-        });
-        const areaBias = selectedArea ? AREA_BIAS[selectedArea] : null;
-
-        if (areaBias) {
-          params.set("location", `${areaBias.lat},${areaBias.lng}`);
-        }
-
-        const response = await fetch(
-          `/api/grab-maps/places/search?${params.toString()}`,
-          {
-            cache: "no-store",
-            signal: controller.signal
-          }
-        );
-        const data = (await response.json()) as {
-          places?: PlaceResult[];
-          error?: string;
-        };
-
-        if (!response.ok) {
-          throw new Error(data.error ?? "Unable to search for places.");
-        }
-
-        setHostQueryResults(data.places ?? []);
-        setHostQueryStatus(null);
-      } catch (searchError) {
-        if ((searchError as Error).name === "AbortError") {
-          return;
-        }
-
-        setHostQueryResults([]);
-        setHostQueryStatus(
-          searchError instanceof Error
-            ? searchError.message
-            : "Unable to search for places."
-        );
-      }
-    }, 300);
-
-    return () => {
-      controller.abort();
-      window.clearTimeout(timeoutId);
-    };
-  }, [customQuery, isHost, selectedArea]);
 
   const shareUrl =
     typeof window === "undefined" || !snapshot
@@ -444,11 +359,13 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
             ? "Found 1 exact postcode match."
             : `Found ${exactPostcodeMatches.length} exact postcode matches.`
         );
+        originInputRef.current?.blur();
         return;
       }
 
       setOriginResults(places);
       setOriginStatus(null);
+      originInputRef.current?.blur();
     } catch (searchError) {
       setOriginStatus(null);
       setOriginResults([]);
@@ -525,7 +442,7 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
           body: JSON.stringify({
             category,
             selectedArea: selectedArea || null,
-            customQuery: customQuery.trim() || null,
+            customQuery: null,
             rankingMode
           })
         }
@@ -539,7 +456,6 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
       setSnapshot(data);
       setCategory(data.room.category);
       setSelectedArea(data.room.selectedArea ?? "");
-      setCustomQuery(data.room.customQuery ?? "");
       setRankingMode(data.room.rankingMode);
       setHostFiltersDirty(false);
       setActiveRecommendationIds([]);
@@ -571,7 +487,7 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
         body: JSON.stringify({
           category,
           selectedArea: selectedArea || null,
-          customQuery: customQuery.trim() || null,
+          customQuery: null,
           rankingMode
         })
       });
@@ -584,7 +500,6 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
       setSnapshot(data);
       setCategory(data.room.category);
       setSelectedArea(data.room.selectedArea ?? "");
-      setCustomQuery(data.room.customQuery ?? "");
       setRankingMode(data.room.rankingMode);
       setHostFiltersDirty(false);
     } catch (updateError) {
@@ -827,9 +742,6 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                 {MODE_LABELS[snapshot.room.rankingMode] ?? snapshot.room.rankingMode}
               </span>
             </div>
-            <p className="syncspot-share-url">
-              Invite: {shareUrl || `/room/${snapshot.room.roomId}`}
-            </p>
           </div>
         </div>
 
@@ -888,11 +800,12 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                           <>
                             <div className="syncspot-origin-inline-edit">
                               <input
-                                autoFocus
+                                ref={originInputRef}
                                 onChange={(event) => setOriginQuery(event.target.value)}
                                 onKeyDown={(event) => {
                                   if (event.key === "Enter") {
                                     event.preventDefault();
+                                    originInputRef.current?.blur();
                                     void searchOrigins();
                                   }
                                 }}
@@ -920,6 +833,7 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                                   <li
                                     className="syncspot-origin-result"
                                     key={`${place.poi_id ?? place.id ?? place.name ?? "place"}-${index}`}
+                                    onMouseDown={(e) => e.preventDefault()}
                                   >
                                     <div>
                                       <strong>{place.name ?? "Unknown place"}</strong>
@@ -929,6 +843,7 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                                     </div>
                                     <button
                                       className="syncspot-secondary-btn"
+                                      onMouseDown={(e) => e.preventDefault()}
                                       onClick={() => void confirmOrigin(place)}
                                       type="button"
                                     >
@@ -1000,47 +915,6 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                   </select>
                 </label>
                 <label className="syncspot-field">
-                  <span>Specific place or vibe</span>
-                  <input
-                    onChange={(event) => {
-                      setCustomQuery(event.target.value);
-                      setHostFiltersDirty(true);
-                    }}
-                    placeholder="Bubble tea, IKEA, quiet cafe, study spot..."
-                    value={customQuery}
-                  />
-                  {hostQueryStatus && hostQueryStatus !== "Searching places..." ? (
-                    <p className="syncspot-origin-status">{hostQueryStatus}</p>
-                  ) : null}
-                  {hostQueryResults.length > 0 ? (
-                    <ul className="syncspot-origin-results">
-                      {hostQueryResults.map((place, index) => (
-                        <li
-                          className="syncspot-origin-result"
-                          key={`${place.poi_id ?? place.id ?? place.name ?? "host-place"}-${index}`}
-                        >
-                          <div>
-                            <strong>{place.name ?? "Unknown place"}</strong>
-                            <span>{place.formatted_address ?? "No address available"}</span>
-                          </div>
-                          <button
-                            className="syncspot-secondary-btn"
-                            onClick={() => {
-                              setCustomQuery(place.name ?? place.formatted_address ?? "");
-                              setHostQueryResults([]);
-                              setHostQueryStatus(null);
-                              setHostFiltersDirty(true);
-                            }}
-                            type="button"
-                          >
-                            Use this place
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-                </label>
-                <label className="syncspot-field">
                   <span>Ranking mode</span>
                   <select
                     onChange={(event) => {
@@ -1057,10 +931,10 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                   </select>
                 </label>
                 <p className="syncspot-muted">
-                  Use a broad topic, narrow it to an area, or type a specific place idea to guide
-                  the Grab search.
+                  Pick a category, narrow it to an area if you want, then compute the best meetup
+                  spots.
                 </p>
-                <div className="syncspot-inline-actions">
+                <div className="syncspot-inline-actions syncspot-host-actions-row">
                   <button
                     className="syncspot-secondary-btn"
                     disabled={loading !== null}
@@ -1086,24 +960,6 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                     Clear paths
                   </button>
                 </div>
-                {renderedRecommendations.length > 0 ? (
-                  <div className="syncspot-render-manager">
-                    <strong>Rendered on map</strong>
-                    <div className="syncspot-render-list">
-                      {renderedRecommendations.map((recommendation) => (
-                        <button
-                          className="syncspot-render-chip"
-                          key={recommendation.poiId}
-                          onClick={() => toggleRecommendationRoutes(recommendation.poiId)}
-                          type="button"
-                        >
-                          <span>{recommendation.name}</span>
-                          <span>Remove</span>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                ) : null}
               </section>
             ) : null}
           </div>
@@ -1418,10 +1274,7 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
         <section className="syncspot-chat-dock">
           <div className="syncspot-chat-card">
             <div className="syncspot-chat-header">
-              <div>
-                <strong>Room chat</strong>
-                <span>Talk through the decision here.</span>
-              </div>
+              <strong>Room chat</strong>
               <span className="syncspot-pill syncspot-pill-confirmed">
                 {snapshot.messages.length}
               </span>
@@ -1460,12 +1313,12 @@ export function SyncSpotRoom({ roomId }: SyncSpotRoomProps) {
                 value={chatBody}
               />
               <button
-                className="syncspot-primary-btn"
+                className="syncspot-primary-btn syncspot-chat-send"
                 disabled={loading !== null || !chatBody.trim()}
                 onClick={() => void sendMessage()}
                 type="button"
               >
-                {loading === "Sending message..." ? loading : "Send"}
+                {loading === "Sending message..." ? "..." : "Send"}
               </button>
             </div>
           </div>
